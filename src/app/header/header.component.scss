@@ -1,0 +1,18 @@
+button {
+  padding: 8px 15px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2.5px solid black;
+
+
+  &.log_in_btn {
+    color: black;
+    background-color: white;
+  }
+
+  &.sign_up_btn {
+    color: white;
+    background-color: black;
+  }
+}
