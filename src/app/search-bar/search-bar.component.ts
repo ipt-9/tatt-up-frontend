@@ -15,7 +15,7 @@ export class SearchBarComponent {
   search(term: string): void {
     this.searchService.search(term).subscribe({
       next: (data) => {
-        this.searchResults = data; // Assuming the data is an array of results
+        this.searchResults = data;
       },
       error: (error) => {
         console.error('There was an error!', error);
