@@ -11,13 +11,15 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     NavigationComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
