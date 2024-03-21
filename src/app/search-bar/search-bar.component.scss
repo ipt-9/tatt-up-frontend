@@ -17,5 +17,29 @@
   padding: 2% 15% 2% 5%;
   background-color: #F0F0F0;
   outline: none;
-;
 }
+
+.search-bar {
+  display: flex; /* Creates a flexbox layout within the search-bar div */
+  align-items: center; /* Aligns the input and button vertically */
+  border-radius: 50px; /* This should be the overall border radius for the container */
+  background-color: #F0F0F0; /* Light gray background */
+  border: 1px solid #ccc;
+
+  #search-input {
+    border: none; /* Removes individual border from input */
+    padding: 2% 5%; /* Adjust padding as needed */
+    background-color: transparent; /* Makes the input's background transparent */
+    margin-right: -1px; /* Fixes a potential double-border issue */
+  }
+
+  .search-button {
+    padding: 2% 5%; /* Adjust padding to match the input's height */
+    border: none; /* Removes the button border */
+    border-radius: 50px; /* Only rounds the right side */
+    background-color: #F0F0F0; /* Matches the input's background color */
+    cursor: pointer; /* Changes the mouse cursor on hover */
+  }
+}
+
+
