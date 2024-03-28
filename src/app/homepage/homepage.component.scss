@@ -43,7 +43,7 @@ body{
   padding-top: 10%;
   padding-left: 35%;
   text-align: left;
-  font-size: 21px;
+  font-size: 150%;
   line-height: 50px;
 ;
   .nav_bold{
@@ -111,8 +111,6 @@ body{
   width: 100%;
   position: fixed;
   height: 5vh;
-
-  padding-bottom: 20px;
   font-family: Arial, serif;
   font-size: 6.5vh;
   font-weight: bold;
@@ -143,6 +141,7 @@ body{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  padding-top: 50px;
 }
 
 .homepage-monetize-title {
@@ -225,4 +224,5 @@ body{
   background-color: #A4A4A4;
   color: black;
 }
+
 
