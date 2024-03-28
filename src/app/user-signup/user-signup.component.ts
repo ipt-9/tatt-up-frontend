@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+
 @Component({
   selector: 'app-user-signup',
   templateUrl: './user-signup.component.html',
@@ -11,6 +14,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
 })
 export class UserSignupComponent {
@@ -31,4 +36,8 @@ export class UserSignupComponent {
       // Handle form submission
     }
   }
+
+//openSignUp(){
+    //this.modalService.open(UserSignupComponent);
+//}
 }

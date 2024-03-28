@@ -1,30 +1,131 @@
-
+h1{
+  padding-left: 5%;
+  padding-top: 5%;
+  font-size: 80px;
+}
 .grid-usersignup{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 15vh 15vh;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  margin: auto;
+  gap: 5%;
+  padding-top: 3%;
+  padding-left: 5%;
 }
-.grid-roles{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 10vh 15vh 15vh;
-}
+
 .username{
   grid-column: 1;
   grid-row: 1;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-
+.username_2{
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Arial, serif;
+  font-size: 30px;
+  border: none;
+  border-bottom: 3.5px solid #000000;
+  outline:none;
+  padding: 5px 0;
+}
 .email{
   grid-column: 2;
   grid-row: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.email_2{
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Arial, serif;
+  font-size: 30px;
+  border: none;
+  border-bottom: 3.5px solid #000000;
+  outline:none;
+  padding: 5px 0;
 }
 
 .pwd{
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 3;
+}
+
+.pwd_2{
+  grid-column: 1;
+  grid-row: 4;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Arial, serif;
+  font-size: 30px;
+  border: none;
+  border-bottom: 3.5px solid #000000;
+  outline:none;
+  padding: 5px 0;
 }
 
 .confpwd{
   grid-column: 2;
-  grid-row:2;
+  grid-row:3;
+}
+
+.confpwd_2{
+  grid-column: 2;
+  grid-row:4;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Arial, serif;
+  font-size: 30px;
+  border: none;
+  border-bottom: 3.5px solid #000000;
+  outline:none;
+  padding: 5px 0;
+}
+
+.usertype{
+  grid-row: 5;
+  grid-column: 1;
+}
+
+.user_input{
+  font-family: Arial, serif;
+  font-size: 30px;
+  grid-row: 6;
+  grid-column: 1;
+}
+
+.question{
+  grid-column: 1;
+  grid-row: 8;
+  font-family: Arial, serif;
+  font-size: 20px;
+  color: #A2A2A2;
+}
+
+.login{
+  color: black;
+  font-size: 20px;
+}
+
+.signup-button{
+  grid-column: 2;
+  grid-row: 8;
+  font-family: Arial, serif;
+  font-weight: bold;
+  border-width: medium;
+  font-size: 30px;
+  width: fit-content;
+  padding: 8px 15px;
+  border-radius: 18px;
+  background-color: white;
+  color: black;
+}
+.signup-button:hover{
+  background-color: black;
+  color: white;
 }
