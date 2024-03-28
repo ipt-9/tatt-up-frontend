@@ -7,6 +7,7 @@ import { SearchBarComponent} from "./search-bar/search-bar.component";
 import {HeaderComponent} from "./header/header.component";
 import {UserSignupComponent} from "./user-signup/user-signup.component";
 import {UserLoginComponent} from "./user-login/user-login.component";
+import {UploadPopupComponent} from "./upload-popup/upload-popup.component";
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'search-bar', component:SearchBarComponent},
   {path: 'header', component:HeaderComponent},
   {path: 'user-signup', component:UserSignupComponent},
-  {path: 'user-login', component:UserLoginComponent}
+  {path: 'user-login', component:UserLoginComponent},
+  {path: 'upload-popup', component:UploadPopupComponent}
 ];
 
 @NgModule({

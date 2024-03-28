@@ -13,6 +13,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UploadPopupComponent } from './upload-popup/upload-popup.component';
+import { UploadContentComponent } from './upload-content/upload-content.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UploadPopupComponent } from './upload-popup/upload-popup.component';
     NavigationComponent,
     HeaderComponent,
     UserLoginComponent,
-    UploadPopupComponent
+    UploadPopupComponent,
+    UploadContentComponent
   ],
   imports: [
     BrowserModule,
