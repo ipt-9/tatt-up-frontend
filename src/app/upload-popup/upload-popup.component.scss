@@ -1,4 +1,3 @@
-
 .close-button{
   position: absolute;
   top: 5px;
@@ -7,7 +6,6 @@
   background: transparent;
   font-size: 5vh;
   cursor: pointer;
-
 }
 
 .popup-container{
@@ -16,6 +14,7 @@
   box-sizing: border-box;
   font-size: 1vw;
   text-align: center;
+
 }
 
 .upload-box{
@@ -25,4 +24,14 @@
   width: 80%;
   margin: 20px 0;
   text-align: center;
+}
+
+.image-preview {
+  max-width: 50%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.caption-box {
+  width: 50%;
 }
