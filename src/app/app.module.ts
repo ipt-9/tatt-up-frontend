@@ -11,8 +11,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { UserLoginComponent } from './user-login/user-login.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UploadPopupComponent } from './upload-popup/upload-popup.component';
+
+import { HomepageComponent } from './homepage/homepage.component';
+import { AboutComponent } from './about/about.component';
+import { ExploreComponent } from './explore/explore.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +28,16 @@ import { UploadPopupComponent } from './upload-popup/upload-popup.component';
     LayoutComponent,
     NavigationComponent,
     HeaderComponent,
+
     UserLoginComponent,
     UploadPopupComponent
+
+    UserLoginComponent
+    HomepageComponent,
+    AboutComponent,
+    ExploreComponent,
+    FavoritesComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
