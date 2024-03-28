@@ -12,5 +12,8 @@ export class UploadPopupComponent {
   openCreatePostPopup() {
     this.modalService.open(UploadPopupComponent);
   }
+  closePopup() {
+    this.modalService.dismissAll();
+  }
 
 }
