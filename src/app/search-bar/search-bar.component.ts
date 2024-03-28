@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { SearchService} from "../services/search.service";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
   standalone: true,
+  imports: [
+    NgForOf
+  ],
   styleUrls: ['./search-bar.component.scss']
 })
 

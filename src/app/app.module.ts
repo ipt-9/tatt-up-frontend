@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatButtonModule} from '@angular/material/button';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -12,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UploadPopupComponent } from './upload-popup/upload-popup.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UserLoginComponent } from './user-login/user-login.component';
     LayoutComponent,
     NavigationComponent,
     HeaderComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    UploadPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
     HttpClientModule,
     NoopAnimationsModule,
     MatButtonModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
