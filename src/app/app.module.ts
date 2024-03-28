@@ -14,6 +14,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UploadPopupComponent } from './upload-popup/upload-popup.component';
+import { UploadContentComponent } from './upload-content/upload-content.component';
 
 import { HomepageComponent } from './homepage/homepage.component';
 import { AboutComponent } from './about/about.component';
@@ -31,7 +32,15 @@ import { LegalComponent } from './legal/legal.component';
     HeaderComponent,
 
     UserLoginComponent,
+
+
     UploadPopupComponent,
+    UploadContentComponent,
+    UploadPopupComponent,
+
+
+    UploadPopupComponent,
+
 
     UserLoginComponent,
     HomepageComponent,

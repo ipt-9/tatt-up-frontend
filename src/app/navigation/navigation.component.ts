@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 
 @Component({
   selector: 'app-navigation',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
+  constructor(private modalService: NgbModal) {}
+
+  openCreatePostModal() {
+    this.modalService.open(UploadPopupComponent);
+  }
 
 }
