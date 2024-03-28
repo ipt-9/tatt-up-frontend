@@ -13,4 +13,8 @@ export class HeaderComponent {
   navigateToSignUp(): void {
     this.router.navigateByUrl('/user-signup');
   }
+
+  navigateToLogin(): void {
+    this.router.navigateByUrl('/user-login');
+  }
 }
