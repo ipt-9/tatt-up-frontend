@@ -7,7 +7,7 @@
   <div class="title">Tatt' up</div>
   <div class="nav">
     <div class="sidebar-content">
-      <div>Home</div>
+      <div class="nav_bold">Home</div>
       <div>Explore</div>
       <div>Favorites</div>
       <div class="link-style" (click)="openCreatePostModal()">Create Post</div>
@@ -15,7 +15,11 @@
     </div>
   </div>
 
-  <div class="header">Here comes the header</div>
+  <div class="header">
+    <button class="log_in_btn" (click)="navigateToLogin()" >LOG IN</button>
+    <button class="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
+  </div>
+
   <div class="main">
     <div class="homepage-main-title">Welcome to Tatt' Up!</div>
     <div class="grid-monetize-etwot">

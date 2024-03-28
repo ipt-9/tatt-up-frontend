@@ -1,0 +1,30 @@
+
+.grid-usersignup{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 15vh 15vh;
+}
+.grid-roles{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10vh 15vh 15vh;
+}
+.username{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.email{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.pwd{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.confpwd{
+  grid-column: 2;
+  grid-row:2;
+}
