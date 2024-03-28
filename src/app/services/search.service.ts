@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SearchService {
-  private apiUrl = '/https://bbzwinf.ch:8443/phpMyAdmin/index.php?db=tatt-up/search'; // Replace with PHP backend URL
+  private apiUrl = '/https://bbzwinf.ch:8443/api/posts/search'; // Replace with PHP backend URL
 
   constructor(private http: HttpClient) {}
 
