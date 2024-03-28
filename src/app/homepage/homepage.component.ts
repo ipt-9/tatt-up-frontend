@@ -24,7 +24,6 @@ export class HomepageComponent {
     this.router.navigateByUrl('/explore');
   }
 
-
   navigateToSignUp(): void {
     this.router.navigateByUrl('/user-signup');
   }
