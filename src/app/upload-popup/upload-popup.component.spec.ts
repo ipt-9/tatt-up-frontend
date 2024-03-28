@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UploadPopupComponent } from './upload-popup.component';
 
 describe('UploadPopupComponent', () => {
