@@ -15,11 +15,11 @@ import {ExploreComponent} from "./explore/explore.component";
 
 
 const routes: Routes = [
+  {path: '', component: HomepageComponent},
   {path: 'layout', component: LayoutComponent},
   {path: 'footer', component: FooterComponent},
   {path: 'navigation', component: NavigationComponent},
   {path: 'search-bar', component:SearchBarComponent},
-
   {path: 'header', component:HeaderComponent},
   {path: 'user-signup', component:UserSignupComponent},
   {path: 'user-login', component:UserLoginComponent},

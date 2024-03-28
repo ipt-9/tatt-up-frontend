@@ -1,1 +1,17 @@
-<p>user-signup works!</p>
+<!-- signup.component.html -->
+<h1>Create an Account</h1>
+<div class="grid-usersignup">
+<p class="username">USERNAME</p>
+  <p class="email">EMAIL</p>
+  <p class="pwd">PASSWORD</p>
+  <p class="confpwd">CONFIRM PASSWORD</p>
+</div>
+<div class="grid-roles">
+  <p>I AM A:</p>
+  <select formControlName="userType">
+    <option value="" disabled selected>Select User Type</option>
+    <option value="tattooer">Tattooer</option>
+    <option value="designer">Designer</option>
+    <option value="user">User</option>
+  </select>
+</div>
