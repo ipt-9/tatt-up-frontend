@@ -1,7 +1,7 @@
 <!-- signup.component.html -->
 <h1>Create an Account</h1>
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
 <div class="grid-usersignup">
-
 <h2 class="username">USERNAME</h2>
   <input class="username_2"   type="text" formControlName="username" placeholder="Enter your username">
 
@@ -22,5 +22,8 @@
     <option value="user">User</option>
   </select>
 <p class="question">Already have an account? <a class="login" href="/login">Login</a></p>
+
 <button class="signup-button" type="submit">Sign Up</button>
+
 </div>
+</form>
