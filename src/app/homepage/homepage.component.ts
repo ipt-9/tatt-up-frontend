@@ -31,4 +31,5 @@ export class HomepageComponent {
   navigateToLogin(): void {
     this.router.navigateByUrl('/user-login');
   }
+
 }
