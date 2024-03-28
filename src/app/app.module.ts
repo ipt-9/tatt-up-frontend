@@ -30,9 +30,9 @@ import { CreatePostComponent } from './create-post/create-post.component';
     HeaderComponent,
 
     UserLoginComponent,
-    UploadPopupComponent
+    UploadPopupComponent,
 
-    UserLoginComponent
+    UserLoginComponent,
     HomepageComponent,
     AboutComponent,
     ExploreComponent,
