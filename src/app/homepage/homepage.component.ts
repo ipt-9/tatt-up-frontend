@@ -18,4 +18,12 @@ export class HomepageComponent {
   navigateToExplore(): void {
     this.router.navigateByUrl('/explore');
   }
+
+  navigateToSignUp(): void {
+    this.router.navigateByUrl('/user-signup');
+  }
+
+  navigateToLogin(): void {
+    this.router.navigateByUrl('/user-login');
+  }
 }

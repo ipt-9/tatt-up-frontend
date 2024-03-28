@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { AboutComponent } from './about/about.component';
 import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { LegalComponent } from './legal/legal.component';
 
 
 @NgModule({
@@ -32,16 +33,22 @@ import { CreatePostComponent } from './create-post/create-post.component';
 
     UserLoginComponent,
 
+
     UploadPopupComponent,
     UploadContentComponent,
     UploadPopupComponent,
+
+
+    UploadPopupComponent,
+
 
     UserLoginComponent,
     HomepageComponent,
     AboutComponent,
     ExploreComponent,
     FavoritesComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    LegalComponent
   ],
   imports: [
     BrowserModule,
