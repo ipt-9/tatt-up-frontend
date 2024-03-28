@@ -22,11 +22,8 @@ const routes: Routes = [
   {path: 'header', component:HeaderComponent},
   {path: 'user-signup', component:UserSignupComponent},
   {path: 'user-login', component:UserLoginComponent},
-
   {path: 'upload-popup', component:UploadPopupComponent},
   {path: 'user-login', component:UserLoginComponent},
-
-
   {path: 'homepage', component:HomepageComponent},
   {path: 'about', component:AboutComponent},
   {path: 'explore', component:ExploreComponent},
