@@ -23,10 +23,10 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -46,7 +46,6 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     CreatePostComponent,
     LegalComponent,
     ContactFormComponent,
-    LegalComponent,
     ForgotPasswordComponent,
     ChangePasswordComponent
   ],
