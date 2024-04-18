@@ -26,7 +26,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { FormsModule } from '@angular/forms';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +45,10 @@ import { FormsModule } from '@angular/forms';
     FavoritesComponent,
     CreatePostComponent,
     LegalComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    LegalComponent,
+    ForgotPasswordComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -55,9 +59,9 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     NgbModule,
     MatSnackBarModule,
-    LegalComponent,
-    ForgotPasswordComponent
-    FormsModule
+
+    FormsModule,
+    ReactiveFormsModule
   ],
 
   providers: [],
