@@ -8,73 +8,78 @@
   cursor: pointer;
 }
 
-.popup-container{
+.popup-container {
   border-radius: 50%;
   height: auto;
   padding: 20px;
   box-sizing: border-box;
   font-size: 1vw;
   text-align: center;
-
+  position: relative;
 }
 
-.upload-box{
+.upload-box {
   border: 2px dashed #ccc;
   border-radius: 10px;
   padding: 20px;
   width: 80%;
-  margin: 20px 0;
+  margin: 20px auto;
   text-align: center;
 }
 
 .image-preview {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 300%;
   object-fit: contain;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .image-and-caption {
-  display: flex; /* Added this line to display the image and caption side by side */
-  justify-content: center; /* Added this line to center the image and caption */
-  width: 100%; /* Added this line to make the image and caption take up the full width */
-  margin-bottom: 20px; /* Added this line to add some spacing between the image/caption and the button */
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-items: flex-start;
 }
 
 .caption-box {
-  width: 50%;
-  padding: 0 20px;
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #ccc; /* Set the border to dashed */
+  border-radius: 5px;
+  outline: none;
+  margin-left: 20px;
 }
 
-.content-container{
+.caption-box textarea{
+  width: calc(100% - 12px);
+  height: auto;
+  min-height: 40px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.content-container {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  width: 50%; /* Added this line to make the image container take up half the width */
 }
 
 .button-container {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start
 }
 
 .publish-button {
-  background-color: black;
+  background-color: #2A2A2A;
   color: white;
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
   cursor: pointer;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin-top: 100px;
-  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  justify-content: flex-start;
 }
