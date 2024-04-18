@@ -22,6 +22,9 @@ import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -48,17 +51,20 @@ import { LegalComponent } from './legal/legal.component';
     ExploreComponent,
     FavoritesComponent,
     CreatePostComponent,
-    LegalComponent
+    LegalComponent,
+    ForgotPasswordComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SearchBarComponent,
-    HttpClientModule,
-    NoopAnimationsModule,
-    MatButtonModule,
-    NgbModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        SearchBarComponent,
+        HttpClientModule,
+        NoopAnimationsModule,
+        MatButtonModule,
+        NgbModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
