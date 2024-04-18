@@ -10,14 +10,14 @@
       <div class="nav_bold">Home</div>
       <div>Explore</div>
       <div>Favorites</div>
-      <div>Create Post</div>
+      <div class="link-style" (click)="openCreatePostModal()">Create Post</div>
       <div>About Us</div>
     </div>
   </div>
 
   <div class="header">
-    <button class="log_in_btn" (click)="navigateToLogin()" >LOG IN</button>
-    <button class="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
+    <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()" >LOG IN</button>
+    <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
   </div>
 
   <div class="main">

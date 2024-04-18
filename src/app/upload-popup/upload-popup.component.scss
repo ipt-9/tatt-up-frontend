@@ -1,0 +1,37 @@
+.close-button{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 5vh;
+  cursor: pointer;
+}
+
+.popup-container{
+  border-radius: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 1vw;
+  text-align: center;
+
+}
+
+.upload-box{
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.image-preview {
+  max-width: 50%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.caption-box {
+  width: 50%;
+}

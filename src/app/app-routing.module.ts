@@ -11,6 +11,7 @@ import {UploadPopupComponent} from "./upload-popup/upload-popup.component";
 import {HomepageComponent} from "./homepage/homepage.component";
 import {AboutComponent} from "./about/about.component";
 import {ExploreComponent} from "./explore/explore.component";
+import {LegalComponent} from "./legal/legal.component";
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -26,6 +27,10 @@ const routes: Routes = [
   {path: 'homepage', component:HomepageComponent},
   {path: 'about', component:AboutComponent},
   {path: 'explore', component:ExploreComponent},
+<<<<<<< HEAD
+=======
+  {path: 'legal', component:LegalComponent}
+>>>>>>> 3052441486f1295c8be50057fa5a034956200c44
 ];
 
 @NgModule({

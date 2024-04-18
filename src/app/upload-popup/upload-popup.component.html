@@ -1,6 +1,20 @@
-<div class="upload-popup-content">
+<div class="popup-container">
   <h2>Create Post</h2>
-  <form>
-    <button type="submit">Upload file</button>
-  </form>
+
+  <div class="upload-box">
+    <div *ngIf="showImageUpload">
+  <p>Select file or add via Drag-and-Drop</p>
+    <input type="file" id="fileInput" hidden (change)="onFileSelected($event)" #fileInput />
+    <button type="button" (click)="fileInput.click()">Select file</button>
+  </div>
+
+    <img *ngIf="imageSrc" [src]="imageSrc" alt="Image preview" />
+
+
+    <div *ngIf="imageSrc" class="caption-box">
+      <textarea placeholder="Caption"></textarea>
+    </div>
+
+  <button class="close-button" (click)="closePopup()">&times;</button>
+  </div>
 </div>
