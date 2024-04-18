@@ -22,7 +22,9 @@ import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { LegalComponent } from './legal/legal.component';
     ExploreComponent,
     FavoritesComponent,
     CreatePostComponent,
-    LegalComponent
+    LegalComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { LegalComponent } from './legal/legal.component';
     NoopAnimationsModule,
     MatButtonModule,
     NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
