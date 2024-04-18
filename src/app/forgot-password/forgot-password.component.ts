@@ -2,19 +2,17 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../auth.service";
 import {Router} from "@angular/router";
-
 @Component({
-  selector: 'app-user-login',
-  templateUrl: './user-login.component.html',
-  styleUrls: ['./user-login.component.scss']
+  selector: 'app-forgot-password',
+  templateUrl: './forgot-password.component.html',
+  styleUrls: ['./forgot-password.component.scss']
 })
-export class UserLoginComponent {
-  signupForm: FormGroup;
+export class ForgotPasswordComponent {
+signupForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
     this.signupForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
 
@@ -35,6 +33,3 @@ export class UserLoginComponent {
     }
   }
 }
-
-
-
