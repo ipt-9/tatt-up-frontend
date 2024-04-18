@@ -23,7 +23,6 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
@@ -55,9 +54,6 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     NgbModule,
     MatSnackBarModule,
-    LegalComponent,
-    ForgotPasswordComponent
-    FormsModule
   ],
 
   providers: [],
