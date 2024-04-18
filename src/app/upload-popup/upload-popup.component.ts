@@ -34,4 +34,9 @@ export class UploadPopupComponent {
     // Implement publish functionality here
     // For example, you can send the data to your backend server
   }
+
+  autoResize(event: any) {
+    event.target.style.height = 'auto';
+    event.target.style.height = (event.target.scrollHeight) + 'px';
+  }
 }
