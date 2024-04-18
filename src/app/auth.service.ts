@@ -1,7 +1,8 @@
+//auth.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError,  } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -17,13 +18,21 @@ export class AuthService {
       catchError(this.handleError<any>('signUp'))
     );
   }
+  checkEmailExists(email: string): Observable<boolean> {
+    return this.http.get<boolean>(`${this.apiUrl}/checkEmailExists/${email}`).pipe(
+      catchError(this.handleError<boolean>('checkEmailExists', false))
+    );
+  }
 
-  // Handle HTTP errors
+  checkUsernameExists(username : string): Observable<boolean> {
+    return this.http.get<boolean>(`${this.apiUrl}/checkUsernameExists/${username}`).pipe(
+      catchError(this.handleError<boolean>('checkUsernameExists', false))
+    );
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
-      // Optionally, you can log the error to a logging service
-      // Return an empty result or throw an error depending on your application's requirements
       return of(result as T);
     };
   }

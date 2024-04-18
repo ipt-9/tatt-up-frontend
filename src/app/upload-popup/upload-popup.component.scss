@@ -8,30 +8,78 @@
   cursor: pointer;
 }
 
-.popup-container{
+.popup-container {
   border-radius: 50%;
+  height: auto;
   padding: 20px;
   box-sizing: border-box;
   font-size: 1vw;
   text-align: center;
-
+  position: relative;
 }
 
-.upload-box{
+.upload-box {
   border: 2px dashed #ccc;
   border-radius: 10px;
   padding: 20px;
   width: 80%;
-  margin: 20px 0;
+  margin: 20px auto;
   text-align: center;
 }
 
 .image-preview {
-  max-width: 50%;
-  max-height: 100%;
+  max-width: 100%;
+  max-height: 300%;
   object-fit: contain;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.image-and-caption {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-items: flex-start;
 }
 
 .caption-box {
-  width: 50%;
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #ccc; /* Set the border to dashed */
+  border-radius: 5px;
+  outline: none;
+  margin-left: 20px;
+}
+
+.caption-box textarea{
+  width: calc(100% - 12px);
+  height: auto;
+  min-height: 40px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start
+}
+
+.publish-button {
+  background-color: #2A2A2A;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-left: 5px;
+  justify-content: flex-start;
 }

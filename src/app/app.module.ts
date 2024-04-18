@@ -22,8 +22,10 @@ import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -32,18 +34,9 @@ import { FormsModule } from '@angular/forms';
     LayoutComponent,
     NavigationComponent,
     HeaderComponent,
-
     UserLoginComponent,
-
-
     UploadPopupComponent,
     UploadContentComponent,
-    UploadPopupComponent,
-
-
-    UploadPopupComponent,
-
-
     UserLoginComponent,
     HomepageComponent,
     AboutComponent,
@@ -61,8 +54,12 @@ import { FormsModule } from '@angular/forms';
     NoopAnimationsModule,
     MatButtonModule,
     NgbModule,
+    MatSnackBarModule,
+    LegalComponent,
+    ForgotPasswordComponent
     FormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
