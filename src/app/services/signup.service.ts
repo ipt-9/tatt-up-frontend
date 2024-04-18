@@ -6,5 +6,6 @@ import { Injectable } from '@angular/core';
 export class SignupService {
 
   private apiUrl = 'https://backend.tatt-up-bmsd21a.bbzwinf.ch/api/signup';
+
   constructor() { }
 }
