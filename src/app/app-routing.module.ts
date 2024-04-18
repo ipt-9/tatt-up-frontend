@@ -28,9 +28,13 @@ const routes: Routes = [
   {path: 'about', component:AboutComponent},
   {path: 'explore', component:ExploreComponent},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   {path: 'legal', component:LegalComponent}
 >>>>>>> 3052441486f1295c8be50057fa5a034956200c44
+=======
+  {path: 'legal', component:LegalComponent}
+>>>>>>> d2698b38613f90b12fcd454d8d6ea7ce84da3c42
 ];
 
 @NgModule({
