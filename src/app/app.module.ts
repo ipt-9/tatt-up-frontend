@@ -22,7 +22,11 @@ import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
-
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,25 +34,17 @@ import { LegalComponent } from './legal/legal.component';
     LayoutComponent,
     NavigationComponent,
     HeaderComponent,
-
     UserLoginComponent,
-
-
     UploadPopupComponent,
     UploadContentComponent,
-    UploadPopupComponent,
-
-
-    UploadPopupComponent,
-
-
     UserLoginComponent,
     HomepageComponent,
     AboutComponent,
     ExploreComponent,
     FavoritesComponent,
     CreatePostComponent,
-    LegalComponent
+    LegalComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +54,12 @@ import { LegalComponent } from './legal/legal.component';
     NoopAnimationsModule,
     MatButtonModule,
     NgbModule,
+    MatSnackBarModule,
+    LegalComponent,
+    ForgotPasswordComponent
+    FormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
