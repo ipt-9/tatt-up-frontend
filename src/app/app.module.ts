@@ -43,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     FavoritesComponent,
     CreatePostComponent,
     LegalComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +55,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     NgbModule,
     MatSnackBarModule,
+    FormsModule
   ],
 
   providers: [],
