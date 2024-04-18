@@ -23,6 +23,9 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+
 
 
 @NgModule({
@@ -31,18 +34,9 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     LayoutComponent,
     NavigationComponent,
     HeaderComponent,
-
     UserLoginComponent,
-
-
     UploadPopupComponent,
     UploadContentComponent,
-    UploadPopupComponent,
-
-
-    UploadPopupComponent,
-
-
     UserLoginComponent,
     HomepageComponent,
     AboutComponent,
@@ -60,7 +54,10 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     MatButtonModule,
     NgbModule,
     MatSnackBarModule,
+    LegalComponent,
+    ForgotPasswordComponent
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
