@@ -10,11 +10,11 @@
 
 .popup-container{
   border-radius: 50%;
+  height: auto;
   padding: 20px;
   box-sizing: border-box;
   font-size: 1vw;
   text-align: center;
-
 }
 
 .upload-box{
@@ -34,4 +34,11 @@
 
 .caption-box {
   width: 50%;
+  padding: 0 20px;
+}
+
+.content-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
