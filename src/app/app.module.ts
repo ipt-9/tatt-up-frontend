@@ -22,9 +22,10 @@ import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+
 
 
 @NgModule({
@@ -33,38 +34,30 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     LayoutComponent,
     NavigationComponent,
     HeaderComponent,
-
     UserLoginComponent,
-
-
     UploadPopupComponent,
     UploadContentComponent,
-    UploadPopupComponent,
-
-
-    UploadPopupComponent,
-
-
     UserLoginComponent,
     HomepageComponent,
     AboutComponent,
     ExploreComponent,
     FavoritesComponent,
     CreatePostComponent,
+    LegalComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SearchBarComponent,
+    HttpClientModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    NgbModule,
+    MatSnackBarModule,
     LegalComponent,
     ForgotPasswordComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        SearchBarComponent,
-        HttpClientModule,
-        NoopAnimationsModule,
-        MatButtonModule,
-        NgbModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
