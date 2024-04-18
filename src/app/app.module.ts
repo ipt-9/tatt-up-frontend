@@ -25,8 +25,8 @@ import { LegalComponent } from './legal/legal.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-
-
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     ExploreComponent,
     FavoritesComponent,
     CreatePostComponent,
-    LegalComponent
+    LegalComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +57,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     MatSnackBarModule,
     LegalComponent,
     ForgotPasswordComponent
+    FormsModule
   ],
 
   providers: [],
