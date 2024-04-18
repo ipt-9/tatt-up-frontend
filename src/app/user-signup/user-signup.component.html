@@ -1,21 +1,47 @@
 <!-- signup.component.html -->
 <h1>Create an Account</h1>
+
 <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
 <div class="grid-usersignup">
 <h2 class="username">USERNAME</h2>
-  <input class="username_2"   type="text" formControlName="username" placeholder="Enter your username">
-
+  <input
+    class="username_2"
+    type="text"
+    formControlName="username"
+    placeholder="Enter your username"
+    maxlength="255"
+    required
+  >
   <h2 class="email">EMAIL</h2>
-    <input class="email_2"  type="email" formControlName="email" placeholder="Enter your email">
+    <input
+      class="email_2"
+      type="email"
+      formControlName="email"
+      placeholder="Enter your email"
+      required>
 
   <h2 class="pwd">PASSWORD</h2>
-  <input class="pwd_2"  type="password" formControlName="password" placeholder="Enter a password">
+  <input
+    class="pwd_2"
+    type="password"
+    formControlName="password"
+    placeholder="Enter a password"
+    required>
 
   <h2 class="confpwd">CONFIRM PASSWORD</h2>
-  <input class="confpwd_2"  type="password" formControlName="password" placeholder="Confirm password">
+  <input
+    class="confpwd_2"
+    type="password"
+    formControlName="confirmPassword"
+    placeholder="Confirm password"
+    required>
 
   <h2 class="usertype">I AM A:</h2>
-  <select class="user_input" formControlName="userType">
+  <select
+    class="user_input"
+    formControlName="userType"
+    required>
     <option value="" disabled selected>Select User Type</option>
     <option value="tattooer">Tattooer</option>
     <option value="designer">Designer</option>
@@ -23,7 +49,8 @@
   </select>
 <p class="question">Already have an account? <a class="login" href="/login">Login</a></p>
 
-<button class="signup-button" type="submit">Sign Up</button>
+<button class="signup-button" type="submit" >Sign Up</button>
 
 </div>
+
 </form>

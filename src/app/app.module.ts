@@ -22,6 +22,7 @@ import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { LegalComponent } from './legal/legal.component';
     NoopAnimationsModule,
     MatButtonModule,
     NgbModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
