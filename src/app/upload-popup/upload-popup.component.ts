@@ -9,6 +9,7 @@ import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
 export class UploadPopupComponent {
   imageUploaded: boolean = false;
   imageSrc: string | ArrayBuffer | null = null;
+  selectFileClicked: boolean = false;
   constructor(private modalService: NgbModal) {}
 
   openCreatePostPopup() {
@@ -28,5 +29,9 @@ export class UploadPopupComponent {
       };
       reader.readAsDataURL(file);
     }
+  }
+  publish() {
+    // Implement publish functionality here
+    // For example, you can send the data to your backend server
   }
 }
