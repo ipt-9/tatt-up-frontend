@@ -27,6 +27,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UserProfilesComponent } from './user-profiles/user-profiles.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CreatePostComponent,
     LegalComponent,
     ContactFormComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    UserProfilesComponent
   ],
   imports: [
     BrowserModule,
