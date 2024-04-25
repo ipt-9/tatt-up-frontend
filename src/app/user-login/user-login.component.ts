@@ -9,31 +9,46 @@ import {Router} from "@angular/router";
   styleUrls: ['./user-login.component.scss']
 })
 export class UserLoginComponent {
-  signupForm: FormGroup;
+  loginForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
-    this.signupForm = this.formBuilder.group({
+    this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
 
   onSubmit() {
-    const formData = this.signupForm.value;
-    const email = formData.email;
-    const password = formData.password;
-
-
-    if (email === 'hello@gmail.com' && password === '12345') {
-      this.router.navigateByUrl('');
-    } else if (email === '' || password === '') {
-      alert('Please enter your userdata')
+    // Check if the form is invalid
+    if (this.loginForm.invalid) {
+      // If the form is invalid, display an alert message and return to prevent further execution
+      alert('Please enter a valid email and password.');
+      return;
     }
-    else {
-      alert('Incorrect email or password.');
-      window.location.reload();
-    }
+
+    // Retrieve email and password from the form
+    const email = this.loginForm.get('email')?.value;
+    const password = this.loginForm.get('password')?.value;
+
+    // Call the login method from the AuthService, passing the email and password
+    this.authService.logIn({ email, password }).subscribe(
+      (response) => {
+        // If authentication is successful, navigate the user to the home page
+        this.router.navigateByUrl('/');
+      },
+      (error) => {
+        // If authentication fails, display the error message returned by the backend
+        if (error && error.error && error.error.errors && error.error.errors.general) {
+          alert(error.error.errors.general);
+        } else {
+          // For other errors, display a generic error message
+          alert('An error occurred while logging in. Please try again later.');
+        }
+      }
+    );
   }
+
+
 }
 
 
