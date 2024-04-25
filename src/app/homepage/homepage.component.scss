@@ -225,4 +225,13 @@ body{
   color: black;
 }
 
+.featured-aritsts{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+
+
 

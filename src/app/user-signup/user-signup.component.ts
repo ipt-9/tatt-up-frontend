@@ -45,31 +45,37 @@ export class UserSignupComponent{
   onSubmit() {
     const userData = this.signupForm.value;
 
-    if(this.signupForm.invalid){
+    // Check if all required fields are filled
+    if (this.signupForm.invalid) {
       alert('Please fill in all required fields');
+
     }
 
-    if(userData.password !== userData.confirmPassword){
+    // Check if passwords match
+    if (userData.password !== userData.confirmPassword) {
       alert('Passwords do not match');
-
     }
 
+    // Check if username already exists
     this.authService.checkUsernameExists(userData.username).subscribe(
-      (usernameExists) =>{
-        if(usernameExists){
+      (usernameExists) => {
+        if (usernameExists) {
           alert('Username already exists');
+        } else {
+          // Check if email already exists
+          this.authService.checkEmailExists(userData.email).subscribe(
+            (emailExists) => {
+              if (emailExists) {
+                alert('Email already exists');
+              } else {
+                // All checks passed, proceed with user creation
+                this.signUp(userData);
+              }
+            }
+          );
         }
-        }
-         )
-
-    this.authService.checkEmailExists(userData.email).subscribe(
-      (emailExists) =>{
-      if(emailExists){
-        alert('Email already exists');
-      } else{
-        this.signUp(userData);
       }
-    })
+    );
 
 
   }

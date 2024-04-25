@@ -18,6 +18,12 @@ export class AuthService {
       catchError(this.handleError<any>('signUp'))
     );
   }
+
+  logIn(loginData: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/login`, loginData).pipe(
+      catchError(this.handleError<any>('logIn'))
+    );
+  }
   checkEmailExists(email: string): Observable<boolean> {
     return this.http.get<boolean>(`${this.apiUrl}/checkEmailExists/${email}`).pipe(
       catchError(this.handleError<boolean>('checkEmailExists', false))
