@@ -46,7 +46,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CreatePostComponent,
     LegalComponent,
     ContactFormComponent,
-    ForgotPasswordComponent,
     ChangePasswordComponent
   ],
   imports: [
