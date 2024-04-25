@@ -1,3 +1,5 @@
+//app.module.ts
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
@@ -59,12 +61,12 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
     MatButtonModule,
     NgbModule,
     MatSnackBarModule,
-
     FormsModule,
     ReactiveFormsModule
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap:
+  [HomepageComponent],
 })
 export class AppModule { }
