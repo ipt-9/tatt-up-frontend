@@ -10,9 +10,17 @@ export class ContactFormComponent {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   };
-  submitForm() {
-    console.log(this.formData);
+
+  async SendMail(): Promise<void> {
+
+
+
+
+
   }
+  submitForm():void{}
 }
+
+
