@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "../auth.service";
-import {Router} from "@angular/router";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { AuthService } from "../auth.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-user-login',
@@ -10,6 +10,7 @@ import {Router} from "@angular/router";
 })
 export class UserLoginComponent {
   loginForm: FormGroup;
+  loginError: string = '';
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.formBuilder.group({
@@ -30,7 +31,7 @@ export class UserLoginComponent {
     const email = this.loginForm.get('email')?.value;
     const password = this.loginForm.get('password')?.value;
 
-    // Call the login method from the AuthService, passing the email and password
+    // Call the logIn method from the AuthService, passing the email and password
     this.authService.logIn({ email, password }).subscribe(
       (response) => {
         // If authentication is successful, navigate the user to the home page
@@ -39,17 +40,12 @@ export class UserLoginComponent {
       (error) => {
         // If authentication fails, display the error message returned by the backend
         if (error && error.error && error.error.errors && error.error.errors.general) {
-          alert(error.error.errors.general);
+          alert('Wrong email or password. Please try again.');
         } else {
           // For other errors, display a generic error message
-          alert('An error occurred while logging in. Please try again later.');
+          this.loginError = 'An error occurred while logging in. Please try again later.';
         }
       }
     );
   }
-
-
 }
-
-
-
