@@ -41,7 +41,7 @@ body{
   border-color: #D6D6D6;
   border-width: 2px;
   padding-top: 10%;
-  padding-left: 35%;
+  padding-left: 25%;
   text-align: left;
   font-size: 150%;
   line-height: 50px;
@@ -49,6 +49,18 @@ body{
   .nav_bold{
     font-weight: bold;
   }
+
+  div{
+
+    align-items: center;
+    gap: 10px;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
 }
 
 .link-style{
@@ -240,6 +252,11 @@ body{
   margin-bottom: 20px;
 }
 
+.tattoo-week-img img{
+  width: 200px;
+  height: 200px;
+}
+
 .image-1 {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
@@ -257,14 +274,18 @@ body{
 .featured-artists{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px 1px;
+  row-gap: 30px;
+  column-gap: 1px;
   justify-content: center;
-  grid-auto-rows: minmax(100px, auto);
 
 }
 
 .featured-artists img{
-  border-radius: 50%;
+  border-radius: 100%;
+  max-width: 100px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
 
@@ -302,8 +323,27 @@ body{
   grid-row: 2 / span 1;
 }
 
+
 .featured-artists-container {
   margin-top: 70px;
   max-height: calc(100vh - 150px);
   padding-bottom: 100px;
+}
+
+.artist-name{
+  font-size: 14px;
+  text-align: left;
+  margin-top: 5px;
+  font-weight: bold;
+
+}
+
+.artist-link {
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+}
+
+.artist-link:hover {
+  color: #555;
 }
