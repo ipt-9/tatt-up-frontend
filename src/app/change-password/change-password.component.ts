@@ -15,6 +15,9 @@ export class ChangePasswordComponent {
       email: ['', [Validators.required, Validators.email]],
     });
   }
+  navigateToLogin(): void {
+    this.router.navigateByUrl('/user-login');
+  }
 
 
   }
