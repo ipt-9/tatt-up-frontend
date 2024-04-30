@@ -67,6 +67,6 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
 
   providers: [],
   bootstrap:
-  [HomepageComponent],
+  [AppComponent],
 })
 export class AppModule { }
