@@ -17,11 +17,11 @@ import {ExploreComponent} from "./explore/explore.component";
 import {LegalComponent} from "./legal/legal.component";
 import {ForgotPasswordComponent} from "./forgot-password/forgot-password.component";
 import {ChangePasswordComponent} from "./change-password/change-password.component";
-<<<<<<< HEAD
+
 import {FavoritesComponent} from "./favorites/favorites.component";
-=======
+
 import {ProfileSettingsComponent} from "./profile-settings/profile-settings.component";
->>>>>>> 081bae1945ca06351829cdad324d66f86da505d8
+
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
