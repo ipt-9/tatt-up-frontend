@@ -3,6 +3,7 @@ import {Router} from "@angular/router";
 import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
