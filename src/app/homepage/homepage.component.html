@@ -4,14 +4,14 @@
 <div class="grid">
 
 
-  <div class="title">Tatt' up</div>
+  <div (click)="navigateToHomepage()"  class="title">Tatt' up</div>
   <div class="nav">
     <div class="sidebar-content">
-      <div class="nav_bold">Home</div>
-      <div>Explore</div>
-      <div>Favorites</div>
-      <div class="link-style" (click)="openCreatePostModal()">Create Post</div>
-      <div href="/about">About Us</div>
+      <div class="nav_bold" (click)="navigateToHomepage()">Home</div>
+      <div class="hover" (click)="navigateToExplore()">Explore  </div>
+      <div class="hover" (click)="navigateToFavorites()">Favorites</div>
+      <div  class="link-style" (click)="openCreatePostModal()">Create Post</div>
+      <div class="hover" (click)="navigateToAbout()">About Us</div>
     </div>
   </div>
 
