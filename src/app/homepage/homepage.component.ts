@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
