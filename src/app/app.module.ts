@@ -30,6 +30,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -62,11 +63,12 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
     NgbModule,
     MatSnackBarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
 
   providers: [],
   bootstrap:
-  [HomepageComponent],
+  [AppComponent],
 })
 export class AppModule { }

@@ -8,6 +8,8 @@ body{
   grid-template-rows: 10vh 85vh;
 
 }
+
+
 .title{
   grid-row: 1;
   grid-column: 1;
@@ -50,6 +52,7 @@ body{
     font-weight: bold;
   }
 
+
   div{
 
     align-items: center;
@@ -61,12 +64,19 @@ body{
     height: 30px;
   }
 
+
+  .hover:hover{
+    font-weight: bold;
+  }
+
 }
 
 .link-style{
   cursor: pointer;
 }
-
+.link-style:hover{
+  font-weight: bold;
+}
 
 .main{
   grid-row: 2;

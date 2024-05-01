@@ -3,9 +3,10 @@
 <div class="grid">
 
 
-  <div class="title">Tatt' up</div>
+  <div (click)="navigateToHomepage()"  class="title">Tatt' up</div>
   <div class="nav">
     <div class="sidebar-content">
+<!-- 
       <div class="nav_bold">
         <img src="assets/images/home-bold.png" alt="Home Icon"> Home
       </div>
@@ -13,6 +14,22 @@
       <div> <img src="assets/images/list.png" alt="Favourites Icon"> Favorites</div>
       <div class="link-style" (click)="openCreatePostModal()"> <img src="assets/images/upload.png" alt="Upload Icon"> Create Post</div>
       <div href="/about"> <img src="assets/images/info.png" alt="Info Icon"> About Us</div>
+
+      <!--<i class="fas fa-home"></i>
+           <i class="fas fa-search"></i>
+           <i class="fas fa-bookmark"></i>
+            <i class="fas fa-upload"></i>
+           -->
+
+      <div class="nav_bold" (click)="navigateToHomepage()">Home</div>
+
+      <div class="hover" (click)="navigateToExplore()">Explore  </div>
+
+      <div class="hover" (click)="navigateToFavorites()">Favorites</div>
+
+      <div  class="link-style" (click)="openCreatePostModal()">Create Post</div>
+      <div class="hover" (click)="navigateToAbout()">About Us</div>
+
     </div>
   </div>
 
