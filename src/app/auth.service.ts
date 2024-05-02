@@ -36,10 +36,17 @@ export class AuthService {
     );
   }
 
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-      console.error(error);
-      return of(result as T);
+      console.error(`${operation} failed: ${error.message}`);
+      // Let the app keep running by rethrowing the error
+      return throwError(() => error);
     };
   }
+
+
+
+
+
 }

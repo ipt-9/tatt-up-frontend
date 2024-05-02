@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -24,6 +25,9 @@ export class HomepageComponent {
     this.router.navigateByUrl('/explore');
   }
 
+  navigateToFavorites(): void{
+    this.router.navigateByUrl('/favorites');
+  }
   navigateToSignUp(): void {
     this.router.navigateByUrl('/user-signup');
   }
@@ -31,5 +35,11 @@ export class HomepageComponent {
   navigateToLogin(): void {
     this.router.navigateByUrl('/user-login');
   }
+
+  navigateToHomepage():void{
+    this.router.navigateByUrl('');
+  }
+
+
 
 }
