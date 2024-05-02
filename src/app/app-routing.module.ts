@@ -17,7 +17,12 @@ import {ExploreComponent} from "./explore/explore.component";
 import {LegalComponent} from "./legal/legal.component";
 import {ForgotPasswordComponent} from "./forgot-password/forgot-password.component";
 import {ChangePasswordComponent} from "./change-password/change-password.component";
+import {UserProfilesComponent} from "./user-profiles/user-profiles.component";
+
+import {FavoritesComponent} from "./favorites/favorites.component";
+
 import {ProfileSettingsComponent} from "./profile-settings/profile-settings.component";
+
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -32,10 +37,12 @@ const routes: Routes = [
   {path: 'user-login', component:UserLoginComponent},
   {path: 'homepage', component:HomepageComponent},
   {path: 'about', component:AboutComponent},
+  {path: 'favorites', component:FavoritesComponent},
   {path: 'explore', component:ExploreComponent},
   {path: 'legal', component:LegalComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'change-password', component:ChangePasswordComponent},
+  {path: 'user-profile', component:UserProfilesComponent},
   {path: 'profile-settings', component:ProfileSettingsComponent}
 ];
 

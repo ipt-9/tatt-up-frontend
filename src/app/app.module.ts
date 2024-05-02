@@ -29,8 +29,14 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UserProfilesComponent } from './user-profiles/user-profiles.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+<<<<<<< HEAD
 import { ContactServiceComponent } from './contact-service/contact-service.component';
+=======
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {NgOptimizedImage} from "@angular/common";
+>>>>>>> 968bbe213e41a707660779970d14d9ec677c4e1f
 
 
 @NgModule({
@@ -51,8 +57,13 @@ import { ContactServiceComponent } from './contact-service/contact-service.compo
     LegalComponent,
     ContactFormComponent,
     ChangePasswordComponent,
+<<<<<<< HEAD
     ProfileSettingsComponent,
     ContactServiceComponent
+=======
+    UserProfilesComponent,
+    ProfileSettingsComponent
+>>>>>>> 968bbe213e41a707660779970d14d9ec677c4e1f
   ],
   imports: [
     BrowserModule,
@@ -64,7 +75,9 @@ import { ContactServiceComponent } from './contact-service/contact-service.compo
     NgbModule,
     MatSnackBarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule,
+    NgOptimizedImage
   ],
 
   providers: [],
