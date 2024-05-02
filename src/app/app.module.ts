@@ -29,6 +29,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UserProfilesComponent } from './user-profiles/user-profiles.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {NgOptimizedImage} from "@angular/common";
@@ -52,6 +53,7 @@ import {NgOptimizedImage} from "@angular/common";
     LegalComponent,
     ContactFormComponent,
     ChangePasswordComponent,
+    UserProfilesComponent,
     ProfileSettingsComponent
   ],
   imports: [
