@@ -122,6 +122,15 @@ body{
     border-radius: 50px;
     background-color: #F0F0F0;
     cursor: pointer;
+    display: inline-flex;
+    margin-left: 7%;
+  }
+
+  .search-button img{
+    margin-right: 10px;
+    max-width: 100%;
+    width: 100px;
+    height: auto;
   }
 }
 
