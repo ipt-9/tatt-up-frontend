@@ -6,9 +6,7 @@ body{
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 10vh 85vh;
-
 }
-
 
 .title{
   grid-row: 1;
@@ -23,7 +21,6 @@ body{
   font-size: 4vh;
   text-align: center;
   padding-top: 8%;
-
 }
 
 .header{
@@ -62,7 +59,10 @@ body{
   cursor: pointer;
 }
 .link-style:hover{
+<<<<<<< HEAD
+=======
 
+>>>>>>> c7b83e6ae4477c97cdcb2eb51d5a43340e8aa22a
   font-weight: bold;
   }
 
@@ -71,11 +71,6 @@ body{
     gap: 10px;
   }
 
-  img{
-    width: 30px;
-    height: 30px;
-  }
-}
 
 .main{
   grid-row: 2;

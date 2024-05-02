@@ -31,6 +31,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {NgOptimizedImage} from "@angular/common";
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgOptimizedImage
   ],
 
   providers: [],
