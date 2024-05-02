@@ -27,8 +27,8 @@ body {
 .header {
   grid-row: 1;
   grid-column: 2;
-  border-bottom: solid;
-  border-color: #d6d6d6;
+  //border-bottom: solid;
+  //border-color: #d6d6d6;
   border-width: 2px;
   padding-top: 1vh;
   font-size: 20px;
@@ -150,27 +150,6 @@ link-style{
   background-color: black;
 }
 
-//----------------------------- login/signup button ------------------------------
-
-.lgsubutton {
-  padding: 8px 15px;
-  border-radius: 18px;
-  font-weight: bold;
-  font-size: 20px;
-  border: 2.5px solid black;
-  margin-right: 10px;
-}
-
-#log_in_btnlog_in_btn {
-  color: black;
-  background-color: white;
-}
-
-#sign_up_btn {
-  color: white;
-  background-color: black;
-}
-
 
   //----------------------------- login/signup button ------------------------------
 
@@ -193,30 +172,14 @@ link-style{
     margin-right: 10px;
   }
 
-//----------------------------- content ------------------------------
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 10vh 85vh;
-}
-
-  #log_in_btnlog_in_btn {
-    color: black;
-    background-color: white;
-  }
-
-  #sign_up_btn {
-    color: white;
-    background-color: black;
-  }
-
 
   //----------------------------- content ------------------------------
   .grid-container {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 10vh 85vh;
+    grid-template-rows: 1fr 85vh;
+    margin-left: 150px;
+    margin-top: 50px;
   }
 
   .grid-info {
@@ -311,3 +274,25 @@ link-style{
     font-size: 18px;
     color: #C1C1C1;
   }
+
+.posts-pic {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.posts-pic img {
+  width: 100%;
+  height: auto;
+  display: block;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+
