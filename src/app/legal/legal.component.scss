@@ -69,11 +69,12 @@ body {
   width: 100%;
   position: fixed;
   background-color: #e9e9e9;
-  height: 5vh;
-  margin-left: -7px;
-  padding: 8px;
+  height: 3.4vh;
+
+  padding: 0.5vh;
   font-family: Arial, serif;
   font-size: 15px;
+  bottom: 0;
 }
 .footer-container {
   display: grid;
@@ -92,6 +93,7 @@ body {
   grid-column: 2;
   text-align: left;
   padding-top: 2%;
+  font-weight:550;
 }
 
 .footer-links {
@@ -99,7 +101,7 @@ body {
   display: flex;
   gap: 15%;
   padding-top: 2%;
-
+  font-weight: 550;
   a {
     text-decoration: none;
     color: #000000;
