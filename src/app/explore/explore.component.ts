@@ -11,6 +11,12 @@ import { NgForOf } from '@angular/common';
   styleUrls: ['./explore.component.scss'],
 })
 export class ExploreComponent {
+  searchTerm: string = ''; //  search term entered by the user
+  searchResults: any[] = []; // search results fetched from the server
+  filteredResults: any[] = []; // Holds the search results that match the selected category
+  showFilterPanel: boolean = false;
+  category: string = ''; // category that the user selects for filtering
+
   constructor(
     private router: Router,
     private modalService: NgbModal,
@@ -45,15 +51,39 @@ export class ExploreComponent {
     this.router.navigateByUrl('');
   }
 
-  searchResults: any[] = [];
-  search(term: string): void {
+  fetchSearchResults(term: string): void {
     this.searchService.search(term).subscribe({
       next: (data) => {
         this.searchResults = data;
+        // Update filteredResults with initial search results
+        this.filteredResults = data;
       },
       error: (error) => {
         console.error('There was an error!', error);
       },
     });
   }
+
+  onSearchChange(): void {
+    // Perform search when the user types in the search input field
+    // You can optionally debounce the search to reduce API calls
+    this.fetchSearchResults(this.searchTerm);
+  }
+
+
+  filterByCategory(category: string): void {
+    this.filteredResults = this.searchResults.filter(result => result.category === category);
+    // You can add more filter criteria as needed
+  }
+
+
+  // Method to apply filter
+  showFilter: any;
+  applyFilter(filterType: string, value: any): void {
+    // Implement your filter logic here
+    // For demonstration, assume you filter the results based on category
+    this.filteredResults = this.searchResults.filter(result => result.category === value);
+    // You can add more filter criteria as needed
+  }
+
 }

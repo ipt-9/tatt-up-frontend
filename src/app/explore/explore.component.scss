@@ -181,6 +181,7 @@ body {
   font-size: 6.5vh;
   font-weight: bold;
 }
+
 .lgsubutton {
   padding: 8px 15px;
   border-radius: 18px;
@@ -189,108 +190,48 @@ body {
   border: 2.5px solid black;
   margin-right: 10px;
 }
+
 #log_in_btnlog_in_btn {
   color: black;
   background-color: white;
 }
+
 #sign_up_btn {
   color: white;
   background-color: black;
 }
 
-//------------------------- content -------------------------
 
-.grid-monetize-etwot {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  padding-top: 50px;
+.filter-button {
+  border-radius: 100%;
+  width: 40px; /* Adjust the width as needed */
+  height: 40px;
+  border: solid black 2px;
+  margin-left: 5%;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
-.homepage-monetize-title {
-  width: 100%;
-  margin-top: 100px;
-  margin-left: 13px;
-  font-family: Arial, serif;
-  font-size: 23px;
-  font-weight: bold;
-  grid-column: 1;
-  grid-row: 1;
+.filter-dropdown {
+  position: absolute;
+  display: none;
+  top: calc(100% + 10px);
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  div {
+    padding: 5px 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
 }
 
-.homepage-etwot-title {
-  width: 100%;
-  margin-top: 100px;
-  font-family: Arial, serif;
-  font-size: 23px;
-  font-weight: bold;
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.homepage-monetize-text {
-  width: 100%;
-  font-family: Arial, serif;
-  font-size: 21px;
-  grid-column: 1;
-  margin-left: 13px;
-}
-
-.homepage-etwot-text {
-  width: 100%;
-  font-family: Arial, serif;
-  font-size: 21px;
-  grid-column: 2;
-}
-
-.learnmore-btn {
-  border-color: black;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border-radius: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  grid-column: 1;
-  width: 150px;
-  height: 50px;
-  margin-left: 13px;
-}
-
-.learnmore-btn:hover {
-  background-color: #a4a4a4;
-  color: black;
-}
-
-.explore-btn {
-  border-color: black;
-  color: black;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border-radius: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  grid-column: 2;
-  width: 150px;
-  height: 50px;
-}
-
-.explore-btn:hover {
-  background-color: #a4a4a4;
-  color: black;
-}
-
-.featured-aritsts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-content: center;
+.filter-container:hover .filter-dropdown {
+  display: block;
 }
