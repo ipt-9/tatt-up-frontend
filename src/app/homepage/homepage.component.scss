@@ -5,7 +5,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 10vh 85vh;
+  grid-template-rows: auto auto auto;
 }
 
 .title {
@@ -32,6 +32,7 @@ body {
   padding-top: 1vh;
   font-size: 20px;
   text-align: end;
+  height: auto;
 }
 
 .nav {
@@ -97,11 +98,12 @@ body {
   width: 100%;
   position: fixed;
   background-color: #e9e9e9;
-  height: 5vh;
-  margin-left: -7px;
-  padding: 8px;
+  height: 3.4vh;
+
+  padding: 0.5vh;
   font-family: Arial, serif;
   font-size: 15px;
+  bottom: 0;
 }
 
 .footer-container {
@@ -121,6 +123,7 @@ body {
   grid-column: 2;
   text-align: left;
   padding-top: 2%;
+  font-weight: 550;
 }
 
 .footer-links {
@@ -128,6 +131,7 @@ body {
   display: flex;
   gap: 15%;
   padding-top: 2%;
+  font-weight: 550;
 
   a {
     text-decoration: none;
@@ -174,10 +178,9 @@ body {
 
 .homepage-monetize-title {
   width: 100%;
-  margin-top: 100px;
-  margin-left: 13px;
+  margin-top: 40px;
   font-family: Arial, serif;
-  font-size: 23px;
+  font-size: 4vh;
   font-weight: bold;
   grid-column: 1;
   grid-row: 1;
@@ -185,9 +188,9 @@ body {
 
 .homepage-etwot-title {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 40px;
   font-family: Arial, serif;
-  font-size: 23px;
+  font-size: 4vh;
   font-weight: bold;
   grid-column: 2;
   grid-row: 1;
@@ -196,33 +199,35 @@ body {
 .homepage-monetize-text {
   width: 100%;
   font-family: Arial, serif;
-  font-size: 21px;
+  font-size: 2.5vh;
   grid-column: 1;
-  margin-left: 13px;
+  margin-top: -2%;
+  margin-bottom: 15px;
 }
 
 .homepage-etwot-text {
   width: 100%;
   font-family: Arial, serif;
-  font-size: 21px;
+  font-size: 2.5vh;
   grid-column: 2;
+  margin-top: -2%;
+  margin-bottom: 15px;
 }
 
 .learnmore-btn {
-  border-color: black;
   color: black;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 2vh;
   cursor: pointer;
   background-color: #ffffff;
-  border-radius: 12px;
+  border-radius: 25px;
   text-transform: uppercase;
   font-weight: bold;
   grid-column: 1;
-  width: 150px;
-  height: 50px;
-  margin-left: 13px;
+  height: 4.5vh;
+  width: 18vh;
+  border: 3px solid black;
 }
 
 .learnmore-btn:hover {
@@ -231,21 +236,19 @@ body {
 }
 
 .explore-btn {
-  border-color: black;
   color: black;
-  padding: 10px 25px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  font-size: 2vh;
   cursor: pointer;
   background-color: #ffffff;
-  border-radius: 12px;
+  border-radius: 25px;
   text-transform: uppercase;
   font-weight: bold;
   grid-column: 2;
-  width: 150px;
-  height: 50px;
+  height: 4.5vh;
+  width: 16vh;
+  border: 3px solid black;
 }
 
 .explore-btn:hover {
@@ -257,20 +260,26 @@ body {
 
 .tattoo-week-img {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px 1px;
   justify-content: center;
 }
 
 .tattoos-title {
   font-weight: bold;
-  font-size: 23px;
+  font-size: 3.5vh;
   margin-bottom: 20px;
 }
 
 .tattoo-week-img img {
-  width: 200px;
-  height: 200px;
+  width: 25vh;
+  height: 25vh;
+}
+.artist-name {
+  font-size: 1.5vh;
+  text-align: left;
+  margin-top: 5px;
+  font-weight: bold;
 }
 
 .image-1 {
@@ -290,10 +299,10 @@ body {
 
 .featured-artists {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   row-gap: 30px;
-  column-gap: 1px;
-  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
 }
 
 .featured-artists img {
@@ -305,26 +314,26 @@ body {
 }
 
 .artist-title {
-  grid-column: 2 / span 3;
-  text-align: left;
-  grid-row: 1;
-  margin-bottom: 10px;
+  text-align: center;
+  margin-left: -22vh;
+  margin-bottom: 2%;
+  margin-top: 5%;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 3.5vh;
 }
 
 .image1 {
-  grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.image2 {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
 }
 
+.image2 {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+
 .image3 {
-  grid-column: 1 / span 1;
+  grid-column: 4 / span 1;
   grid-row: 3 / span 1;
 }
 
@@ -339,7 +348,7 @@ body {
 }
 
 .image6 {
-  grid-column: 3 / span 1;
+  grid-column: 4 / span 1;
   grid-row: 2 / span 1;
 }
 
@@ -347,14 +356,11 @@ body {
   margin-top: 70px;
   max-height: calc(100vh - 150px);
   padding-bottom: 100px;
+  margin-left: -13px;
+
 }
 
-.artist-name {
-  font-size: 14px;
-  text-align: left;
-  margin-top: 5px;
-  font-weight: bold;
-}
+
 
 .artist-link {
   text-decoration: none;
