@@ -4,11 +4,11 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  selector: 'app-user-profiles',
+  templateUrl: './user-profiles.component.html',
+  styleUrls: ['./user-profiles.component.scss']
 })
-export class LayoutComponent {
+export class UserProfilesComponent {
   constructor(private router: Router, private modalService: NgbModal) {}
 
   openCreatePostModal() {
@@ -21,9 +21,6 @@ export class LayoutComponent {
     this.router.navigateByUrl('/explore');
   }
 
-  navigateToFavorites(): void{
-    this.router.navigateByUrl('/favorites');
-  }
   navigateToSignUp(): void {
     this.router.navigateByUrl('/user-signup');
   }
@@ -31,10 +28,5 @@ export class LayoutComponent {
   navigateToLogin(): void {
     this.router.navigateByUrl('/user-login');
   }
-
-  navigateToHomepage():void{
-    this.router.navigateByUrl('');
-  }
-
 
 }
