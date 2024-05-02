@@ -60,11 +60,26 @@ body{
     height: 30px;
   }
 
+
+  .hover:hover{
   .hover:hover {
     font-weight: bold;
   }
 
+  .hover:hover{
+    font-weight: bold;
+  }
 
+
+}
+
+
+.link-style{
+  cursor: pointer;
+}
+.link-style:hover{
+  font-weight: bold;
+}
   .link-style {
     cursor: pointer;
   }

@@ -6,9 +6,7 @@ body{
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 10vh 85vh;
-
 }
-
 
 .title{
   grid-row: 1;
@@ -28,13 +26,15 @@ body{
 
 .header{
   grid-row: 1;
-  grid-column: 2;
+  grid-template-columns: 1fr auto;
   border-bottom: solid;
   border-color: #D6D6D6;
   border-width: 2px;
   padding-top: 1vh;
   font-size: 20px;
-  text-align: end;
+  align-items: center;
+
+
 }
 .nav{
   grid-row: 2;
@@ -70,6 +70,59 @@ body{
   padding-top: 3%;
   padding-left: 5%;
   font-size: 20px;
+}
+
+.login-signup-container {
+  display: flex;
+  margin-left: auto;
+
+}
+
+.search-container{
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  margin-left: 10%;
+}
+
+.search-label{
+  color: #000000;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#search-input{
+  border-radius: 50px;
+  border: 01px solid #ccc;
+  padding: 2% 15% 2% 5%;
+  background-color: #F0F0F0;
+  outline: none;
+}
+
+.search-bar {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  height: 3%;
+  border-radius: 50px;
+  background-color: #F0F0F0;
+  border: 1px solid #ccc;
+
+  #search-input {
+    border: none;
+    padding: 2% 5%;
+    background-color: transparent;
+    margin-right: -1px;
+  }
+
+  .search-button {
+    padding: 2% 5%;
+    border: none;
+    border-radius: 50px;
+    background-color: #F0F0F0;
+    cursor: pointer;
+  }
 }
 
 .footer{
