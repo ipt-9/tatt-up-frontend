@@ -9,8 +9,8 @@ body {
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 10vh 85vh;
 }
-.title {
 
+.title {
   grid-row: 1;
   grid-column: 1;
   border-right: solid;
@@ -59,16 +59,17 @@ link-style{
   cursor: pointer;
 }
 
-.link-style:hover{
-.nav_bold {
+.link-style:hover {
+  .nav_bold {
+    font-weight: bold;
+  }
 
-  font-weight: bold;
-}
-.main {
-  grid-row: 2;
-  grid-column: 2;
-  padding: 5% 5%;
-  font-size: 20px;
+  .main {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 5% 5%;
+    font-size: 20px;
+  }
 }
 
 .footer {
@@ -107,13 +108,12 @@ link-style{
   display: flex;
   gap: 15%;
   padding-top: 2%;
-
+}
 
   a {
     text-decoration: none;
     color: #000000;
   }
-}
 
 
 .main-title {
@@ -144,6 +144,7 @@ link-style{
   color: black;
   background-color: white;
 }
+
 #sign_up_btn {
   color: white;
   background-color: black;
@@ -158,12 +159,13 @@ link-style{
   font-size: 20px;
   border: 2.5px solid black;
   margin-right: 10px;
-
 }
+
 #log_in_btnlog_in_btn {
   color: black;
   background-color: white;
 }
+
 #sign_up_btn {
   color: white;
   background-color: black;
@@ -176,6 +178,7 @@ link-style{
     color: black;
     background-color: white;
   }
+
   #sign_up_btn {
     color: white;
     background-color: black;
@@ -189,6 +192,7 @@ link-style{
     border: 2.5px solid black;
     margin-right: 10px;
   }
+
 //----------------------------- content ------------------------------
 
 .grid-container {
@@ -201,6 +205,7 @@ link-style{
     color: black;
     background-color: white;
   }
+
   #sign_up_btn {
     color: white;
     background-color: black;
