@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -13,8 +14,7 @@ body {
   border-right: solid;
   border-color: #d6d6d6;
   border-width: 2px;
-
-  font-family: "Cageroll", serif;
+  font-family: 'Cageroll', serif;
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 4vh;
@@ -32,6 +32,7 @@ body {
   font-size: 20px;
   text-align: end;
 }
+
 .nav {
   grid-row: 2;
   grid-column: 1;
@@ -50,12 +51,14 @@ body {
     font-weight: bold;
   }
 }
+
 link-style {
   cursor: pointer;
 }
 .link-style:hover {
   font-weight: bold;
 }
+
 .main {
   grid-row: 2;
   grid-column: 2;
@@ -75,6 +78,7 @@ link-style {
   font-size: 15px;
   bottom: 0;
 }
+
 .footer-container {
   display: grid;
   grid-template-columns: 20vh 25vh 25vh 30vh;
@@ -102,6 +106,7 @@ link-style {
   padding-top: 2%;
   font-weight: 550;
 
+
   a {
     text-decoration: none;
     color: #000000;
@@ -117,6 +122,7 @@ link-style {
   font-size: 70px;
   font-weight: bold;
 }
+
 .lgsubutton {
   padding: 8px 15px;
   border-radius: 18px;
