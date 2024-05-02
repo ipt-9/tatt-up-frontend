@@ -1,3 +1,5 @@
+//app.module.ts
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
@@ -28,6 +30,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserProfilesComponent } from './user-profiles/user-profiles.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 
 
 @NgModule({
@@ -48,7 +51,8 @@ import { UserProfilesComponent } from './user-profiles/user-profiles.component';
     LegalComponent,
     ContactFormComponent,
     ChangePasswordComponent,
-    UserProfilesComponent
+    UserProfilesComponent,
+    ProfileSettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -59,12 +63,12 @@ import { UserProfilesComponent } from './user-profiles/user-profiles.component';
     MatButtonModule,
     NgbModule,
     MatSnackBarModule,
-
     FormsModule,
     ReactiveFormsModule
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap:
+  [HomepageComponent],
 })
 export class AppModule { }

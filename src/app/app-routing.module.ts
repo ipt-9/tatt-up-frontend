@@ -1,3 +1,6 @@
+// app-routing.module.ts
+
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent} from "./layout/layout.component";
@@ -15,6 +18,7 @@ import {LegalComponent} from "./legal/legal.component";
 import {ForgotPasswordComponent} from "./forgot-password/forgot-password.component";
 import {ChangePasswordComponent} from "./change-password/change-password.component";
 import {UserProfilesComponent} from "./user-profiles/user-profiles.component";
+import {ProfileSettingsComponent} from "./profile-settings/profile-settings.component";
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -33,7 +37,8 @@ const routes: Routes = [
   {path: 'legal', component:LegalComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'change-password', component:ChangePasswordComponent},
-  {path: 'user-profile', component:UserProfilesComponent}
+  {path: 'user-profile', component:UserProfilesComponent},
+  {path: 'profile-settings', component:ProfileSettingsComponent}
 ];
 
 @NgModule({
