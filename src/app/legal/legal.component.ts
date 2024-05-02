@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
+import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
 
 @Component({
   selector: 'app-legal',
   templateUrl: './legal.component.html',
-  styleUrls: ['./legal.component.scss']
+  styleUrls: ['./legal.component.scss'],
 })
 export class LegalComponent {
-  constructor(private router: Router, private modalService: NgbModal) {}
+  constructor(
+    private router: Router,
+    private modalService: NgbModal,
+  ) {}
 
   openCreatePostModal() {
     this.modalService.open(UploadPopupComponent);
@@ -21,7 +24,7 @@ export class LegalComponent {
     this.router.navigateByUrl('/explore');
   }
 
-  navigateToFavorites(): void{
+  navigateToFavorites(): void {
     this.router.navigateByUrl('/favorites');
   }
   navigateToSignUp(): void {
@@ -32,7 +35,7 @@ export class LegalComponent {
     this.router.navigateByUrl('/user-login');
   }
 
-  navigateToHomepage():void{
+  navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }
 

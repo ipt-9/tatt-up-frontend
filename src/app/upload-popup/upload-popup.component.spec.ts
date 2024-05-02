@@ -7,7 +7,7 @@ describe('UploadPopupComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [UploadPopupComponent]
+      declarations: [UploadPopupComponent],
     });
     fixture = TestBed.createComponent(UploadPopupComponent);
     component = fixture.componentInstance;

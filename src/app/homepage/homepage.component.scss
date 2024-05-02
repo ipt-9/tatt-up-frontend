@@ -1,21 +1,21 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
-.grid{
+.grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 10vh 85vh;
 }
 
-.title{
+.title {
   grid-row: 1;
   grid-column: 1;
-  border-right:solid ;
-  border-color: #D6D6D6;
+  border-right: solid;
+  border-color: #d6d6d6;
   border-width: 2px;
 
-  font-family: 'Cageroll', serif;
+  font-family: "Cageroll", serif;
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 4vh;
@@ -23,11 +23,11 @@ body{
   padding-top: 8%;
 }
 
-.header{
+.header {
   grid-row: 1;
   grid-column: 2;
   border-bottom: solid;
-  border-color: #D6D6D6;
+  border-color: #d6d6d6;
   border-width: 2px;
   padding-top: 1vh;
   font-size: 20px;
@@ -38,7 +38,7 @@ body{
   grid-row: 2;
   grid-column: 1;
   border-right: solid;
-  border-color: #D6D6D6;
+  border-color: #d6d6d6;
   border-width: 2px;
   padding-top: 10%;
   padding-left: 25%;
@@ -61,10 +61,21 @@ body{
   }
 
   .hover:hover {
-    font-weight: bold;
+    .hover:hover {
+      font-weight: bold;
+    }
+
+    .hover:hover {
+      font-weight: bold;
+    }
   }
 
-
+  .link-style {
+    cursor: pointer;
+  }
+  .link-style:hover {
+    font-weight: bold;
+  }
   .link-style {
     cursor: pointer;
   }
@@ -72,295 +83,285 @@ body{
   .link-style:hover {
     font-weight: bold;
   }
-
 }
 
-  .main {
-    grid-row: 2;
-    grid-column: 2;
-    padding-top: 3%;
-    padding-left: 5%;
-    font-size: 20px;
-  }
+.main {
+  grid-row: 2;
+  grid-column: 2;
+  padding-top: 3%;
+  padding-left: 5%;
+  font-size: 20px;
+}
 
-  .footer {
-    width: 100%;
-    position: fixed;
-    background-color: #E9E9E9;
-    height: 5vh;
-    margin-left: -7px;
-    padding: 8px;
-    font-family: Arial, serif;
-    font-size: 15px;
-  }
+.footer {
+  width: 100%;
+  position: fixed;
+  background-color: #e9e9e9;
+  height: 5vh;
+  margin-left: -7px;
+  padding: 8px;
+  font-family: Arial, serif;
+  font-size: 15px;
+}
 
-  .footer-container {
-    display: grid;
-    grid-template-columns: 20vh 25vh 25vh 30vh;
-  }
+.footer-container {
+  display: grid;
+  grid-template-columns: 20vh 25vh 25vh 30vh;
+}
 
-  .footer-logo {
-    grid-column: 1;
-    margin-left: 0;
-    font-family: "Cageroll", serif;
-    font-size: 24px;
-    text-align: center;
+.footer-logo {
+  grid-column: 1;
+  margin-left: 0;
+  font-family: "Cageroll", serif;
+  font-size: 24px;
+  text-align: center;
+}
 
-  }
+.footer-copy {
+  grid-column: 2;
+  text-align: left;
+  padding-top: 2%;
+}
 
-  .footer-copy {
-    grid-column: 2;
-    text-align: left;
-    padding-top: 2%;
-  }
+.footer-links {
+  grid-column: 3;
+  display: flex;
+  gap: 15%;
+  padding-top: 2%;
 
-  .footer-links {
-    grid-column: 3;
-    display: flex;
-    gap: 15%;
-    padding-top: 2%;
-
-
-    a {
-      text-decoration: none;
-      color: #000000;
-    }
-  }
-
-  .homepage-main-title {
-    width: 100%;
-    position: relative;
-    height: 8vh;
-    font-family: Arial, serif;
-    font-size: 6.5vh;
-    font-weight: bold;
-  }
-
-  .lgsubutton {
-    padding: 8px 15px;
-    border-radius: 18px;
-    font-weight: bold;
-    font-size: 20px;
-    border: 2.5px solid black;
-    margin-right: 10px;
-
-  }
-
-  #log_in_btnlog_in_btn {
-    color: black;
-    background-color: white;
-  }
-
-  #sign_up_btn {
-    color: white;
-    background-color: black;
-  }
-
-  //------------------------- content -------------------------
-
-
-  .grid-monetize-etwot {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    padding-top: 50px;
-  }
-
-  .homepage-monetize-title {
-    width: 100%;
-    margin-top: 100px;
-    margin-left: 13px;
-    font-family: Arial, serif;
-    font-size: 23px;
-    font-weight: bold;
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .homepage-etwot-title {
-    width: 100%;
-    margin-top: 100px;
-    font-family: Arial, serif;
-    font-size: 23px;
-    font-weight: bold;
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .homepage-monetize-text {
-    width: 100%;
-    font-family: Arial, serif;
-    font-size: 21px;
-    grid-column: 1;
-    margin-left: 13px;
-  }
-
-  .homepage-etwot-text {
-    width: 100%;
-    font-family: Arial, serif;
-    font-size: 21px;
-    grid-column: 2;
-  }
-
-  .learnmore-btn {
-    border-color: black;
-    color: black;
-    text-align: center;
+  a {
     text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #ffffff;
-    border-radius: 12px;
-    text-transform: uppercase;
-    font-weight: bold;
-    grid-column: 1;
-    width: 150px;
-    height: 50px;
-    margin-left: 13px;
+    color: #000000;
   }
+}
 
-  .learnmore-btn:hover {
-    background-color: #A4A4A4;
-    color: black;
-  }
+.homepage-main-title {
+  width: 100%;
+  position: relative;
+  height: 8vh;
+  font-family: Arial, serif;
+  font-size: 6.5vh;
+  font-weight: bold;
+}
 
-  .explore-btn {
-    border-color: black;
-    color: black;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #ffffff;
-    border-radius: 12px;
-    text-transform: uppercase;
-    font-weight: bold;
-    grid-column: 2;
-    width: 150px;
-    height: 50px;
-  }
+.lgsubutton {
+  padding: 8px 15px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2.5px solid black;
+  margin-right: 10px;
+}
 
-  .explore-btn:hover {
-    background-color: #A4A4A4;
-    color: black;
-  }
+#log_in_btnlog_in_btn {
+  color: black;
+  background-color: white;
+}
 
-  //--------------------------------------
+#sign_up_btn {
+  color: white;
+  background-color: black;
+}
 
-  .tattoo-week-img {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));;
-    gap: 20px 1px;
-    justify-content: center;
-  }
+//------------------------- content -------------------------
 
-  .tattoos-title {
-    font-weight: bold;
-    font-size: 23px;
-    margin-bottom: 20px;
-  }
+.grid-monetize-etwot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-top: 50px;
+}
 
-  .tattoo-week-img img {
-    width: 200px;
-    height: 200px;
-  }
+.homepage-monetize-title {
+  width: 100%;
+  margin-top: 100px;
+  margin-left: 13px;
+  font-family: Arial, serif;
+  font-size: 23px;
+  font-weight: bold;
+  grid-column: 1;
+  grid-row: 1;
+}
 
-  .image-1 {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-  }
+.homepage-etwot-title {
+  width: 100%;
+  margin-top: 100px;
+  font-family: Arial, serif;
+  font-size: 23px;
+  font-weight: bold;
+  grid-column: 2;
+  grid-row: 1;
+}
 
-  .image-2 {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-  }
+.homepage-monetize-text {
+  width: 100%;
+  font-family: Arial, serif;
+  font-size: 21px;
+  grid-column: 1;
+  margin-left: 13px;
+}
 
-  .image-3 {
-    grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
-  }
+.homepage-etwot-text {
+  width: 100%;
+  font-family: Arial, serif;
+  font-size: 21px;
+  grid-column: 2;
+}
 
+.learnmore-btn {
+  border-color: black;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  grid-column: 1;
+  width: 150px;
+  height: 50px;
+  margin-left: 13px;
+}
 
-  .featured-artists {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 30px;
-    column-gap: 1px;
-    justify-content: center;
+.learnmore-btn:hover {
+  background-color: #a4a4a4;
+  color: black;
+}
 
-  }
+.explore-btn {
+  border-color: black;
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  grid-column: 2;
+  width: 150px;
+  height: 50px;
+}
 
-  .featured-artists img {
-    border-radius: 100%;
-    max-width: 100px;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-  }
+.explore-btn:hover {
+  background-color: #a4a4a4;
+  color: black;
+}
 
+//--------------------------------------
 
-  .artist-title {
-    grid-column: 2 / span 3;
-    text-align: left;
-    grid-row: 1;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 23px;
-  }
+.tattoo-week-img {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px 1px;
+  justify-content: center;
+}
 
-  .image1 {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-  }
+.tattoos-title {
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
 
-  .image2 {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-  }
+.tattoo-week-img img {
+  width: 200px;
+  height: 200px;
+}
 
-  .image3 {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-  }
+.image-1 {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
 
-  .image4 {
-    grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
-  }
+.image-2 {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
 
-  .image5 {
-    grid-column: 3 / span 1;
-    grid-row: 3 / span 1;
-  }
+.image-3 {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
 
-  .image6 {
-    grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
-  }
+.featured-artists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 30px;
+  column-gap: 1px;
+  justify-content: center;
+}
 
+.featured-artists img {
+  border-radius: 100%;
+  max-width: 100px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
 
-  .featured-artists-container {
-    margin-top: 70px;
-    max-height: calc(100vh - 150px);
-    padding-bottom: 100px;
-  }
+.artist-title {
+  grid-column: 2 / span 3;
+  text-align: left;
+  grid-row: 1;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 23px;
+}
 
-  .artist-name {
-    font-size: 14px;
-    text-align: left;
-    margin-top: 5px;
-    font-weight: bold;
+.image1 {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
 
-  }
+.image2 {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
 
-  .artist-link {
-    text-decoration: none;
-    color: #333;
-    text-align: center;
-  }
+.image3 {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
 
-  .artist-link:hover {
-    color: #555;
-  }
+.image4 {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.image5 {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.image6 {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.featured-artists-container {
+  margin-top: 70px;
+  max-height: calc(100vh - 150px);
+  padding-bottom: 100px;
+}
+
+.artist-name {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.artist-link {
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+}
+
+.artist-link:hover {
+  color: #555;
+}

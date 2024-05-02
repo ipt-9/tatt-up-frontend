@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
-import {NavigationComponent} from "./navigation/navigation.component";
+import { NavigationComponent } from './navigation/navigation.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
@@ -24,17 +24,15 @@ import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
-import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserProfilesComponent } from './user-profiles/user-profiles.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {NgOptimizedImage} from "@angular/common";
-
-
+import { NgOptimizedImage } from '@angular/common';
 
 
 @NgModule({
@@ -58,7 +56,7 @@ import {NgOptimizedImage} from "@angular/common";
     ProfileSettingsComponent,
     ProfileSettingsComponent,
     UserProfilesComponent,
-    ProfileSettingsComponent
+    ProfileSettingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,11 +70,10 @@ import {NgOptimizedImage} from "@angular/common";
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    NgOptimizedImage
+    NgOptimizedImage,
   ],
 
   providers: [],
-  bootstrap:
-  [AppComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
