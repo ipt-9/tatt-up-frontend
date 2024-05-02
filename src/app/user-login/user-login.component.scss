@@ -1,10 +1,10 @@
-h1{
+h1 {
   padding-left: 5%;
   padding-top: 5%;
   font-size: 80px;
 }
-.grid-userlogin{
-  display:grid;
+.grid-userlogin {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   margin: auto;
@@ -12,14 +12,14 @@ h1{
   padding-top: 3%;
   padding-left: 5%;
 }
-.email{
+.email {
   grid-column: 1;
   grid-row: 1;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.email_2{
+.email_2 {
   grid-column: 1;
   grid-row: 2;
   margin-top: auto;
@@ -28,18 +28,18 @@ h1{
   font-size: 30px;
   border: none;
   border-bottom: 3.5px solid #000000;
-  outline:none;
+  outline: none;
   padding: 5px 0;
 }
 
-.pwd{
+.pwd {
   grid-column: 2;
   grid-row: 1;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.pwd_2{
+.pwd_2 {
   grid-column: 2;
   grid-row: 2;
   margin-top: auto;
@@ -48,35 +48,34 @@ h1{
   font-size: 30px;
   border: none;
   border-bottom: 3.5px solid #000000;
-  outline:none;
+  outline: none;
   padding: 5px 0;
 }
-.pwd_forgot{
+.pwd_forgot {
   grid-column: 2;
   grid-row: 3;
   font-family: Arial, serif;
   font-size: 20px;
-  color: #A2A2A2;
-
+  color: #a2a2a2;
 }
-.pwd_forgot_2{
-  color: #A2A2A2;
+.pwd_forgot_2 {
+  color: #a2a2a2;
   font-size: 20px;
 }
-.question{
+.question {
   grid-column: 1;
   grid-row: 9;
   font-family: Arial, serif;
   font-size: 20px;
-  color: #A2A2A2;
+  color: #a2a2a2;
 }
 
-.signup{
+.signup {
   color: black;
   font-size: 20px;
 }
 
-.login-button{
+.login-button {
   grid-column: 3;
   grid-row: 9;
   font-family: Arial, serif;
@@ -89,7 +88,7 @@ h1{
   background-color: white;
   color: black;
 }
-.login-button:hover{
+.login-button:hover {
   background-color: black;
   color: white;
 }

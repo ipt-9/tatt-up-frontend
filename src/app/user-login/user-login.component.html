@@ -2,14 +2,28 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <div class="grid-userlogin">
     <h2 class="email">EMAIL</h2>
-    <input class="email_2" type="text" formControlName="email" placeholder="Enter your email">
+    <input
+      class="email_2"
+      type="text"
+      formControlName="email"
+      placeholder="Enter your email"
+    />
 
     <h2 class="pwd">PASSWORD</h2>
 
-    <input class="pwd_2"  type="password" formControlName="password" placeholder="Enter your password">
-    <p class="pwd_forgot"><a class="pwd_forgot_2" href="/forgot-password">Forgot your Password?</a></p>
+    <input
+      class="pwd_2"
+      type="password"
+      formControlName="password"
+      placeholder="Enter your password"
+    />
+    <p class="pwd_forgot">
+      <a class="pwd_forgot_2" href="/forgot-password">Forgot your Password?</a>
+    </p>
 
-    <p class="question">Create an account? <a class="signup" href="/user-signup">Sign up</a></p>
+    <p class="question">
+      Create an account? <a class="signup" href="/user-signup">Sign up</a>
+    </p>
 
     <button class="login-button" type="submit">Login</button>
   </div>

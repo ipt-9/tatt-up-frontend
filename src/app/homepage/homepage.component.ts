@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
+import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent {
-
-  constructor(private router: Router, private modalService: NgbModal) {}
+  constructor(
+    private router: Router,
+    private modalService: NgbModal,
+  ) {}
 
   openCreatePostModal() {
     this.modalService.open(UploadPopupComponent);
@@ -25,7 +26,7 @@ export class HomepageComponent {
     this.router.navigateByUrl('/explore');
   }
 
-  navigateToFavorites(): void{
+  navigateToFavorites(): void {
     this.router.navigateByUrl('/favorites');
   }
   navigateToSignUp(): void {
@@ -36,10 +37,7 @@ export class HomepageComponent {
     this.router.navigateByUrl('/user-login');
   }
 
-  navigateToHomepage():void{
+  navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }
-
-
-
 }

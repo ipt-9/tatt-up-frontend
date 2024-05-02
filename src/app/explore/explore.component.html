@@ -1,61 +1,71 @@
 <body>
-<div class="grid">
+  <div class="grid">
+    <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
+    <div class="nav">
+      <div class="sidebar-content">
+        <div (click)="navigateToHomepage()">Home</div>
+        <div class="nav_bold" (click)="navigateToExplore()">Explore</div>
+        <div class="hover" (click)="navigateToFavorites()">Favorites</div>
+        <div class="link-style" (click)="openCreatePostModal()">
+          Create Post
+        </div>
+        <div class="hover" (click)="navigateToAbout()">About Us</div>
+      </div>
+    </div>
 
-  <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
-  <div class="nav">
-    <div class="sidebar-content">
-      <div  (click)="navigateToHomepage()">Home</div>
-      <div class="nav_bold" (click)="navigateToExplore()">Explore  </div>
-      <div class="hover" (click)="navigateToFavorites()">Favorites</div>
-      <div  class="link-style" (click)="openCreatePostModal()">Create Post</div>
-      <div class="hover" (click)="navigateToAbout()">About Us</div>
+    <div class="header">
+      <div class="search-container">
+        <label for="search-input" class="search-label">EXPLORE</label>
+        <div class="search-bar">
+          <!-- You can add an icon here if you want -->
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Explore"
+            #searchInput
+          />
+          <button class="search-button" (click)="search(searchInput.value)">
+            <img src="assets/images/explore-bold.png" />
+          </button>
+        </div>
+
+        <div class="login-signup-container">
+          <button
+            class="lgsubutton"
+            id="log_in_btn"
+            (click)="navigateToLogin()"
+          >
+            LOG IN
+          </button>
+          <button
+            class="lgsubutton"
+            id="sign_up_btn"
+            (click)="navigateToSignUp()"
+          >
+            SIGN UP
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="main">Here comes the main content</div>
+
+    <div *ngFor="let result of searchResults">
+      <!-- Display search results here -->
+      <!-- Replace 'property' with actual properties from your result objects -->
+      <p>{{ result.property }}</p>
     </div>
   </div>
 
-  <div class="header">
-    <div class="search-container">
-
-      <label for="search-input" class="search-label">EXPLORE</label>
-      <div class="search-bar">
-        <!-- You can add an icon here if you want -->
-        <input id="search-input" type="text" placeholder="Explore" #searchInput>
-        <button class="search-button" (click)="search(searchInput.value)">
-          <!-- add an icon here -->
-        </button>
-      </div>
-
-      <div class="login-signup-container">
-        <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()" >LOG IN</button>
-        <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
-      </div>
-
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">TATT'UP</div>
+      <div class="footer-copy">© 2023 Copyright</div>
+      <nav class="footer-links">
+        <a href="/legal">Legal</a>
+        <a href="/contact">Contact</a>
+        <a href="/monetization">Monetization</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </nav>
     </div>
-
-
-  </div>
-  <div class="main">Here comes the main content</div>
-
-
-
-  <div *ngFor="let result of searchResults">
-    <!-- Display search results here -->
-    <!-- Replace 'property' with actual properties from your result objects -->
-    <p>{{ result.property }}</p>
-  </div>
-
-
-</div>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">TATT'UP</div>
-    <div class="footer-copy">© 2023 Copyright</div>
-    <nav class="footer-links">
-      <a href="/legal">Legal</a>
-      <a href="/contact">Contact</a>
-      <a href="/monetization">Monetization</a>
-      <a href="/disclaimer">Disclaimer</a>
-    </nav>
-  </div>
-</footer>
+  </footer>
 </body>

@@ -1,4 +1,4 @@
-.close-button{
+.close-button {
   position: absolute;
   top: 5px;
   right: 10px;
@@ -51,7 +51,7 @@
   margin-left: 20px;
 }
 
-.caption-box textarea{
+.caption-box textarea {
   width: calc(100% - 12px);
   height: auto;
   min-height: 40px;
@@ -69,11 +69,11 @@
 .button-container {
   width: 100%;
   display: flex;
-  justify-content: flex-start
+  justify-content: flex-start;
 }
 
 .publish-button {
-  background-color: #2A2A2A;
+  background-color: #2a2a2a;
   color: white;
   border: none;
   border-radius: 25px;
