@@ -30,6 +30,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { ContactServiceComponent } from './contact-service/contact-service.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
     LegalComponent,
     ContactFormComponent,
     ChangePasswordComponent,
-    ProfileSettingsComponent
+    ProfileSettingsComponent,
+    ContactServiceComponent
   ],
   imports: [
     BrowserModule,
