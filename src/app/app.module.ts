@@ -31,18 +31,10 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserProfilesComponent } from './user-profiles/user-profiles.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ContactServiceComponent } from './contact-service/contact-service.component';
-=======
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {NgOptimizedImage} from "@angular/common";
->>>>>>> 968bbe213e41a707660779970d14d9ec677c4e1f
-=======
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {NgOptimizedImage} from "@angular/common";
 
->>>>>>> b52d4d38df3d1d1bda69baa5ccbe7f65081e61d2
+
 
 
 @NgModule({
@@ -63,20 +55,10 @@ import {NgOptimizedImage} from "@angular/common";
     LegalComponent,
     ContactFormComponent,
     ChangePasswordComponent,
-<<<<<<< HEAD
-<<<<<<< HEAD
     ProfileSettingsComponent,
-    ContactServiceComponent
-=======
-    UserProfilesComponent,
-    ProfileSettingsComponent
->>>>>>> 968bbe213e41a707660779970d14d9ec677c4e1f
-=======
     ProfileSettingsComponent,
     UserProfilesComponent,
     ProfileSettingsComponent
-
->>>>>>> b52d4d38df3d1d1bda69baa5ccbe7f65081e61d2
   ],
   imports: [
     BrowserModule,

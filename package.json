@@ -28,6 +28,7 @@
     "@popperjs/core": "^2.11.6",
     "angular-social-login": "^0.0.1",
     "bootstrap": "^5.2.3",
+    "dotenv": "^16.4.5",
     "google-auth-library": "^9.9.0",
     "googleapis": "^134.0.0",
     "nodemailer": "^6.9.13",
