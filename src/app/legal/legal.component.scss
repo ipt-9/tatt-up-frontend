@@ -47,6 +47,18 @@ body{
 }
 .nav_bold{
   font-weight: bold;
+
+
+}
+
+.hover:hover{
+  font-weight: bold;
+}
+.link-style{
+  cursor: pointer;
+}
+.link-style:hover{
+  font-weight: bold;
 }
 .main{
   grid-row: 2;

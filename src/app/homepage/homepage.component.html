@@ -3,88 +3,125 @@
 <div class="grid">
 
 
-  <div class="title">Tatt' up</div>
+  <div (click)="navigateToHomepage()"  class="title">Tatt' up</div>
   <div class="nav">
     <div class="sidebar-content">
-      <div class="nav_bold">Home</div>
-      <div>Explore</div>
-      <div>Favorites</div>
-      <div class="link-style" (click)="openCreatePostModal()">Create Post</div>
-      <div href="/about">About Us</div>
+
+
+
+<!--
+
+      <div class="nav_bold">
+        <img ngSrc="assets/images/home-bold.png" alt="Home Icon" height="512" width="512"> Home
+      </div>
+      <div> <img ngSrc="assets/images/explore-bold.png" alt="Explore Icon" height="512" width="512"> Explore</div>
+      <div> <img ngSrc="assets/images/list.png" alt="Favourites Icon" height="512" width="512"> Favorites</div>
+      <div class="link-style" (click)="openCreatePostModal()"> <img src="assets/images/upload.png" alt="Upload Icon"> Create Post</div>
+
+      <div href="/about"> <img ngSrc="assets/images/info.png" alt="Info Icon" height="144" width="144"> About Us</div>
+=======
+      <div href="/about"> <img src="assets/images/info.png" alt="Info Icon"> About Us</div>
+>>>>>>> c7b83e6ae4477c97cdcb2eb51d5a43340e8aa22a
+
+      <i class="fas fa-home"></i>
+           <i class="fas fa-search"></i>
+           <i class="fas fa-bookmark"></i>
+            <i class="fas fa-upload"></i>
+           -->
+
+      <!--<div class="nav_bold" (click)="navigateToHomepage()">Home</div>
+     <div class="hover" (click)="navigateToExplore()">Explore  </div>
+     <div class="hover" (click)="navigateToFavorites()">Favorites</div>
+     <div  class="link-style" (click)="openCreatePostModal()">Create Post</div>
+     <div class="hover" (click)="navigateToAbout()">About Us</div> -->
+
+   </div>
+ </div>
+
+ <div class="header">
+   <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()" >LOG IN</button>
+   <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
+ </div>
+
+ <div class="main">
+   <div class="homepage-main-title">Welcome to Tatt' Up!</div>
+   <div class="grid-monetize-etwot">
+   <div class="homepage-monetize-title">Monetize your art!</div>
+   <div class="homepage-monetize-text">Learn how to make money off <br> your art. We encourage fair<br> compensation for your<br> creativity and time.</div>
+   <div class="homepage-etwot-title">Explore the world of tattoos</div>
+   <div class="homepage-etwot-text">Tatt' Up provides you with an<br>unlimited amount of diverse<br>tattoo designs and unique<br>tattoo artists.</div>
+
+      <div  class="link-style" (click)="openCreatePostModal()">Create Post</div>
+      <div class="hover" (click)="navigateToAbout()">About Us</div>
+
     </div>
   </div>
 
-  <div class="header">
-    <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()" >LOG IN</button>
-    <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
-  </div>
 
-  <div class="main">
-    <div class="homepage-main-title">Welcome to Tatt' Up!</div>
-    <div class="grid-monetize-etwot">
-    <div class="homepage-monetize-title">Monetize your art!</div>
-    <div class="homepage-monetize-text">Learn how to make money off <br> your art. We encourage fair<br> compensation for your<br> creativity and time.</div>
-    <div class="homepage-etwot-title">Explore the world of tattoos</div>
-    <div class="homepage-etwot-text">Tatt' Up provides you with an<br>unlimited amount of diverse<br>tattoo designs and unique<br>tattoo artists.</div>
+   <button type="button" class="learnmore-btn" (click)="navigateToAbout()">learn more</button>
+   <button type="button" class="explore-btn" (click)="navigateToExplore()">explore</button>
+   </div>
 
-    <button type="button" class="learnmore-btn" (click)="navigateToAbout()">learn more</button>
-    <button type="button" class="explore-btn" (click)="navigateToExplore()">explore</button>
-    </div>
+   <div class="tattoos-of-week-container">
+     <div class="tattoo-week-img">
+     <div class="tattoos-title">Tattoos of the week</div>
+       <div class="image-1">
+         <img src="assets/images/tattoo.png" alt="Tattoo 1">
+         <div class="artist-name">Artist Name 1</div>
+       </div>
+       <div class="image-2">
+         <img src="assets/images/tattoo.png" alt="Tattoo 2">
+         <div class="artist-name">Artist Name 2</div>
+       </div>
+       <div class="image-3">
+         <img src="assets/images/tattoo.png" alt="Tattoo 3">
+         <div class="artist-name">Artist Name 3</div>
+       </div>
+     </div>
 
-    <div class="tattoos-of-week-container">
-      <div class="tattoo-week-img">
-      <div class="tattoos-title">Tattoos of the week</div>
-        <div class="image-1">
-          <img src="assets/img1.jpg" alt="Tattoo 1">
-        </div>
-        <div class="image-2">
-          <img src="assets/img2.jpg" alt="Tattoo 2">
-        </div>
-        <div class="image-3">
-          <img src="assets/img3.jpg" alt="Tattoo 3">
-        </div>
-      </div>
-
-    </div>
+   </div>
 
 
-    <div class="featured-artists-container">
-    <div class="featured-artists">
-      <div class="artist-title">Featured artists</div>
-      <div class="image1">
-        <img src="assets/img3.jpg" alt="Artist 1">
-      </div>
-      <div class="image2">
-        <img src="assets/img3.jpg" alt="Artist 2">
-      </div>
-      <div class="image3">
-        <img src="assets/img3.jpg" alt="Artist 3">
-      </div>
-      <div class="image4">
-        <img src="assets/img3.jpg" alt="Artist 4">
-      </div>
-      <div class="image5">
-        <img src="assets/img3.jpg" alt="Artist 5">
-      </div>
-      <div class="image6">
-        <img src="assets/img3.jpg" alt="Artist 6">
-      </div>
-    </div>
-    </div>
-
-  </div>
-</div>
+   <div class="featured-artists-container">
+     <div class="featured-artists">
+       <div class="artist-title">Featured artists</div>
+       <div class="image1">
+         <img src="assets/images/profile.jpg" alt="Artist 1">
+         <div class="artist-name"><a href="#" class="artist-link">Artist Name </a></div>
+       </div>
+       <div class="image2">
+         <img src="assets/images/profile.jpg" alt="Artist 2">
+         <div class="artist-name"><a href="#" class="artist-link">Artist Name </a></div>
+       </div>
+       <div class="image3">
+         <img src="assets/images/profile.jpg" alt="Artist 3">
+         <div class="artist-name"><a href="#" class="artist-link">Artist Name </a></div>
+       </div>
+       <div class="image4">
+         <img src="assets/images/profile.jpg" alt="Artist 4">
+         <div class="artist-name"><a href="#" class="artist-link">Artist Name </a></div>
+       </div>
+       <div class="image5">
+         <img src="assets/images/profile.jpg" alt="Artist 5">
+         <div class="artist-name"><a href="#" class="artist-link">Artist Name </a></div>
+       </div>
+       <div class="image6">
+         <img src="assets/images/profile.jpg" alt="Artist 6">
+         <div class="artist-name"><a href="#" class="artist-link">Artist Name </a></div>
+       </div>
+     </div>
+   </div>
 
 <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">TATT'UP</div>
-    <div class="footer-copy">© 2023 Copyright</div>
-    <nav class="footer-links">
-      <a href="/legal">Legal</a>
-      <a href="/contact">Contact</a>
-      <a href="/monetization">Monetization</a>
-      <a href="/disclaimer">Disclaimer</a>
-    </nav>
-  </div>
+ <div class="footer-container">
+   <div class="footer-logo">TATT'UP</div>
+   <div class="footer-copy">© 2023 Copyright</div>
+   <nav class="footer-links">
+     <a href="/legal">Legal</a>
+     <a href="/contact">Contact</a>
+     <a href="/monetization">Monetization</a>
+     <a href="/disclaimer">Disclaimer</a>
+   </nav>
+ </div>
 </footer>
 </body>

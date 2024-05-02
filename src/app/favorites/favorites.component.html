@@ -1,1 +1,39 @@
-<p>favorites works!</p>
+
+
+<body>
+<div class="grid">
+
+
+  <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
+  <div class="nav">
+    <div class="sidebar-content">
+      <div class="hover"  (click)="navigateToHomepage()">Home</div>
+      <div class="hover" (click)="navigateToExplore()">Explore  </div>
+      <div class="nav_bold"  (click)="navigateToFavorites()">Favorites</div>
+      <div  class="link-style" (click)="openCreatePostModal()">Create Post</div>
+      <div class="hover" (click)="navigateToAbout()">About Us</div>
+    </div>
+  </div>
+
+  <div class="header">
+    <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()" >LOG IN</button>
+    <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
+  </div>
+  <div class="main">Here comes the main content</div>
+
+
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">TATT'UP</div>
+    <div class="footer-copy">© 2023 Copyright</div>
+    <nav class="footer-links">
+      <a href="/legal">Legal</a>
+      <a href="/contact">Contact</a>
+      <a href="/monetization">Monetization</a>
+      <a href="/disclaimer">Disclaimer</a>
+    </nav>
+  </div>
+</footer>
+</body>
