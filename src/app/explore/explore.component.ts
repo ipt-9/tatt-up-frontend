@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
-import { SearchService} from "../services/search.service";
-import {NgForOf} from "@angular/common";
+import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
+import { SearchService } from '../services/search.service';
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-explore',
   templateUrl: './explore.component.html',
-  styleUrls: ['./explore.component.scss']
+  styleUrls: ['./explore.component.scss'],
 })
 export class ExploreComponent {
-  constructor(private router: Router, private modalService: NgbModal, private searchService: SearchService) {}
+  constructor(
+    private router: Router,
+    private modalService: NgbModal,
+    private searchService: SearchService,
+  ) {}
 
   openCreatePostModal() {
     this.modalService.open(UploadPopupComponent);
@@ -49,7 +53,7 @@ export class ExploreComponent {
       },
       error: (error) => {
         console.error('There was an error!', error);
-      }
+      },
     });
   }
 }

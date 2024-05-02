@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
-import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-
+import { Router } from '@angular/router';
+import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent {
-  constructor(private router: Router, private modalService: NgbModal) {}
+  constructor(
+    private router: Router,
+    private modalService: NgbModal,
+  ) {}
   openCreatePostModal() {
     this.modalService.open(UploadPopupComponent);
   }
@@ -22,7 +24,6 @@ export class AboutComponent {
     this.router.navigateByUrl('/user-login');
   }
 
-
   navigateToAbout(): void {
     this.router.navigateByUrl('/about');
   }
@@ -30,11 +31,11 @@ export class AboutComponent {
     this.router.navigateByUrl('/explore');
   }
 
-  navigateToFavorites(): void{
+  navigateToFavorites(): void {
     this.router.navigateByUrl('/favorites');
   }
 
-  navigateToHomepage():void{
+  navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }
 

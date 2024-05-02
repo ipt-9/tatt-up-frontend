@@ -1,21 +1,25 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { AuthService } from "../auth.service";
-import { Router } from "@angular/router";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
-  styleUrls: ['./user-login.component.scss']
+  styleUrls: ['./user-login.component.scss'],
 })
 export class UserLoginComponent {
   loginForm: FormGroup;
   loginError: string = '';
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private router: Router,
+  ) {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]]
+      password: ['', [Validators.required, Validators.minLength(8)]],
     });
   }
 
@@ -39,13 +43,19 @@ export class UserLoginComponent {
       },
       (error) => {
         // If authentication fails, display the error message returned by the backend
-        if (error && error.error && error.error.errors && error.error.errors.general) {
+        if (
+          error &&
+          error.error &&
+          error.error.errors &&
+          error.error.errors.general
+        ) {
           alert('Wrong email or password. Please try again.');
         } else {
           // For other errors, display a generic error message
-          this.loginError = 'An error occurred while logging in. Please try again later.';
+          this.loginError =
+            'An error occurred while logging in. Please try again later.';
         }
-      }
+      },
     );
   }
 }

@@ -8,7 +8,7 @@ describe('ContactServiceComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ContactServiceComponent]
+      declarations: [ContactServiceComponent],
     });
     fixture = TestBed.createComponent(ContactServiceComponent);
     component = fixture.componentInstance;

@@ -1,77 +1,109 @@
-
-
 <body>
-<div class="grid">
+  <div class="grid">
+    <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
+    <div class="nav">
+      <div class="sidebar-content">
+        <div class="hover" (click)="navigateToHomepage()">Home</div>
+        <div class="hover" (click)="navigateToExplore()">Explore</div>
+        <div class="hover" (click)="navigateToFavorites()">Favorites</div>
+        <div class="link-style" (click)="openCreatePostModal()">
+          Create Post
+        </div>
+        <div class="hover" (click)="navigateToAbout()">About Us</div>
+      </div>
+    </div>
 
+    <div class="header">
+      <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">
+        LOG IN
+      </button>
+      <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">
+        SIGN UP
+      </button>
+    </div>
 
-  <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
-  <div class="nav">
-    <div class="sidebar-content">
-      <div class="hover" (click)="navigateToHomepage()" >Home</div>
-      <div class="hover" (click)="navigateToExplore()">Explore</div>
-      <div class="hover" (click)="navigateToFavorites()">Favorites</div>
-      <div class="link-style" (click)="openCreatePostModal()">Create Post</div>
-      <div class="hover" (click)="navigateToAbout()">About Us</div>
+    <div class="main">
+      <div class="legal-title">Legal Information</div>
+      <div class="subtitle-info">
+        Welcome to our website Tatt'up. This legal notice regulates the use of
+        our platform where<br />
+        customers can view and buy tattoo designs and book appointments with
+        tattoo artists.<br />
+        By using our services, you agree to these terms and conditions
+      </div>
+
+      <ol>
+        <li class="terms-title">Terms of use</li>
+        <div class="terms-text">
+          The content provided on the platform, including designs, texts, images
+          and other materials, are protected by copyright and may only be used
+          within the scope of the services presented on this website. Any other
+          use without express consent is prohibited.
+        </div>
+        <br />
+        <li class="terms-title">Account creation and management</li>
+        <div class="terms-text">
+          The content provided on the platform, including designs, texts, images
+          and other materials, are protected by copyright and may only be used
+          within the scope of the services presented on this website. Any other
+          use without express consent is prohibited.
+        </div>
+        <br />
+        <li class="terms-title">Copyright and intellectual property</li>
+        <div class="terms-text">
+          All tattoo designs on our platform are the property of the respective
+          artists and may not be reproduced, sold or used in any other way
+          without their consent. We reserve the right to take legal action in
+          the event of infringements.
+        </div>
+        <br />
+        <li class="terms-title">Booking and payment conditions</li>
+        <div class="terms-text">
+          Bookings of appointments are made via the platform. Payment of the
+          purchase price including a fee of 10% of the total amount to us is due
+          immediately. Cancellations and refunds are handled in accordance with
+          our cancellation policy.
+        </div>
+        <br />
+        <li class="terms-title">Disclaimer of liability</li>
+        <div class="terms-text">
+          We assume no liability for damages arising from using our platform or
+          from using the services offered, to the extent permitted by law.
+        </div>
+        <br />
+        <li class="terms-title">Data protection</li>
+        <div class="terms-text">
+          The protection of your personal data is important to us. Our privacy
+          policy explains how we collect, use and protect your data.
+        </div>
+        <br />
+        <li class="terms-title">Dispute resolution</li>
+        <div class="terms-text">
+          In the event of disputes, we will endeavor to reach an amicable
+          solution. If no agreement is reached, disputes shall be governed by
+          the laws of the country in which our platform is registered.
+        </div>
+        <br />
+        <li class="terms-title">Severability of Terms</li>
+        <div class="eight-terms-text">
+          Should individual provisions of these GTC be or become invalid, the
+          validity of the remaining provisions shall remain unaffected.
+        </div>
+        <br />
+      </ol>
     </div>
   </div>
 
-  <div class="header">
-    <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()" >LOG IN</button>
-    <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
-  </div>
-
-  <div class="main">
-
-    <div class="legal-title">Legal Information</div>
-    <div class="subtitle-info">Welcome to our website Tatt'up. This legal notice regulates the use of our platform where<br>
-      customers can view and buy tattoo designs and book appointments with tattoo artists.<br>
-      By using our services, you agree to these terms and conditions</div>
-
-    <ol>
-      <li class="terms-title">Terms of use</li>
-      <div class="terms-text"> The content provided on the platform, including designs, texts, images and other materials, are protected by copyright and may only be used within the scope of the services presented on this website. Any other use without express consent is prohibited.</div>
-      <br>
-      <li class="terms-title">Account creation and management</li>
-      <div class="terms-text">The content provided on the platform, including designs, texts, images and other materials, are protected by copyright and may only be used within the scope of the services presented on this website. Any other use without express consent is prohibited.</div>
-      <br>
-      <li class="terms-title">Copyright and intellectual property</li>
-      <div class="terms-text">All tattoo designs on our platform are the property of the respective artists and may not be reproduced, sold or used in any other way without their consent. We reserve the right to take legal action in the event of infringements.</div>
-      <br>
-      <li class="terms-title">Booking and payment conditions</li>
-      <div class="terms-text">Bookings of appointments are made via the platform. Payment of the purchase price including a fee of 10% of the total amount to us is due immediately. Cancellations and refunds are handled in accordance with our cancellation policy.</div>
-      <br>
-      <li class="terms-title">Disclaimer of liability</li>
-      <div class="terms-text">We assume no liability for damages arising from using our platform or from using the services offered, to the extent permitted by law.</div>
-      <br>
-      <li class="terms-title">Data protection</li>
-      <div class="terms-text">The protection of your personal data is important to us. Our privacy policy explains how we collect, use and protect your data.</div>
-      <br>
-      <li class="terms-title">Dispute resolution</li>
-      <div class="terms-text">In the event of disputes, we will endeavor to reach an amicable solution. If no agreement is reached, disputes shall be governed by the laws of the country in which our platform is registered.</div>
-      <br>
-      <li class="terms-title">Severability of Terms</li>
-      <div class="eight-terms-text" >Should individual provisions of these GTC be or become invalid, the validity of the remaining provisions shall remain unaffected.</div>
-      <br>
-
-
-    </ol>
-
-
-  </div>
-
-
-</div>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">TATT'UP</div>
-    <div class="footer-copy">© 2023 Copyright</div>
-    <nav class="footer-links">
-      <a href="/legal">Legal</a>
-      <a href="/contact">Contact</a>
-      <a href="/monetization">Monetization</a>
-      <a href="/disclaimer">Disclaimer</a>
-    </nav>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">TATT'UP</div>
+      <div class="footer-copy">© 2023 Copyright</div>
+      <nav class="footer-links">
+        <a href="/legal">Legal</a>
+        <a href="/contact">Contact</a>
+        <a href="/monetization">Monetization</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
 </body>
