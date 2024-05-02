@@ -34,6 +34,7 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgOptimizedImage } from '@angular/common';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { NgOptimizedImage } from '@angular/common';
     LegalComponent,
     ContactFormComponent,
     ChangePasswordComponent,
+    ProfileSettingsComponent,
     ProfileSettingsComponent,
     UserProfilesComponent,
     ProfileSettingsComponent,
