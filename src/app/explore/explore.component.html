@@ -24,7 +24,7 @@
             placeholder="Explore"
             #searchInput
           />
-          <button class="search-button" (click)="search(searchInput.value)">
+          <button class="search-button" (click)="fetchSearchResults(searchInput.value)">
             <img src="assets/images/explore-bold.png" />
           </button>
         </div>
@@ -47,7 +47,18 @@
         </div>
       </div>
     </div>
-    <div class="main">Here comes the main content</div>
+    <div class="main">
+
+      <div class="filter-container">
+        <button class="filter-button">
+          <img src="assets/images/filter.png">
+        </button>
+        <div class="filter-dropdown">
+          <div (click)="filterByCategory('Fineline')">Category 1</div>
+          <div (click)="filterByCategory('Coquette')">Category 2</div>
+          <div (click)="filterByCategory('Futuristic')">Category 3</div>
+        </div>
+      </div>
 
     <div *ngFor="let result of searchResults">
       <!-- Display search results here -->
@@ -56,6 +67,7 @@
     </div>
   </div>
 
+  </div>
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-logo">TATT'UP</div>
