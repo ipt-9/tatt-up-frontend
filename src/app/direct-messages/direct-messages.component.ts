@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
@@ -5,8 +6,6 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {AuthService} from "../auth.service";
 import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
-import {CalendarEvent, CalendarModule, CalendarView, DateAdapter} from "angular-calendar";
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 
 @Component({
@@ -18,9 +17,9 @@ export class DirectMessagesComponent {
 
   isLoggedIn$!: Observable<boolean>;
   constructor(
-    private router: Router,
-    private modalService: NgbModal,
-    private authService : AuthService,
+      private router: Router,
+      private modalService: NgbModal,
+      private authService : AuthService,
   ) {}
   ngOnInit() {
     this.isLoggedIn$ = this.authService.isLoggedIn();
@@ -74,3 +73,7 @@ export class DirectMessagesComponent {
 
 
 }
+
+
+
+

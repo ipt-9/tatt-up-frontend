@@ -22,7 +22,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
 
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import {MyProfileComponent} from "./my-profile/my-profile.component";
-import {DirectMessagesComponent} from "./direct-messages/direct-messages.component";
+import { DirectMessagesComponent } from "./direct-messages/direct-messages.component";
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
