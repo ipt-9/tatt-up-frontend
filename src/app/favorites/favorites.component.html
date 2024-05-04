@@ -3,15 +3,35 @@
     <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
     <div class="nav">
       <div class="sidebar-content">
-        <div class="hover" (click)="navigateToHomepage()">Home</div>
-        <div class="hover" (click)="navigateToExplore()">Explore</div>
-        <div class="nav_bold" (click)="navigateToFavorites()">Favorites</div>
+        <div class="nav_bold" (click)="navigateToHomepage()" >
+          <i class="fas fa-home"  (click)="navigateToHomepage()" ></i>
+          Home
+        </div>
+        <div class="hover" (click)="navigateToExplore()">
+          <i class="fas fa-search" (click)="navigateToExplore()"></i>
+
+          Explore
+        </div>
+
+        <div class="hover" (click)="navigateToFavorites()">
+          <i class="fas fa-bookmark" (click)="navigateToFavorites()"></i>
+          Favorites
+        </div>
         <div class="link-style" (click)="openCreatePostModal()">
+          <i class="fas fa-upload" (click)="openCreatePostModal()"></i>
           Create Post
         </div>
-        <div class="hover" (click)="navigateToAbout()">About Us</div>
+
+
+        <div class="hover" (click)="navigateToAbout()">
+          <div href="/about" (click)="navigateToAbout()">
+            <i class="fas fa-info-circle"></i>
+            About Us
+          </div>
+        </div>
       </div>
     </div>
+
 
     <div class="header">
       <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">
