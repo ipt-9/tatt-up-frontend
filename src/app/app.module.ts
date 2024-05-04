@@ -36,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwipeableCalendarComponent } from './swipeable-calendar/swipeable-calendar.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
