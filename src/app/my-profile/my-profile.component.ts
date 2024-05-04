@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import {Observable} from "rxjs";
+import {Router} from "@angular/router";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {AuthService} from "../auth.service";
+import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss'],
+  selector: 'app-my-profile',
+  templateUrl: './my-profile.component.html',
+  styleUrls: ['./my-profile.component.scss']
 })
-export class HomepageComponent {
+export class MyProfileComponent {
   isLoggedIn$!: Observable<boolean>;
   constructor(
     private router: Router,
@@ -53,8 +51,4 @@ export class HomepageComponent {
   navigateToMyProfile(): void{
     this.router.navigateByUrl('/my-profile');
   }
-  navigateToDirectMessages():void{
-    this.router.navigateByUrl('/direct-messages');
-  }
-
 }

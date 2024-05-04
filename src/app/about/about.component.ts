@@ -50,5 +50,12 @@ export class AboutComponent {
     this.router.navigateByUrl('');
   }
 
+  navigateToMyProfile(): void{
+    this.router.navigateByUrl('/my-profile');
+  }
+  navigateToDirectMessages():void{
+    this.router.navigateByUrl('/direct-messages');
+  }
+
   protected readonly open = open;
 }

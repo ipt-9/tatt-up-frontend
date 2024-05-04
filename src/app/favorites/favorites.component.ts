@@ -48,4 +48,10 @@ export class FavoritesComponent {
   navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }
+  navigateToMyProfile(): void{
+    this.router.navigateByUrl('/my-profile');
+  }
+  navigateToDirectMessages():void{
+    this.router.navigateByUrl('/direct-messages');
+  }
 }

@@ -59,7 +59,12 @@ export class ExploreComponent {
   navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }
-
+  navigateToMyProfile(): void{
+    this.router.navigateByUrl('/my-profile');
+  }
+  navigateToDirectMessages():void{
+    this.router.navigateByUrl('/direct-messages');
+  }
   fetchSearchResults(term: string): void {
     this.searchService.search(term).subscribe({
       next: (data) => {

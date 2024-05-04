@@ -3,7 +3,7 @@
     <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
     <div class="nav">
       <div class="sidebar-content">
-        <div class="nav_bold" (click)="navigateToHomepage()" >
+        <div class="hover" (click)="navigateToHomepage()" >
           <i class="fas fa-home"  (click)="navigateToHomepage()" ></i>
           Home
         </div>
@@ -42,8 +42,8 @@
       </button>
     </div>
       <div class="signedin-icons" *ngIf="isLoggedIn$ | async ">
-        <i class="fas fa-envelope"></i>
-        <i class="fas fa-user"></i>
+        <i class="fas fa-envelope" (click)="navigateToDirectMessages()"></i>
+        <i class="fas fa-user" (click)="navigateToMyProfile()"></i>
         <i class="fas fa-sign-out"></i>
       </div>
     </div>
