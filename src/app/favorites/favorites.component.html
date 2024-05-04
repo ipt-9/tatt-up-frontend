@@ -35,6 +35,7 @@
 
 
     <div class="header">
+      <div *ngIf="!(isLoggedIn$ | async)">
       <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">
         LOG IN
       </button>
@@ -42,6 +43,13 @@
         SIGN UP
       </button>
     </div>
+      <div class="signedin-icons" *ngIf="isLoggedIn$ | async ">
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-user"></i>
+        <i class="fas fa-sign-out"></i>
+      </div>
+
+  </div>
     <div class="main">Here comes the main content</div>
   </div>
 
