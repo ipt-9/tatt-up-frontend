@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -26,8 +26,10 @@ export class AuthService {
   }
   checkEmailExists(email: string): Observable<boolean> {
     return this.http
-      .get<boolean>(`${this.apiUrl}/checkEmailExists/${email}`)
-      .pipe(catchError(this.handleError<boolean>('checkEmailExists', false)));
+      .get<{exists : boolean}>(`${this.apiUrl}/checkEmailExists`, {params: {email}})
+      .pipe(
+        map(response => response.exists),
+    catchError(this.handleError<boolean>('checkEmailExists', false)));
   }
 
   checkUsernameExists(username: string): Observable<boolean> {
