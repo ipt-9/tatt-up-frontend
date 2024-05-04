@@ -58,7 +58,7 @@ export class LayoutComponent {
   }
 
   openLogoutModal() {
-    const modalRef = this.modalService.open(LogoutConfirmationComponent);
+    const modalRef = this.modalService.open(LogoutConfirmationComponent );
     modalRef.result.then((result) => {
       if (result) {
         this.authService.logOut();
