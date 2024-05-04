@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
 import {AuthService} from "../auth.service";
 import {Observable} from "rxjs";
+import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
 
 @Component({
   selector: 'app-legal',
@@ -53,6 +54,16 @@ export class LegalComponent {
   }
   navigateToDirectMessages():void{
     this.router.navigateByUrl('/direct-messages');
+  }
+  openLogoutModal() {
+    const modalRef = this.modalService.open(LogoutConfirmationComponent);
+    modalRef.result.then((result) => {
+      if (result) {
+        this.authService.logOut();
+      }
+    }).catch(err => {
+      console.error('Modal dismissed without logging out:', err);
+    });
   }
   protected readonly postMessage = postMessage;
 }

@@ -6,6 +6,7 @@ import { SearchService } from '../services/search.service';
 import { NgForOf } from '@angular/common';
 import {AuthService} from "../auth.service";
 import {Observable} from "rxjs";
+import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
 
 @Component({
   selector: 'app-explore',
@@ -64,6 +65,16 @@ export class ExploreComponent {
   }
   navigateToDirectMessages():void{
     this.router.navigateByUrl('/direct-messages');
+  }
+  openLogoutModal() {
+    const modalRef = this.modalService.open(LogoutConfirmationComponent);
+    modalRef.result.then((result) => {
+      if (result) {
+        this.authService.logOut();
+      }
+    }).catch(err => {
+      console.error('Modal dismissed without logging out:', err);
+    });
   }
   fetchSearchResults(term: string): void {
     this.searchService.search(term).subscribe({

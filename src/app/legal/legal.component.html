@@ -44,7 +44,7 @@
       <div class="signedin-icons" *ngIf="isLoggedIn$ | async ">
         <i class="fas fa-envelope" (click)="navigateToDirectMessages()"></i>
         <i class="fas fa-user" (click)="navigateToMyProfile()"></i>
-        <i class="fas fa-sign-out"></i>
+        <i class="fas fa-sign-out" (click)="openLogoutModal()"></i>
       </div>
     </div>
     <div class="main">
