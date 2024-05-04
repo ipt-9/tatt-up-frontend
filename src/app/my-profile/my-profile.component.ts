@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
 import {Observable} from "rxjs";
+import {Router} from "@angular/router";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {AuthService} from "../auth.service";
+import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
+import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
 
 @Component({
-  selector: 'app-favorites',
-  templateUrl: './favorites.component.html',
-  styleUrls: ['./favorites.component.scss'],
+  selector: 'app-my-profile',
+  templateUrl: './my-profile.component.html',
+  styleUrls: ['./my-profile.component.scss']
 })
-export class FavoritesComponent {
+export class MyProfileComponent {
   isLoggedIn$!: Observable<boolean>;
   constructor(
     private router: Router,
@@ -51,7 +52,14 @@ export class FavoritesComponent {
   navigateToMyProfile(): void{
     this.router.navigateByUrl('/my-profile');
   }
-  navigateToDirectMessages():void{
-    this.router.navigateByUrl('/direct-messages');
+  openLogoutModal() {
+    const modalRef = this.modalService.open(LogoutConfirmationComponent);
+    modalRef.result.then((result) => {
+      if (result) {
+        this.authService.logOut();
+      }
+    }).catch(err => {
+      console.error('Modal dismissed without logging out:', err);
+    });
   }
 }

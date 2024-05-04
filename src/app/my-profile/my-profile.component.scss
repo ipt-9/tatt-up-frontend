@@ -5,7 +5,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 10vh 85vh;
 }
 
 .title {
@@ -32,7 +32,6 @@ body {
   padding-top: 1vh;
   font-size: 20px;
   text-align: end;
-  height: auto;
 }
 
 .nav {
@@ -46,46 +45,28 @@ body {
   text-align: left;
   font-size: 150%;
   line-height: 50px;
+}
+.nav_bold {
+  font-weight: bold;
+}
 
-  .nav_bold {
-    font-weight: bold;
-  }
-
-  div {
-    align-items: center;
-    gap: 10px;
-  }
-
-  img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .hover:hover {
-
-      font-weight: bold;
+.hover:hover {
+  font-weight: bold;
+}
 
 
-  }
-
-  .link-style {
-    cursor: pointer;
-  }
-  .link-style:hover {
-    font-weight: bold;
-  }
-  .link-style {
-    cursor: pointer;
-  }
-
-  .link-style:hover {
-    font-weight: bold;
-  }
+.link-style {
+  cursor: pointer;
+}
+.link-style:hover {
+  font-weight: bold;
 }
 .signedin-icons i{
   font-size: 1.5em;
   margin-right: 10px;
 }
+
+
 .main {
   grid-row: 2;
   grid-column: 2;
@@ -98,14 +79,12 @@ body {
   width: 100%;
   position: fixed;
   background-color: #e9e9e9;
-  height: 3.4vh;
-
-  padding: 0.5vh;
+  height: 5vh;
+  margin-left: -7px;
+  padding: 8px;
   font-family: Arial, serif;
   font-size: 15px;
-  bottom: 0;
 }
-
 .footer-container {
   display: grid;
   grid-template-columns: 20vh 25vh 25vh 30vh;
@@ -123,7 +102,6 @@ body {
   grid-column: 2;
   text-align: left;
   padding-top: 2%;
-  font-weight: 550;
 }
 
 .footer-links {
@@ -131,7 +109,6 @@ body {
   display: flex;
   gap: 15%;
   padding-top: 2%;
-  font-weight: 550;
 
   a {
     text-decoration: none;
@@ -141,13 +118,12 @@ body {
 
 .homepage-main-title {
   width: 100%;
-  position: relative;
-  height: 8vh;
+  position: fixed;
+  height: 5vh;
   font-family: Arial, serif;
   font-size: 6.5vh;
   font-weight: bold;
 }
-
 .lgsubutton {
   padding: 8px 15px;
   border-radius: 18px;
@@ -156,12 +132,10 @@ body {
   border: 2.5px solid black;
   margin-right: 10px;
 }
-
-#log_in_btnlog_in_btn {
+#log_in_btn {
   color: black;
   background-color: white;
 }
-
 #sign_up_btn {
   color: white;
   background-color: black;
@@ -178,9 +152,10 @@ body {
 
 .homepage-monetize-title {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 100px;
+  margin-left: 13px;
   font-family: Arial, serif;
-  font-size: 4vh;
+  font-size: 23px;
   font-weight: bold;
   grid-column: 1;
   grid-row: 1;
@@ -188,9 +163,9 @@ body {
 
 .homepage-etwot-title {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 100px;
   font-family: Arial, serif;
-  font-size: 4vh;
+  font-size: 23px;
   font-weight: bold;
   grid-column: 2;
   grid-row: 1;
@@ -199,35 +174,33 @@ body {
 .homepage-monetize-text {
   width: 100%;
   font-family: Arial, serif;
-  font-size: 2.5vh;
+  font-size: 21px;
   grid-column: 1;
-  margin-top: -2%;
-  margin-bottom: 15px;
+  margin-left: 13px;
 }
 
 .homepage-etwot-text {
   width: 100%;
   font-family: Arial, serif;
-  font-size: 2.5vh;
+  font-size: 21px;
   grid-column: 2;
-  margin-top: -2%;
-  margin-bottom: 15px;
 }
 
 .learnmore-btn {
+  border-color: black;
   color: black;
   text-align: center;
   text-decoration: none;
-  font-size: 2vh;
+  font-size: 16px;
   cursor: pointer;
   background-color: #ffffff;
-  border-radius: 25px;
+  border-radius: 12px;
   text-transform: uppercase;
   font-weight: bold;
   grid-column: 1;
-  height: 4.5vh;
-  width: 18vh;
-  border: 3px solid black;
+  width: 150px;
+  height: 50px;
+  margin-left: 13px;
 }
 
 .learnmore-btn:hover {
@@ -236,19 +209,21 @@ body {
 }
 
 .explore-btn {
+  border-color: black;
   color: black;
+  padding: 10px 25px;
   text-align: center;
   text-decoration: none;
-  font-size: 2vh;
+  display: inline-block;
+  font-size: 16px;
   cursor: pointer;
   background-color: #ffffff;
-  border-radius: 25px;
+  border-radius: 12px;
   text-transform: uppercase;
   font-weight: bold;
   grid-column: 2;
-  height: 4.5vh;
-  width: 16vh;
-  border: 3px solid black;
+  width: 150px;
+  height: 50px;
 }
 
 .explore-btn:hover {
@@ -256,117 +231,9 @@ body {
   color: black;
 }
 
-//--------------------------------------
-
-.tattoo-week-img {
+.featured-aritsts {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px 1px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   justify-content: center;
-}
-
-.tattoos-title {
-  font-weight: bold;
-  font-size: 3.5vh;
-  margin-bottom: 20px;
-}
-
-.tattoo-week-img img {
-  width: 25vh;
-  height: 25vh;
-}
-.artist-name {
-  font-size: 1.5vh;
-  text-align: left;
-  margin-top: 5px;
-  font-weight: bold;
-}
-
-.image-1 {
-  grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.image-2 {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.image-3 {
-  grid-column: 3 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.featured-artists {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  row-gap: 30px;
-  align-items: center;
-  padding-bottom: 100px;
-}
-
-.featured-artists img {
-  border-radius: 100%;
-  width: 10vh;
-  height: 10vh;
-  object-fit: cover;
-}
-
-.artist-title {
-  text-align: center;
-  margin-left: -22vh;
-  margin-bottom: 2%;
-  margin-top: 5%;
-  font-weight: bold;
-  font-size: 3.5vh;
-}
-
-.image1 {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.image2 {
-  grid-column: 3 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.image3 {
-  grid-column: 4 / span 1;
-  grid-row: 3 / span 1;
-}
-
-.image4 {
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
-}
-
-.image5 {
-  grid-column: 3 / span 1;
-  grid-row: 3 / span 1;
-}
-
-.image6 {
-  grid-column: 4 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.featured-artists-container {
-  margin-top: 70px;
-  max-height: calc(100vh - 150px);
-  padding-bottom: 100px;
-  margin-left: -13px;
-
-}
-
-
-
-.artist-link {
-  text-decoration: none;
-  color: #333;
-  text-align: center;
-}
-
-.artist-link:hover {
-  color: #555;
 }

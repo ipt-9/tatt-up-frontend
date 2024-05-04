@@ -33,6 +33,9 @@ import { UserProfilesComponent } from './user-profiles/user-profiles.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgOptimizedImage } from '@angular/common';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import { DirectMessagesComponent } from './direct-messages/direct-messages.component';
+import { LogoutConfirmationComponent } from './logout-confirmation/logout-confirmation.component';
 
 
 @NgModule({
@@ -57,6 +60,9 @@ import { NgOptimizedImage } from '@angular/common';
     ProfileSettingsComponent,
     UserProfilesComponent,
     ProfileSettingsComponent,
+    MyProfileComponent,
+    DirectMessagesComponent,
+    LogoutConfirmationComponent,
   ],
   imports: [
     BrowserModule,

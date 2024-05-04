@@ -45,7 +45,7 @@ body {
   text-align: left;
   font-size: 150%;
   line-height: 50px;
-
+}
   .nav_bold {
     font-weight: bold;
   }
@@ -53,7 +53,7 @@ body {
   .hover:hover {
     font-weight: bold;
   }
-} //??
+
 
 .link-style {
   cursor: pointer;
@@ -61,11 +61,11 @@ body {
 .link-style:hover {
   font-weight: bold;
 }
-
-div {
-  align-items: center;
-  gap: 10px;
+.signedin-icons i{
+  font-size: 1.5em;
+  margin-right: 10px;
 }
+
 
 .main {
   grid-row: 2;

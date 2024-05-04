@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
+import {AuthService} from "../auth.service";
+import {Observable} from "rxjs";
+import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
 
 @Component({
   selector: 'app-legal',
@@ -9,11 +12,19 @@ import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
   styleUrls: ['./legal.component.scss'],
 })
 export class LegalComponent {
+  isLoggedIn$!: Observable<boolean>;
   constructor(
     private router: Router,
     private modalService: NgbModal,
+    private authService : AuthService,
   ) {}
+  ngOnInit() {
+    this.isLoggedIn$ = this.authService.isLoggedIn();
+  }
 
+  logOut() {
+    this.authService.logOut();
+  }
   openCreatePostModal() {
     this.modalService.open(UploadPopupComponent);
   }
@@ -38,6 +49,21 @@ export class LegalComponent {
   navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }
-
+  navigateToMyProfile(): void{
+    this.router.navigateByUrl('/my-profile');
+  }
+  navigateToDirectMessages():void{
+    this.router.navigateByUrl('/direct-messages');
+  }
+  openLogoutModal() {
+    const modalRef = this.modalService.open(LogoutConfirmationComponent);
+    modalRef.result.then((result) => {
+      if (result) {
+        this.authService.logOut();
+      }
+    }).catch(err => {
+      console.error('Modal dismissed without logging out:', err);
+    });
+  }
   protected readonly postMessage = postMessage;
 }

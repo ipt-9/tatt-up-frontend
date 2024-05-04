@@ -3,40 +3,51 @@
     <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
     <div class="nav">
       <div class="sidebar-content">
-        <<<<<<< HEAD
-        <i class="fas fa-home"></i>
-        <i class="fas fa-search"></i>
-        <i class="fas fa-bookmark"></i>
-        <i class="fas fa-upload"></i>
-        <i class="fas fa-info-circle"></i>
+        <div class="hover" (click)="navigateToHomepage()" >
+          <i class="fas fa-home"  (click)="navigateToHomepage()" ></i>
+          Home
+        </div>
+        <div class="hover" (click)="navigateToExplore()">
+          <i class="fas fa-search" (click)="navigateToExplore()"></i>
 
-        =======
-        <!--
-      <div> <img src="assets/images/home-bold.png" alt="Home Icon"> Home</div>
-      <div> <img src="assets/images/explore-bold.png" alt="Explore Icon"> Explore</div>
-      <div> <img src="assets/images/list.png" alt="Favourites Icon"> Favorites</div>
-      <div> <img src="assets/images/upload.png" alt="Upload Icon"> Create Post</div>
-      <div> <img src="assets/images/info.png" alt="Info Icon"> About Us</div>
--->
-        >>>>>>> c7b83e6ae4477c97cdcb2eb51d5a43340e8aa22a
-        <div class="nav_bold" (click)="navigateToHomepage()">Home</div>
-        <div class="hover" (click)="navigateToExplore()">Explore</div>
-        <div class="hover" (click)="navigateToFavorites()">Favorites</div>
+          Explore
+        </div>
+
+        <div class="hover" (click)="navigateToFavorites()">
+          <i class="fas fa-bookmark" (click)="navigateToFavorites()"></i>
+          Favorites
+        </div>
         <div class="link-style" (click)="openCreatePostModal()">
+          <i class="fas fa-upload" (click)="openCreatePostModal()"></i>
           Create Post
         </div>
-        <div class="hover" (click)="navigateToAbout()">About Us</div>
+
+
+        <div class="hover" (click)="navigateToAbout()">
+          <div href="/about" (click)="navigateToAbout()">
+            <i class="fas fa-info-circle"></i>
+            About Us
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="header">
-      <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">
-        LOG IN
-      </button>
-      <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">
-        SIGN UP
-      </button>
+      <div *ngIf="!(isLoggedIn$ | async)">
+        <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">
+          LOG IN
+        </button>
+        <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">
+          SIGN UP
+        </button>
+      </div>
+      <div class="signedin-icons" *ngIf="isLoggedIn$ | async ">
+        <i class="fas fa-envelope" (click)="navigateToDirectMessages()"></i>
+        <i class="fas fa-user" (click)="navigateToMyProfile()"></i>
+        <i class="fas fa-sign-out" (click)="openLogoutModal()"></i>
+      </div>
     </div>
+
     <div class="main">Here comes the main content</div>
   </div>
 
