@@ -58,19 +58,19 @@ export class UserSignupComponent {
           this.snackBar.open('Username already exists', 'Close', {
             duration: 3000,
           });
-          return of(null); // Stop further execution if the username exists
+          return of(null);
         }
         return this.authService.checkEmailExists(email);
       }),
       switchMap((emailExists) => {
-        console.log('Email exists:', emailExists); // More detailed log
+        console.log('Email exists:', emailExists);
         if (emailExists) {
           this.snackBar.open('Email already exists', 'Close', {
             duration: 3000,
           });
-          return of(null); // Stop further execution if the email exists
+          return of(null);
         }
-        // Proceed with registration since both checks passed
+
         return this.authService.signUp({ username, email, password, role });
       }),
     )
@@ -84,7 +84,7 @@ export class UserSignupComponent {
           }
         },
         (error) => {
-          console.error('Failed to create user:', error); // Detailed error logging
+          console.error('Failed to create user:', error);
           this.snackBar.open('Failed to create user', 'Close', {
             duration: 3000,
           });
