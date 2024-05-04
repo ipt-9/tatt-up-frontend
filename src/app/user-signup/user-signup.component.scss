@@ -1,10 +1,10 @@
-h1{
+h1 {
   padding-left: 5%;
   padding-top: 5%;
   font-size: 80px;
 }
-.grid-usersignup{
-  display:grid;
+.grid-usersignup {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto auto auto auto;
   margin: auto;
@@ -13,13 +13,13 @@ h1{
   padding-left: 5%;
 }
 
-.username{
+.username {
   grid-column: 1;
   grid-row: 1;
   margin-top: auto;
   margin-bottom: auto;
 }
-.username_2{
+.username_2 {
   grid-column: 1;
   grid-row: 2;
   margin-top: auto;
@@ -28,17 +28,17 @@ h1{
   font-size: 30px;
   border: none;
   border-bottom: 3.5px solid #000000;
-  outline:none;
+  outline: none;
   padding: 5px 0;
 }
-.email{
+.email {
   grid-column: 2;
   grid-row: 1;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.email_2{
+.email_2 {
   grid-column: 2;
   grid-row: 2;
   margin-top: auto;
@@ -47,16 +47,16 @@ h1{
   font-size: 30px;
   border: none;
   border-bottom: 3.5px solid #000000;
-  outline:none;
+  outline: none;
   padding: 5px 0;
 }
 
-.pwd{
+.pwd {
   grid-column: 1;
   grid-row: 3;
 }
 
-.pwd_2{
+.pwd_2 {
   grid-column: 1;
   grid-row: 4;
   margin-top: auto;
@@ -65,54 +65,54 @@ h1{
   font-size: 30px;
   border: none;
   border-bottom: 3.5px solid #000000;
-  outline:none;
+  outline: none;
   padding: 5px 0;
 }
 
-.confpwd{
+.confpwd {
   grid-column: 2;
-  grid-row:3;
+  grid-row: 3;
 }
 
-.confpwd_2{
+.confpwd_2 {
   grid-column: 2;
-  grid-row:4;
+  grid-row: 4;
   margin-top: auto;
   margin-bottom: auto;
   font-family: Arial, serif;
   font-size: 30px;
   border: none;
   border-bottom: 3.5px solid #000000;
-  outline:none;
+  outline: none;
   padding: 5px 0;
 }
 
-.usertype{
+.usertype {
   grid-row: 5;
   grid-column: 1;
 }
 
-.user_input{
+.user_input {
   font-family: Arial, serif;
   font-size: 30px;
   grid-row: 6;
   grid-column: 1;
 }
 
-.question{
+.question {
   grid-column: 1;
   grid-row: 8;
   font-family: Arial, serif;
   font-size: 20px;
-  color: #A2A2A2;
+  color: #a2a2a2;
 }
 
-.login{
+.login {
   color: black;
   font-size: 20px;
 }
 
-.signup-button{
+.signup-button {
   grid-column: 2;
   grid-row: 8;
   font-family: Arial, serif;
@@ -125,8 +125,7 @@ h1{
   background-color: white;
   color: black;
 }
-.signup-button:hover{
+.signup-button:hover {
   background-color: black;
   color: white;
 }
-

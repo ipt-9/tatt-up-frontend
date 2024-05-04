@@ -3,14 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-profile-settings',
   templateUrl: './profile-settings.component.html',
-  styleUrls: ['./profile-settings.component.scss']
+  styleUrls: ['./profile-settings.component.scss'],
 })
 export class ProfileSettingsComponent {
   userData = {
     name: '', // Initialize with current user data
     email: '', // Initialize with current user data
     address: '',
-    description: ''
+    description: '',
     // Add more properties for other profile settings
   };
 

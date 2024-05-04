@@ -1,32 +1,31 @@
-.footer{
-  background-color: #E9E9E9;
+.footer {
+  background-color: #e9e9e9;
   padding: 0.5%;
   margin: 0;
 }
 
-.footer-container{
+.footer-container {
   display: grid;
   grid-template-columns: 10vh 20vh 30vh 50vh;
 }
 
-.footer-logo{
+.footer-logo {
   grid-column: 1;
   margin-left: 0;
   font-family: "Calibri";
 }
 
-.footer-copy{
+.footer-copy {
   grid-column: 2;
   text-align: left;
 }
 
-.footer-links{
+.footer-links {
   grid-column: 3;
   display: flex;
   gap: 4%;
 
-
-  a{
+  a {
     text-decoration: none;
     color: #000000;
   }

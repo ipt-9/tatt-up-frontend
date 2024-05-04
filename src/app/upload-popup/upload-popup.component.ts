@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-upload-popup',
   templateUrl: './upload-popup.component.html',
-  styleUrls: ['./upload-popup.component.scss']
+  styleUrls: ['./upload-popup.component.scss'],
 })
 export class UploadPopupComponent {
   imageUploaded: boolean = false;
@@ -23,7 +23,7 @@ export class UploadPopupComponent {
     const file = element.files ? element.files[0] : null;
     if (file) {
       const reader = new FileReader();
-      reader.onload = e => {
+      reader.onload = (e) => {
         this.imageSrc = reader.result;
         this.imageUploaded = true;
       };
@@ -37,6 +37,6 @@ export class UploadPopupComponent {
 
   autoResize(event: any) {
     event.target.style.height = 'auto';
-    event.target.style.height = (event.target.scrollHeight) + 'px';
+    event.target.style.height = event.target.scrollHeight + 'px';
   }
 }

@@ -4,23 +4,34 @@
   <div class="content-container">
     <div *ngIf="!imageUploaded" class="upload-box">
       <p>Select file or add via Drag-and-Drop</p>
-       <input type="file" id="fileInput" hidden (change)="onFileSelected($event)" #fileInput />
+      <input
+        type="file"
+        id="fileInput"
+        hidden
+        (change)="onFileSelected($event)"
+        #fileInput
+      />
       <button type="button" (click)="fileInput.click()">Select file</button>
     </div>
 
-  <div *ngIf="imageUploaded" class="image-and-caption">
-    <div class="image-container">
-      <img [src]="imageSrc" alt="Image preview" class="image-preview" />
+    <div *ngIf="imageUploaded" class="image-and-caption">
+      <div class="image-container">
+        <img [src]="imageSrc" alt="Image preview" class="image-preview" />
+      </div>
+      <div class="caption-box">
+        <textarea
+          placeholder="Caption"
+          rows="1"
+          (input)="autoResize($event)"
+        ></textarea>
+      </div>
     </div>
-    <div class="caption-box">
-      <textarea placeholder="Caption" rows="1" (input)="autoResize($event)"></textarea>
-    </div>
-  </div>
   </div>
 
   <button class="close-button" (click)="closePopup()">&times;</button>
   <div class="button-container">
-    <button class="publish-button" *ngIf="imageUploaded" (click)="publish()">Publish</button>
+    <button class="publish-button" *ngIf="imageUploaded" (click)="publish()">
+      Publish
+    </button>
   </div>
-
 </div>

@@ -8,7 +8,7 @@ describe('ContactFormComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ContactFormComponent]
+      declarations: [ContactFormComponent],
     });
     fixture = TestBed.createComponent(ContactFormComponent);
     component = fixture.componentInstance;
