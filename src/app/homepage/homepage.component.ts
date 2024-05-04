@@ -4,6 +4,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import {Observable} from "rxjs";
+import {AuthService} from "../auth.service";
 
 @Component({
   selector: 'app-homepage',
@@ -11,11 +13,19 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent {
+  isLoggedIn$!: Observable<boolean>;
   constructor(
     private router: Router,
     private modalService: NgbModal,
+    private authService : AuthService,
   ) {}
+  ngOnInit() {
+    this.isLoggedIn$ = this.authService.isLoggedIn();
+  }
 
+  logOut() {
+    this.authService.logOut();
+  }
   openCreatePostModal() {
     this.modalService.open(UploadPopupComponent);
   }
@@ -40,4 +50,6 @@ export class HomepageComponent {
   navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }
+
+  
 }
