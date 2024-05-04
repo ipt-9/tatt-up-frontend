@@ -5,13 +5,17 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {AuthService} from "../auth.service";
 import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
+import {CalendarEvent, CalendarModule, CalendarView, DateAdapter} from "angular-calendar";
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+
 
 @Component({
   selector: 'app-direct-messages',
-  templateUrl: './direct-messages.component.html',
-  styleUrls: ['./direct-messages.component.scss']
+  styleUrls: ['./direct-messages.component.scss'],
+  templateUrl: './direct-messages.component.html'
 })
 export class DirectMessagesComponent {
+
   isLoggedIn$!: Observable<boolean>;
   constructor(
     private router: Router,
@@ -67,4 +71,6 @@ export class DirectMessagesComponent {
       console.error('Modal dismissed without logging out:', err);
     });
   }
+
+
 }

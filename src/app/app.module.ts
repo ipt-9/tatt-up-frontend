@@ -2,7 +2,7 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatButtonModule } from '@angular/material/button';
+//import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +24,7 @@ import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+//import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
@@ -36,7 +36,8 @@ import { NgOptimizedImage } from '@angular/common';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { DirectMessagesComponent } from './direct-messages/direct-messages.component';
 import { LogoutConfirmationComponent } from './logout-confirmation/logout-confirmation.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SwipeableCalendarComponent } from './swipeable-calendar/swipeable-calendar.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { LogoutConfirmationComponent } from './logout-confirmation/logout-confir
     MyProfileComponent,
     DirectMessagesComponent,
     LogoutConfirmationComponent,
+    SwipeableCalendarComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,13 +72,13 @@ import { LogoutConfirmationComponent } from './logout-confirmation/logout-confir
     SearchBarComponent,
     HttpClientModule,
     NoopAnimationsModule,
-    MatButtonModule,
     NgbModule,
-    MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
     NgOptimizedImage,
+    BrowserAnimationsModule,
+
   ],
 
   providers: [],
