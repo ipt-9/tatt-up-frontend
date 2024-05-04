@@ -4,64 +4,57 @@
   <div class="nav">
     <div class="sidebar-content">
 
-     
-
-      <div class="nav_bold">
-        <img
+      <div class="nav_bold" (click)="navigateToHomepage()" >
+        <i class="fas fa-home"  (click)="navigateToHomepage()" ></i>
+<!--      <img
           ngSrc="assets/images/home-bold.png"
           alt="Home Icon"
           height="512"
           width="512"
-        />
+
+        /> -->
         Home
       </div>
-      <div>
-        <img
+      <div class="hover" (click)="navigateToExplore()">
+        <i class="fas fa-search" (click)="navigateToExplore()"></i>
+        <!--<img
+
           ngSrc="assets/images/explore-bold.png"
           alt="Explore Icon"
           height="512"
           width="512"
-        />
+        /> -->
         Explore
       </div>
-      <div>
-        <img
+
+      <div class="hover" (click)="navigateToFavorites()">
+        <i class="fas fa-bookmark" (click)="navigateToFavorites()"></i>
+       <!-- <img
           ngSrc="assets/images/list.png"
           alt="Favourites Icon"
           height="512"
           width="512"
-        />
+
+        />-->
         Favorites
       </div>
       <div class="link-style" (click)="openCreatePostModal()">
-        <img src="assets/images/upload.png" alt="Upload Icon" /> Create Post
+        <i class="fas fa-upload" (click)="openCreatePostModal()"></i>
+        <!--<img src="assets/images/upload.png" alt="Upload Icon" />--> Create Post
       </div>
 
 
       <div class="hover" (click)="navigateToAbout()">
-        <div href="/about">
-          <img
+        <div href="/about" (click)="navigateToAbout()">
+          <!--<img
             ngSrc="assets/images/info.png"
             alt="Info Icon"
             height="144"
             width="144"
-          />
+          />--> <i class="fas fa-info-circle"></i>
           About Us
         </div>
       </div>
-
-      <!--
-                <i class="fas fa-home"></i>
-               <i class="fas fa-search"></i>
-               <i class="fas fa-bookmark"></i>
-                <i class="fas fa-upload"></i>
-
-
-         <div class="nav_bold" (click)="navigateToHomepage()">Home</div>
-         <div class="hover" (click)="navigateToExplore()">Explore  </div>
-         <div class="hover" (click)="navigateToFavorites()">Favorites</div>
-         <div  class="link-style" (click)="openCreatePostModal()">Create Post</div>
-         <div class="hover" (click)="navigateToAbout()">About Us</div> -->
     </div>
   </div>
 
