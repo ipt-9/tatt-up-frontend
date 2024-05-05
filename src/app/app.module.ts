@@ -1,7 +1,7 @@
 //app.module.ts
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -20,7 +20,6 @@ import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { LegalComponent } from './legal/legal.component';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
@@ -34,9 +33,13 @@ import { DirectMessagesComponent } from './direct-messages/direct-messages.compo
 import { LogoutConfirmationComponent } from './logout-confirmation/logout-confirmation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwipeableCalendarComponent } from './swipeable-calendar/swipeable-calendar.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatCardModule} from '@angular/material/card';
-
+//Material imports
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatCardModule } from '@angular/material/card';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
@@ -82,6 +85,9 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatCardModule,
     MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule,
+    CommonModule,
   ],
   providers: []
 })

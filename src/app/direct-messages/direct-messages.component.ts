@@ -6,7 +6,7 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {AuthService} from "../auth.service";
 import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
-
+import {SwipeableCalendarComponent} from "../swipeable-calendar/swipeable-calendar.component";
 
 @Component({
   selector: 'app-direct-messages',
