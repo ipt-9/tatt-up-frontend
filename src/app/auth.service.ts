@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of, throwError, BehaviorSubject } from 'rxjs';
+import { Observable, throwError, BehaviorSubject } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -64,5 +64,12 @@ export class AuthService {
       console.error(`${operation} failed: ${error.message}`);
       return throwError(() => error);
     };
+  }
+  getEvents(): Observable<Event[]> {
+    return this.http.get<Event[]>(`${this.apiUrl}/events`);
+  }
+
+  saveEvent(event: Event): Observable<Event> {
+    return this.http.post<Event>(`${this.apiUrl}/events`, event);
   }
 }

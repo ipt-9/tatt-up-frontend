@@ -1,1 +1,78 @@
-<p>direct-messages works!</p>
+<body>
+<div class="grid">
+    <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
+    <div class="nav">
+        <div class="sidebar-content">
+            <div class="hover" (click)="navigateToHomepage()" >
+                <i class="fas fa-home"  (click)="navigateToHomepage()" ></i>
+                Home
+            </div>
+            <div class="hover" (click)="navigateToExplore()">
+                <i class="fas fa-search" (click)="navigateToExplore()"></i>
+
+                Explore
+            </div>
+
+            <div class="hover" (click)="navigateToFavorites()">
+                <i class="fas fa-bookmark" (click)="navigateToFavorites()"></i>
+                Favorites
+            </div>
+            <div class="link-style" (click)="openCreatePostModal()">
+                <i class="fas fa-upload" (click)="openCreatePostModal()"></i>
+                Create Post
+            </div>
+
+
+            <div class="hover" (click)="navigateToAbout()">
+                <div  (click)="navigateToAbout()">
+                    <i class="fas fa-info-circle"></i>
+                    About Us
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div *ngIf="!(isLoggedIn$ | async)">
+            <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">
+                LOG IN
+            </button>
+            <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">
+                SIGN UP
+            </button>
+        </div>
+        <div class="signedin-icons" *ngIf="isLoggedIn$ | async ">
+            <i class="fas fa-envelope" (click)="navigateToDirectMessages()"></i>
+            <i class="fas fa-user" (click)="navigateToMyProfile()"></i>
+            <i class="fas fa-sign-out" (click)="openLogoutModal()"></i>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="messages">
+            <p>List of messages</p>
+        </div>
+
+        <div class="messages-header"> <p>header</p></div>
+        <div class="messages-content">
+            <p>Content of messages</p>
+        </div>
+        <div class="booking-list">
+          <app-swipeable-calendar></app-swipeable-calendar>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">TATT'UP</div>
+        <div class="footer-copy">© 2023 Copyright</div>
+        <nav class="footer-links">
+            <a href="/legal">Legal</a>
+            <a href="/contact">Contact</a>
+            <a href="/monetization">Monetization</a>
+            <a href="/disclaimer">Disclaimer</a>
+        </nav>
+    </div>
+</footer>
+</body>
