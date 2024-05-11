@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
@@ -7,15 +7,16 @@ import {AuthService} from "../auth.service";
 import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
 import {SwipeableCalendarComponent} from "../swipeable-calendar/swipeable-calendar.component";
-import {MessageService} from "../message.service";
-
+import { MessageService} from "../message.service";
+import { Message } from 'src/app/models/message.model';
 @Component({
   selector: 'app-direct-messages',
   styleUrls: ['./direct-messages.component.scss'],
   templateUrl: './direct-messages.component.html'
 })
-export class DirectMessagesComponent {
-
+export class DirectMessagesComponent implements OnInit{
+  messages$!: Observable<Message[]>;
+  currentMessage: Message | null = null;
   isLoggedIn$!: Observable<boolean>;
   constructor(
       private router: Router,
@@ -25,11 +26,19 @@ export class DirectMessagesComponent {
   ) {}
   ngOnInit() {
     this.isLoggedIn$ = this.authService.isLoggedIn();
-    this.messageService.getMessages().subscribe(messages => {
-      this.messages = messages;
-    });
+  this.loadMessages();
+  }
+  loadMessages() {
+    this.messages$ = this.messageService.getMessages(1);  // Assuming '1' is the ID of the receiver or a session user ID
   }
 
+  selectMessage(message: Message) {
+    this.currentMessage = message;
+  }
+  startNewConversation() {
+    console.log('Starting new conversation');
+
+  }
   logOut() {
     this.authService.logOut();
   }

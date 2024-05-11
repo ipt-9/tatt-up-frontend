@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from "../auth.service";
-import { User, Event } from "../auth.service";
-
+import { User } from 'src/app/models/user.model';
+import { Event } from 'src/app/models/event.model';
 @Component({
   selector: 'app-swipeable-calendar',
   templateUrl: './swipeable-calendar.component.html'

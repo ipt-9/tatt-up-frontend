@@ -1,22 +1,19 @@
 import { Injectable } from '@angular/core';
 import {Observable, of} from "rxjs";
-export interface Message {
-  id: number;
-  sender: string;
-  snippet: string;
-  time: Date;
-}
+import {HttpClient} from "@angular/common/http";
+import {AuthService} from "./auth.service";
+import { Message } from 'src/app/models/message.model';
+
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
-  private messages: Message[] = [
-    { id: 1, sender: 'Jane Doe', snippet: 'Hey, how are you?', time: new Date() },
-    { id: 2, sender: 'John Smith', snippet: 'Meeting at 10?', time: new Date() },
 
-  ];
-  constructor() { }
-  getMessages(): Observable<Message[]> {
-    return of(this.messages);
+  constructor(private http: HttpClient, private authService: AuthService) { }
+  getMessages(receiverId: number): Observable<Message[]> {
+    return this.http.get<Message[]>(`${this.authService.apiUrl}/messages/${receiverId}`);
+  }
+  sendMessage(receiverId: number, message: string): Observable<Message> {
+    return this.http.post<Message>(`${this.authService.apiUrl}/messages/send`, { receiverId, message });
   }
 }
