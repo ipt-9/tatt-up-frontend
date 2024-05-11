@@ -9,6 +9,7 @@ import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirm
 import {SwipeableCalendarComponent} from "../swipeable-calendar/swipeable-calendar.component";
 import { MessageService} from "../message.service";
 import { Message } from 'src/app/models/message.model';
+import {User} from "../models/user.model";
 @Component({
   selector: 'app-direct-messages',
   styleUrls: ['./direct-messages.component.scss'],
@@ -16,8 +17,10 @@ import { Message } from 'src/app/models/message.model';
 })
 export class DirectMessagesComponent implements OnInit{
   messages$!: Observable<Message[]>;
+  users$!: Observable<User[]>;
   currentMessage: Message | null = null;
   isLoggedIn$!: Observable<boolean>;
+  selectedUserId!: number;
   constructor(
       private router: Router,
       private modalService: NgbModal,
@@ -31,12 +34,17 @@ export class DirectMessagesComponent implements OnInit{
   loadMessages() {
     this.messages$ = this.messageService.getMessages(1);  // Assuming '1' is the ID of the receiver or a session user ID
   }
+  selectUser(user: User) {
+    this.selectedUserId = user.id;
+    // Now show the message input box to send a message to this selected user
+  }
 
   selectMessage(message: Message) {
     this.currentMessage = message;
   }
   startNewConversation() {
     console.log('Starting new conversation');
+    this.users$ = this.authService.getUsers();
 
   }
   logOut() {
@@ -84,6 +92,7 @@ export class DirectMessagesComponent implements OnInit{
       console.error('Modal dismissed without logging out:', err);
     });
   }
+
 
 
 }

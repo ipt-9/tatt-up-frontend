@@ -291,5 +291,16 @@ body {
 
 }
 
-
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
 

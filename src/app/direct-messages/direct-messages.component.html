@@ -51,10 +51,17 @@
     <div class="main">
         <div class="messages">
           <button (click)="startNewConversation()" class="new-message-button">+ New Message</button>
-          <div *ngFor="let message of messages$ | async" class="message-entry" (click)="selectMessage(message)">
+          <div *ngIf="users$ | async as users">
+            <ul>
+              <li *ngFor="let user of users" (click)="selectUser(user)">
+                <!--{{ user.name }}-->
+              </li>
+            </ul>
+          </div>
+         <!-- <div *ngFor="let message of messages$ | async" class="message-entry" (click)="selectMessage(message)">
             <p><strong>{{ message.sender }}</strong>: {{ message.message | slice:0:30 }}...</p>
             <small>{{ message.sent_at | date:'shortTime' }}</small>
-          </div>
+          </div>-->
         </div>
 
         <div class="messages-header"> <p>header</p></div>
@@ -76,7 +83,7 @@
         <div class="footer-copy">© 2023 Copyright</div>
         <nav class="footer-links">
             <a href="/legal">Legal</a>
-            <a href="/contact">Contact</a>
+            <a href="/about" >Contact</a>
             <a href="/monetization">Monetization</a>
             <a href="/disclaimer">Disclaimer</a>
         </nav>
