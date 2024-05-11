@@ -13,6 +13,7 @@ export class SwipeableCalendarComponent implements OnInit {
   events: Event[] = [];
   users: User[] = [];
 
+
   constructor(private fb: FormBuilder, private authService: AuthService) {
     this.eventForm = this.fb.group({
       title: ['', Validators.required],

@@ -40,6 +40,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
@@ -88,6 +89,7 @@ import { MatInputModule } from '@angular/material/input';
     MatNativeDateModule,
     MatInputModule,
     CommonModule,
+    MatAutocompleteModule,
   ],
   providers: []
 })

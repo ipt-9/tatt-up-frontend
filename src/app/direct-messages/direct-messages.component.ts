@@ -7,6 +7,7 @@ import {AuthService} from "../auth.service";
 import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
 import {SwipeableCalendarComponent} from "../swipeable-calendar/swipeable-calendar.component";
+import {MessageService} from "../message.service";
 
 @Component({
   selector: 'app-direct-messages',
@@ -20,9 +21,13 @@ export class DirectMessagesComponent {
       private router: Router,
       private modalService: NgbModal,
       private authService : AuthService,
+      private messageService : MessageService
   ) {}
   ngOnInit() {
     this.isLoggedIn$ = this.authService.isLoggedIn();
+    this.messageService.getMessages().subscribe(messages => {
+      this.messages = messages;
+    });
   }
 
   logOut() {
