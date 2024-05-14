@@ -87,6 +87,12 @@
         </div>
       </div>
 
+      <div class="results-grid-container">
+        <div *ngFor="let result of filteredResults" class="grid-item">
+          <img [src]="result.picture" alt="Picture">
+        </div>
+      </div>
+
 
       <div *ngFor="let result of searchResults">
       <!-- Display search results here -->
