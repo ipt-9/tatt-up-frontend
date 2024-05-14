@@ -221,23 +221,34 @@ body {
   }
 }
 
-.filter-dropdown {
-  position: absolute;
-  display: none;
-  top: calc(100% + 10px);
-  left: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+hr{
+  width: 100%;
+  color: black;
+  margin: 0px;
+}
 
-  div {
-    padding: 5px 10px;
-    cursor: pointer;
+.filter-container {
+  position: relative;
+  width: 5%;
+  height: 7%;
 
-    &:hover {
-      background-color: #f0f0f0;
+  .filter-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 300%;
+    border: 1px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    div {
+      padding: 5px 10px;
+      cursor: pointer;
     }
+  }
+
+  &:hover .filter-dropdown{
+    display: block;
   }
 }
 
-.filter-container:hover .filter-dropdown {
-  display: block;
-}
