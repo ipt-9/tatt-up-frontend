@@ -1,67 +1,41 @@
+<title>Home</title>
 <body>
 <div class="grid">
   <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
   <div class="nav">
     <div class="sidebar-content">
-      <div class="nav_bold">
-        <img
-          ngSrc="assets/images/home-bold.png"
-          alt="Home Icon"
-          height="512"
-          width="512"
-        />
+
+      <div class="nav_bold" (click)="navigateToHomepage()" >
+        <i class="fas fa-home"  (click)="navigateToHomepage()" ></i>
         Home
       </div>
-      <div>
-        <img
-          ngSrc="assets/images/explore-bold.png"
-          alt="Explore Icon"
-          height="512"
-          width="512"
-        />
+      <div class="hover" (click)="navigateToExplore()">
+        <i class="fas fa-search" (click)="navigateToExplore()"></i>
+
         Explore
       </div>
-      <div>
-        <img
-          ngSrc="assets/images/list.png"
-          alt="Favourites Icon"
-          height="512"
-          width="512"
-        />
+
+      <div class="hover" (click)="navigateToFavorites()">
+        <i class="fas fa-bookmark" (click)="navigateToFavorites()"></i>
         Favorites
       </div>
       <div class="link-style" (click)="openCreatePostModal()">
-        <img src="assets/images/upload.png" alt="Upload Icon" /> Create Post
+        <i class="fas fa-upload" (click)="openCreatePostModal()"></i>
+Create Post
       </div>
 
+
       <div class="hover" (click)="navigateToAbout()">
-        <div href="/about">
-          <img
-            ngSrc="assets/images/info.png"
-            alt="Info Icon"
-            height="144"
-            width="144"
-          />
+        <div href="/about" (click)="navigateToAbout()">
+        <i class="fas fa-info-circle"></i>
           About Us
         </div>
       </div>
-
-      <!--
-                <i class="fas fa-home"></i>
-               <i class="fas fa-search"></i>
-               <i class="fas fa-bookmark"></i>
-                <i class="fas fa-upload"></i>
-
-
-         <div class="nav_bold" (click)="navigateToHomepage()">Home</div>
-         <div class="hover" (click)="navigateToExplore()">Explore  </div>
-         <div class="hover" (click)="navigateToFavorites()">Favorites</div>
-         <div  class="link-style" (click)="openCreatePostModal()">Create Post</div>
-         <div class="hover" (click)="navigateToAbout()">About Us</div> -->
     </div>
   </div>
 
   <div class="header">
+    <div *ngIf="!(isLoggedIn$ | async)">
     <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">
       LOG IN
     </button>
@@ -69,7 +43,12 @@
       SIGN UP
     </button>
   </div>
-
+    <div class="signedin-icons" *ngIf="isLoggedIn$ | async ">
+      <i class="fas fa-envelope" (click)="navigateToDirectMessages()"></i>
+      <i class="fas fa-user" (click)="navigateToMyProfile()"></i>
+      <i class="fas fa-sign-out" (click)="openLogoutModal()"></i>
+    </div>
+  </div>
   <div class="main">
     <div class="homepage-main-title">Welcome to Tatt' Up!</div>
     <div class="grid-monetize-etwot">
@@ -164,7 +143,7 @@
     <div class="footer-copy">© 2023 Copyright</div>
     <nav class="footer-links">
       <a href="/legal">Legal</a>
-      <a href="/contact">Contact</a>
+      <a href="/about">Contact</a>
       <a href="/monetization">Monetization</a>
       <a href="/disclaimer">Disclaimer</a>
     </nav>

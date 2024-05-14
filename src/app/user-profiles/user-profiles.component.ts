@@ -31,4 +31,7 @@ export class UserProfilesComponent {
   navigateToLogin(): void {
     this.router.navigateByUrl('/user-login');
   }
+  navigateToMyProfile(): void{
+    this.router.navigateByUrl('/my-profile');
+  }
 }

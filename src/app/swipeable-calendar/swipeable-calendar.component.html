@@ -1,0 +1,31 @@
+
+<mat-card class="calendar-card">
+  <mat-calendar [(selected)]="selectedDate" (selectedChange)="onDateChange($event)"></mat-calendar>
+</mat-card>
+
+<form [formGroup]="eventForm" (ngSubmit)="saveEvent()">
+  <mat-form-field>
+    <input matInput type="text" placeholder="Event Title" formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="time" placeholder="Event Time" formControlName="time">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="date" formControlName="date">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Username" formControlName="username">
+  </mat-form-field>
+
+  <button class="save-event" type="submit">Save Event</button>
+</form>
+
+<h3>Saved Events</h3>
+<ul>
+  <li *ngFor="let event of events">
+    {{ event.title }} - {{ event.date | date:'dd-MM-yyyy' }} at {{ event.time }}
+  </li>
+</ul>
