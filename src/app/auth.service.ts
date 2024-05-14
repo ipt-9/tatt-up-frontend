@@ -1,19 +1,24 @@
+// auth.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, BehaviorSubject } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
+import { Event } from 'src/app/models/event.model';
+import { User } from 'src/app/models/user.model';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://backend.tatt-up-bmsd21a.bbzwinf.ch/api';
+  public apiUrl = 'https://backend.tatt-up-bmsd21a.bbzwinf.ch/api';
   private isLoggedInStatus = new BehaviorSubject<boolean>(this.hasToken());
 
   constructor(private http: HttpClient) {}
 
   private hasToken(): boolean {
-    return !!localStorage.getItem('auth_token');
+    return !!localStorage.
+    getItem('auth_token');
   }
 
   isLoggedIn(): Observable<boolean> {
@@ -71,5 +76,9 @@ export class AuthService {
 
   saveEvent(event: Event): Observable<Event> {
     return this.http.post<Event>(`${this.apiUrl}/events`, event);
+  }
+
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.apiUrl}/users`);
   }
 }

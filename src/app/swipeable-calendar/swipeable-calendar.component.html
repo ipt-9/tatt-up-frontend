@@ -5,7 +5,7 @@
 
 <form [formGroup]="eventForm" (ngSubmit)="saveEvent()">
   <mat-form-field>
-    <input matInput type="text" placeholder="Customer name" formControlName="title">
+    <input matInput type="text" placeholder="Event Title" formControlName="title">
   </mat-form-field>
 
   <mat-form-field>
@@ -14,6 +14,10 @@
 
   <mat-form-field>
     <input matInput type="date" formControlName="date">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Username" formControlName="username">
   </mat-form-field>
 
   <button class="save-event" type="submit">Save Event</button>
