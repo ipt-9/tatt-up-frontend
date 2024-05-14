@@ -283,6 +283,7 @@ body {
   grid-column: 2;
   border-bottom: 2px solid #d6d6d6;
   border-right: 2px solid #d6d6d6;
+  padding: 20px;
 
 }
 .booking-list{
@@ -314,9 +315,9 @@ ul {
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 200px;
-  max-height: 200px; // Adjust as needed
-  overflow-y: auto; // Enable vertical scrolling
-  z-index: 1000; // Ensure the dropdown is above other elements
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
   padding: 10px;
 }
 

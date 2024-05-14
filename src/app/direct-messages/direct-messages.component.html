@@ -70,16 +70,37 @@
          <!-- <div *ngFor="let message of messages$ | async" class="message-entry" (click)="selectMessage(message)">
             <p><strong>{{ message.sender }}</strong>: {{ message.message | slice:0:30 }}...</p>
             <small>{{ message.sent_at | date:'shortTime' }}</small>
-          </div>-->
-        </div>
+          </div>
 
-        <div class="messages-header"> <p>header</p></div>
-        <div class="messages-content" *ngIf="currentMessage">
+
           <h3>Message from {{ currentMessage.sender }}</h3>
           <p>{{ currentMessage.message }}</p>
-          <p>Sent at: {{ currentMessage.sent_at | date:'medium' }}</p>
+          <p>Sent at: {{ currentMessage.sent_at | date:'medium' }}</p>-->
+        </div>
+
+        <div class="messages-header" *ngIf="selectedUser">
+          <h3>{{selectedUser.username}}</h3></div>
+
+
+        <div class="messages-content" *ngIf="messages$ | async as messages">
+
+          <div *ngIf="messages.length; else noMessages">
+            <div *ngFor="let message of messages" class="message-entry">
+              <p><strong>{{ message.sender }}</strong>: {{ message.message }}</p>
+              <small>{{ message.sent_at | date:'medium' }}</small>
+            </div>
+          </div>
+          <ng-template #noMessages>
+            <p>No messages yet.</p>
+          </ng-template>
 
         </div>
+
+      <div class="message-input" *ngIf="selectedUser">
+        <textarea [(ngModel)]="newMessageContent" placeholder="Type your message here..."></textarea>
+        <button (click)="sendMessage()">Send</button>
+      </div>
+
         <div class="booking-list">
           <app-swipeable-calendar></app-swipeable-calendar>
         </div>

@@ -24,6 +24,8 @@ export class DirectMessagesComponent implements OnInit{
   currentMessage: Message | null = null;
   isLoggedIn$!: Observable<boolean>;
   selectedUserId!: number;
+  selectedUser!: User;
+  newMessageContent : string = '';
   constructor(
       private router: Router,
       private modalService: NgbModal,
@@ -36,12 +38,8 @@ export class DirectMessagesComponent implements OnInit{
     this.filteredUsers$ = this.users$;
     this.loadMessages();
   }
-  loadMessages() {
-    this.messages$ = this.messageService.getMessages(1);
-  }
-  selectMessage(message: Message) {
-    this.currentMessage = message;
-  }
+
+  // New convo //
   startNewConversation() {
     console.log('Starting new conversation');
     this.showUserDropdown = !this.showUserDropdown;
@@ -49,10 +47,11 @@ export class DirectMessagesComponent implements OnInit{
   }
   selectUser(user: User): void {
     console.log('Selected user:', user);
+    this.selectedUser = user;
     this.showUserDropdown = false;
     this.searchTerm = user.username;
+    //this.fetchMessages(user.id);
   }
-
 
   onSearchTermChange(): void {
     this.filteredUsers$ = this.users$.pipe(
@@ -65,6 +64,39 @@ export class DirectMessagesComponent implements OnInit{
       })
     );
   }
+
+  // Messages //
+  loadMessages() {
+    this.messages$ = this.messageService.getMessages();
+  }
+  //selectMessage(message: Message) {
+   // this.currentMessage = message;
+  //}
+  //fetchMessages(userId: number): void {
+   // this.messages$ = this.messageService.getMessages(userId); }
+
+sendMessage(): void{
+  if (!this.newMessageContent.trim()) return;
+  if (!this.authService.isLoggedIn()) {
+    console.error('User is not authenticated');
+    return;
+  }
+  const messageData = {
+    receiver_id: this.selectedUser.id,
+    message: this.newMessageContent,
+  };
+  this.messageService.sendMessage(messageData).subscribe(
+    (response) => {
+      this.newMessageContent = '';
+      this.loadMessages();
+    },
+    (error) => {
+      console.error('Error sending message:', error);
+    }
+  );
+}
+
+  // Basic functions //
   logOut() {
     this.authService.logOut();
   }
