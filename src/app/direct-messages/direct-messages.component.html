@@ -51,12 +51,21 @@
     <div class="main">
         <div class="messages">
           <button (click)="startNewConversation()" class="new-message-button">+ New Message</button>
-          <div *ngIf="users$ | async as users">
-            <ul>
-              <li *ngFor="let user of users" (click)="selectUser(user)">
-                <!--{{ user.name }}-->
-              </li>
-            </ul>
+          <div *ngIf="showUserDropdown" class="user-dropdown">
+            <input
+              type="text"
+              [(ngModel)]="searchTerm"
+              (input)="onSearchTermChange()"
+              placeholder="Search users..."
+              class="user-search-input"
+            />
+            <div *ngIf="filteredUsers$ | async as users">
+              <ul class="user-list">
+                <li *ngFor="let user of users" (click)="selectUser(user)">
+                  {{ user.username }}
+                </li>
+              </ul>
+            </div>
           </div>
          <!-- <div *ngFor="let message of messages$ | async" class="message-entry" (click)="selectMessage(message)">
             <p><strong>{{ message.sender }}</strong>: {{ message.message | slice:0:30 }}...</p>

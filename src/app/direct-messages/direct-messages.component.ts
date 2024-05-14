@@ -1,6 +1,6 @@
 
 import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
+import {Observable, of, switchMap} from "rxjs";
 import {Router} from "@angular/router";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {AuthService} from "../auth.service";
@@ -18,6 +18,9 @@ import {User} from "../models/user.model";
 export class DirectMessagesComponent implements OnInit{
   messages$!: Observable<Message[]>;
   users$!: Observable<User[]>;
+  showUserDropdown: boolean = false;
+  filteredUsers$!: Observable<User[]>;
+  searchTerm: string = '';
   currentMessage: Message | null = null;
   isLoggedIn$!: Observable<boolean>;
   selectedUserId!: number;
@@ -29,23 +32,38 @@ export class DirectMessagesComponent implements OnInit{
   ) {}
   ngOnInit() {
     this.isLoggedIn$ = this.authService.isLoggedIn();
-  this.loadMessages();
+    this.users$ = this.authService.getUsers();
+    this.filteredUsers$ = this.users$;
+    this.loadMessages();
   }
   loadMessages() {
-    this.messages$ = this.messageService.getMessages(1);  // Assuming '1' is the ID of the receiver or a session user ID
+    this.messages$ = this.messageService.getMessages(1);
   }
-  selectUser(user: User) {
-    this.selectedUserId = user.id;
-    // Now show the message input box to send a message to this selected user
-  }
-
   selectMessage(message: Message) {
     this.currentMessage = message;
   }
   startNewConversation() {
     console.log('Starting new conversation');
-    this.users$ = this.authService.getUsers();
+    this.showUserDropdown = !this.showUserDropdown;
 
+  }
+  selectUser(user: User): void {
+    console.log('Selected user:', user);
+    this.showUserDropdown = false;
+    this.searchTerm = user.username;
+  }
+
+
+  onSearchTermChange(): void {
+    this.filteredUsers$ = this.users$.pipe(
+      switchMap(users => {
+        if (!this.searchTerm.trim()) {
+          return of(users);
+        }
+        const lowerSearchTerm = this.searchTerm.toLowerCase();
+        return of(users.filter(user => user.username.toLowerCase().includes(lowerSearchTerm)));
+      })
+    );
   }
   logOut() {
     this.authService.logOut();
