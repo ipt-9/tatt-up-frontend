@@ -20,6 +20,7 @@ export class ExploreComponent {
   showFilterPanel: boolean = false;
   category: string = ''; // category that the user selects for filtering
   isLoggedIn$!: Observable<boolean>;
+
   constructor(
     private router: Router,
     private modalService: NgbModal,
