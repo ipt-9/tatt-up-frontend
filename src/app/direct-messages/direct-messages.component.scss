@@ -283,6 +283,7 @@ body {
   grid-column: 2;
   border-bottom: 2px solid #d6d6d6;
   border-right: 2px solid #d6d6d6;
+  padding: 20px;
 
 }
 .booking-list{
@@ -303,4 +304,43 @@ ul {
     }
   }
 }
+
+
+/** USER DROPDOWN **/
+
+
+.user-dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.user-search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.user-list li:hover {
+  background-color: #f0f0f0;
+}
+
 
