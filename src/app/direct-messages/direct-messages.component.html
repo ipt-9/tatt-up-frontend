@@ -85,6 +85,7 @@
         <div class="messages-content" *ngIf="messages$ | async as messages">
 
           <div *ngIf="messages.length; else noMessages">
+
             <div *ngFor="let message of messages" class="message-entry">
               <p><strong>{{ message.sender }}</strong>: {{ message.message }}</p>
               <small>{{ message.sent_at | date:'medium' }}</small>
@@ -98,7 +99,7 @@
 
       <div class="message-input" *ngIf="selectedUser">
         <textarea [(ngModel)]="newMessageContent" placeholder="Type your message here..."></textarea>
-        <button (click)="sendMessage()">Send</button>
+        <button class="send-button" (click)="sendMessage()">Send</button>
       </div>
 
         <div class="booking-list">
