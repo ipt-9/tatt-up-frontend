@@ -22,6 +22,16 @@ export class ExploreComponent {
   category: string = ''; // category that the user selects for filtering
   isLoggedIn$!: Observable<boolean>;
 
+  //TEMPORARY  IMAGE DATA
+  images = [
+    { picture: 'assets/images/search1.png' },
+    { picture: 'assets/images/search2.png' },
+    { picture: 'assets/images/search3.png' },
+    { picture: 'assets/images/search4.png' },
+    { picture: 'assets/images/search5.png' },
+    { picture: 'assets/images/search6.png' },
+  ];
+
   constructor(
     private router: Router,
     private modalService: NgbModal,
@@ -79,7 +89,11 @@ export class ExploreComponent {
     });
   }
   fetchSearchResults(term: string): void {
-    this.searchService.search(term).subscribe({
+
+    //FOR TEMPORARY PLACEHOLDER IMAGES
+    this.filteredResults = this.images;
+
+    /* this.searchService.search(term).subscribe({
       next: (data: any[]) => {
         this.searchResults = data.map(item => ({
           ...item,
@@ -92,6 +106,8 @@ export class ExploreComponent {
         console.error('There was an error!', error);
       },
     });
+    */
+
   }
 
   getPictureUrl(itemId: string): string {
