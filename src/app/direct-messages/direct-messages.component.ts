@@ -28,6 +28,7 @@ export class DirectMessagesComponent implements OnInit{
   //selectedUserId!: number;
   selectedUser!: User;
   newMessageContent : string = '';
+  conversations$!: Observable<any[]>;
   constructor(
       private router: Router,
       private modalService: NgbModal,
@@ -41,6 +42,7 @@ export class DirectMessagesComponent implements OnInit{
     this.users$ = this.authService.getUsers();
     this.filteredUsers$ = this.users$;
     this.loadMessages();
+    this.conversations$ = this.messageService.getConversations();
   }
 
   // New convo //
@@ -65,7 +67,13 @@ export class DirectMessagesComponent implements OnInit{
 
   loadMessages() {
     if(!this.selectedUser) return;
-    this.messages$ = this.messageService.getMessages(this.selectedUser.username);
+    this.messageService.getMessages(this.selectedUser.username).subscribe(
+      messages => {
+        console.log(messages);
+        this.messages$ = of(messages);
+      },
+      error => console.error('Error fetching messages:', error)
+    );
   }
   sendMessage(): void{
     if (!this.newMessageContent.trim()) return;
@@ -79,18 +87,6 @@ export class DirectMessagesComponent implements OnInit{
     );
 
   }
-  fetchMessages(username: string): Observable<Message[]> {
-    return this.http.get<Message[]>(`${this.authService.apiUrl}/messages/${username}`);
-  }
-
-  // Messages //
-
-  //selectMessage(message: Message) {
-   // this.currentMessage = message;
-  //}
-  //fetchMessages(userId: number): void {
-   // this.messages$ = this.messageService.getMessages(userId); }
-
 
 
   // Basic functions //
