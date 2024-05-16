@@ -73,4 +73,8 @@ export class OpenPostComponent {
       console.error('Modal dismissed without logging out:', err);
     });
   }
+
+  sendComment(){
+
+  }
 }
