@@ -261,7 +261,8 @@ body {
 .tattoo-week-img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px 1px;
+  row-gap: 10px;
+  column-gap: 1px;
   justify-content: center;
 }
 
@@ -272,8 +273,8 @@ body {
 }
 
 .tattoo-week-img img {
-  width: 25vh;
-  height: 25vh;
+  width: 30vh;
+  height: 30vh;
 }
 .artist-name {
   font-size: 1.5vh;
@@ -302,7 +303,7 @@ body {
   grid-template-columns: repeat(5, 1fr);
   row-gap: 30px;
   align-items: center;
-  padding-bottom: 100px;
+
 }
 
 .featured-artists img {
@@ -315,7 +316,7 @@ body {
 .artist-title {
   text-align: center;
   margin-left: -22vh;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   margin-top: 5%;
   font-weight: bold;
   font-size: 3.5vh;
