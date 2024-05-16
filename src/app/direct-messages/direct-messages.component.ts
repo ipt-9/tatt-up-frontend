@@ -82,7 +82,7 @@ sendMessage(): void{
     return;
   }
   const messageData = {
-    receiver_id: this.selectedUser.id,
+    receiver_username: this.selectedUser.username,
     message: this.newMessageContent,
   };
   this.messageService.sendMessage(messageData).subscribe(
