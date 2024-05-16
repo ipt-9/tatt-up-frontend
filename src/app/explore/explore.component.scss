@@ -5,7 +5,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 10vh 85vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .title {
@@ -14,7 +14,6 @@ body {
   border-right: solid;
   border-color: #d6d6d6;
   border-width: 2px;
-
   font-family: "Cageroll", serif;
   text-transform: uppercase;
   text-decoration: underline;
@@ -25,13 +24,13 @@ body {
 
 .header {
   grid-row: 1;
-  grid-template-columns: 1fr auto;
+  grid-column: 2;
   border-bottom: solid;
   border-color: #d6d6d6;
   border-width: 2px;
   padding-top: 1vh;
   font-size: 20px;
-  align-items: center;
+  align-items: end;
 
 }
 .nav {
@@ -41,7 +40,7 @@ body {
   border-color: #d6d6d6;
   border-width: 2px;
   padding-top: 10%;
-  padding-left: 35%;
+  padding-left: 25%;
   text-align: left;
   font-size: 150%;
   line-height: 50px;
