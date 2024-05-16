@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import {catchError, tap} from 'rxjs/operators';
 import { AuthService } from './auth.service';
 import { Message } from 'src/app/models/message.model';
 
@@ -34,4 +34,16 @@ export class MessageService {
         })
       );
   }
+  getConversations(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.authService.apiUrl}/conversations`).pipe(
+      tap(conversations => console.log('Fetched conversations:', conversations)),
+      catchError(error => {
+        console.error('Failed to fetch conversations', error);
+        return throwError(() => new Error('Failed to fetch conversations'));
+      })
+    );
+  }
+
+
+
 }

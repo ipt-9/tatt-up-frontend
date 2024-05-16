@@ -50,6 +50,7 @@
 
     <div class="main">
         <div class="messages">
+
           <button (click)="startNewConversation()" class="new-message-button">+ New Message</button>
           <div *ngIf="showUserDropdown" class="user-dropdown">
             <input
@@ -67,43 +68,44 @@
               </ul>
             </div>
           </div>
-         <!-- <div *ngFor="let message of messages$ | async" class="message-entry" (click)="selectMessage(message)">
-            <p><strong>{{ message.sender }}</strong>: {{ message.message | slice:0:30 }}...</p>
-            <small>{{ message.sent_at | date:'shortTime' }}</small>
+          <div class="conversation-list">
+            <ul *ngIf="conversations$ | async as conversations">
+              <li *ngFor="let convo of conversations">
+                <div (click)="selectUser(convo.receiver)">
+                  <p>{{ convo.receiver.username }}: {{ convo.message }}</p>
+                  <small>Last message at: {{ convo.sent_at | date:'short' }}</small>
+                </div>
+              </li>
+            </ul>
           </div>
+          <!--End of conversation list -->
 
-
-          <h3>Message from {{ currentMessage.sender }}</h3>
-          <p>{{ currentMessage.message }}</p>
-          <p>Sent at: {{ currentMessage.sent_at | date:'medium' }}</p>-->
-        </div>
+        </div> <!-- End of div messages -->
 
 
 
 
         <div class="messages-header" *ngIf="selectedUser">
-          <h3>{{selectedUser.username}}</h3></div>
+          <h3>{{selectedUser.username}}</h3></div> <!-- End of message header -->
 
 
-        <div class="messages-content" *ngIf="messages$ | async as messages">
-
-          <div *ngIf="messages.length; else noMessages">
-
-            <div *ngFor="let message of messages" class="message-entry">
-              <p><strong>{{ message.sender }}</strong>: {{ message.message }}</p>
-              <small>{{ message.sent_at | date:'medium' }}</small>
-            </div>
-          </div>
-          <ng-template #noMessages>
-            <p>No messages yet.</p>
-          </ng-template>
-
+         <div class="messages-content">
+      <div class="message-list" *ngIf="messages$ | async as messages">
+        <div *ngFor="let message of messages" class="message-entry">
+          <p><strong>{{ message.sender?.username }}</strong>: {{ message.message }}</p>
+          <small>{{ message.sent_at | date:'medium' }}</small>
         </div>
-
-      <div class="message-input" *ngIf="selectedUser">
-        <textarea [(ngModel)]="newMessageContent" placeholder="Type your message here..."></textarea>
-        <button class="send-button" (click)="sendMessage()">Send</button>
+        <ng-template #noMessages>
+          <p>No messages yet.</p>
+        </ng-template>
       </div>
+
+          <div class="message-input" *ngIf="selectedUser">
+            <textarea class="text-area" [(ngModel)]="newMessageContent" placeholder="Type your message here..."></textarea>
+            <button class="send-button" (click)="sendMessage()">Send</button>
+          </div>
+        </div> <!-- End of idv messages content -->
+
 
         <div class="booking-list">
           <app-swipeable-calendar></app-swipeable-calendar>
