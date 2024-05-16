@@ -145,10 +145,12 @@ body {
 
 .grid-post{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   grid-template-rows: auto auto auto auto auto;
   gap: 15px;
+  align-items: start;
 }
+
 .post-userpic {
   grid-column: 1;
   grid-row: 1;
@@ -157,7 +159,6 @@ body {
   border-radius: 50%;
 
 }
-
 .post-user {
   grid-column: 1;
   grid-row: 1;
@@ -167,17 +168,11 @@ body {
   padding-top: 5px;
 
 }
-
 .post-image {
   grid-column: 1;
   grid-row: 2;
   width: 60vh;
   height: 60vh;
-}
-
-.post-comments {
-  grid-column: 2;
-  grid-row: 2;
 }
 #post-icons-envelope {
   grid-column: 1;
@@ -191,37 +186,6 @@ body {
   padding: 7px 5px 5px;
   font-size: 1.6em;
 }
-.post-comment-userpic{
-  grid-column: 2;
-  grid-row: 3;
-  height: 50px;
-  width: 50px;
-  margin-left: -80px;
-  border-radius: 50%;
-
-}
-
-.post-comment {
-  grid-column: 2;
-  grid-row: 3;
-  width: 50%;
-  color: black;
-
-}
-.post-comment-btn{
-  grid-column: 2;
-  grid-row: 3;
-  width: 10%;
-  justify-self: right;
-  margin-right: 350px;
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  height: 2em;
-  margin-top: 0.5em;
-  font-size: 80%;
-  border: none;
-}
 .post-caption {
   grid-column: 1;
   grid-row: 4;
@@ -231,6 +195,63 @@ body {
   grid-column: 1;
   grid-row: 5;
   font-size: 1.2em;
+}
+
+
+.post-comments-list {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+}
+//not used rn
+.post-comment-userpic{
+  grid-column: 2;
+  grid-row: 3;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: start;
+  border-radius: 50%;
+  gap: 10px;
+  margin-right: 10px;
+}
+//
+.send-message{
+  grid-column: 2;
+  grid-row: 3;
+}
+.post-comment {
+  grid-column: 2;
+  grid-row: 3;
+  width: 50%;
+  color: black;
+  flex-grow: 1;
+
+}
+.post-comment-btn{
+  grid-column: 2;
+  grid-row: 3;
+  height: fit-content;
+  width: auto;
+  justify-self: right;
+  margin-right: 15px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  font-size: 0.8em;
+  cursor: pointer;
+
+
+}
+.post-comment-btn:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .post-comment-btn {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 
