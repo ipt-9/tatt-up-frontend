@@ -5,7 +5,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 10vh 85vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .title {
@@ -46,13 +46,13 @@ body {
   font-size: 150%;
   line-height: 50px;
 }
-  .nav_bold {
-    font-weight: bold;
-  }
+.nav_bold {
+  font-weight: bold;
+}
 
-  .hover:hover {
-    font-weight: bold;
-  }
+.hover:hover {
+  font-weight: bold;
+}
 
 
 .link-style {
@@ -240,6 +240,44 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
+}
+
+.grid-post{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr 1fr 1fr 1fr;
+}
+
+.post-user {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.post-image {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.post-comments {
+  grid-column: 2;
+  grid-row: 2;
+}
+.post-icons {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.post-comment {
+  grid-column: 2;
+  grid-row: 3;
+}
+.post-caption {
+  grid-column: 1;
+  grid-row: 4;
+}
+.post-date {
+  grid-column: 1;
+  grid-row: 5;
 }
 
 
