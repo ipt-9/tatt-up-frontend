@@ -206,18 +206,41 @@ body {
   background-color: black;
 }
 
-
-.filter-button {
+.multiselect-dropdown .dropdown-btn {
   border-radius: 100%;
   width: 40px;
   height: 40px;
   border: solid black 2px;
   margin-left: 5%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+}
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
+.multiselect-dropdown .dropdown-btn img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.multiselect-dropdown .dropdown-list {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.multiselect-dropdown .dropdown-list .dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f0f0f0;
   }
+}
+
+.multiselect-dropdown .dropdown-list .selected-item {
+  background-color: #d6d6d6;
 }
 
 hr{
@@ -226,10 +249,35 @@ hr{
   margin: 0px;
 }
 
+
+.selected-category {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  span {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    button {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+
 .filter-container {
   position: relative;
-  width: 5%;
+  display: flex;
+  align-items: center;
+  width: auto;
   height: 7%;
+
+  .filter-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
 
   .filter-dropdown {
     display: none;
@@ -237,7 +285,7 @@ hr{
     position: absolute;
     top: calc(100% + 1px);
     left: 0;
-    width: 300%;
+    width: max-content;
     border: 2px solid;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 
