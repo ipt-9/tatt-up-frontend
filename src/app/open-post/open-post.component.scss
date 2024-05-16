@@ -149,12 +149,22 @@ body {
   grid-template-rows: auto auto auto auto auto;
   gap: 15px;
 }
+.post-userpic {
+  grid-column: 1;
+  grid-row: 1;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+
+}
 
 .post-user {
   grid-column: 1;
   grid-row: 1;
   font-size: 2.5vh;
   font-weight: bold;
+  padding-left: 85px;
+  padding-top: 5px;
 
 }
 
@@ -176,13 +186,14 @@ body {
 #post-icons-bookmark {
   grid-column: 1;
   grid-row: 3;
-  padding:5px;
-  font-size: 1.8em;
+  padding: 7px 5px 5px;
+  font-size: 1.6em;
 }
 
 .post-comment {
   grid-column: 2;
   grid-row: 3;
+  width: 50%;
 }
 .post-caption {
   grid-column: 1;
