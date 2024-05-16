@@ -62,6 +62,7 @@
         <div (click)="filterByCategory('Futuristic')">Futuristic</div>
       </div>
     </div>
+
     <div class="results-grid-container">
       <div *ngFor="let image of images" class="grid-item">
         <img [src]="image.picture" alt="Picture">
