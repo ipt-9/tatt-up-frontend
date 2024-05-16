@@ -1,5 +1,7 @@
 //app.module.ts
 import { NgModule } from '@angular/core';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth.interceptor';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -41,6 +43,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { AuthService } from './auth.service';
+import {MessageService} from "./message.service";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
@@ -91,6 +95,10 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     CommonModule,
     MatAutocompleteModule,
   ],
-  providers: []
+  providers: [
+    AuthService,
+    MessageService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ]
 })
 export class AppModule {}
