@@ -171,6 +171,8 @@ body {
 .post-image {
   grid-column: 1;
   grid-row: 2;
+  width: 60vh;
+  height: 60vh;
 }
 
 .post-comments {
@@ -183,17 +185,42 @@ body {
   font-size: 1.8em;
   padding: 5px 5px 5px 55px;
 }
-#post-icons-bookmark {
+#post-icons-bookmark-o {
   grid-column: 1;
   grid-row: 3;
   padding: 7px 5px 5px;
   font-size: 1.6em;
+}
+.post-comment-userpic{
+  grid-column: 2;
+  grid-row: 3;
+  height: 50px;
+  width: 50px;
+  margin-left: -80px;
+  border-radius: 50%;
+
 }
 
 .post-comment {
   grid-column: 2;
   grid-row: 3;
   width: 50%;
+  color: black;
+
+}
+.post-comment-btn{
+  grid-column: 2;
+  grid-row: 3;
+  width: 10%;
+  justify-self: right;
+  margin-right: 350px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  height: 2em;
+  margin-top: 0.5em;
+  font-size: 80%;
+  border: none;
 }
 .post-caption {
   grid-column: 1;
