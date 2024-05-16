@@ -45,6 +45,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AuthService } from './auth.service';
 import {MessageService} from "./message.service";
+import { OpenPostComponent } from './open-post/open-post.component';
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [

@@ -5,7 +5,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 10vh 85vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .title {
@@ -46,13 +46,13 @@ body {
   font-size: 150%;
   line-height: 50px;
 }
-  .nav_bold {
-    font-weight: bold;
-  }
+.nav_bold {
+  font-weight: bold;
+}
 
-  .hover:hover {
-    font-weight: bold;
-  }
+.hover:hover {
+  font-weight: bold;
+}
 
 
 .link-style {
@@ -120,14 +120,6 @@ body {
   }
 }
 
-.homepage-main-title {
-  width: 100%;
-  position: fixed;
-  height: 5vh;
-  font-family: Arial, serif;
-  font-size: 6.5vh;
-  font-weight: bold;
-}
 .lgsubutton {
   padding: 8px 15px;
   border-radius: 18px;
@@ -145,101 +137,63 @@ body {
   background-color: black;
 }
 
-//------------------------- content -------------------------
 
-.grid-monetize-etwot {
+
+
+//------------------------------------------------------------------------
+
+
+.grid-post{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  padding-top: 50px;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 15px;
 }
 
-.homepage-monetize-title {
-  width: 100%;
-  margin-top: 100px;
-  margin-left: 13px;
-  font-family: Arial, serif;
-  font-size: 23px;
-  font-weight: bold;
+.post-user {
   grid-column: 1;
   grid-row: 1;
-}
-
-.homepage-etwot-title {
-  width: 100%;
-  margin-top: 100px;
-  font-family: Arial, serif;
-  font-size: 23px;
+  font-size: 2.5vh;
   font-weight: bold;
-  grid-column: 2;
-  grid-row: 1;
+
 }
 
-.homepage-monetize-text {
-  width: 100%;
-  font-family: Arial, serif;
-  font-size: 21px;
+.post-image {
   grid-column: 1;
-  margin-left: 13px;
+  grid-row: 2;
 }
 
-.homepage-etwot-text {
-  width: 100%;
-  font-family: Arial, serif;
-  font-size: 21px;
+.post-comments {
   grid-column: 2;
+  grid-row: 2;
 }
-
-.learnmore-btn {
-  border-color: black;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border-radius: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
+#post-icons-envelope {
   grid-column: 1;
-  width: 150px;
-  height: 50px;
-  margin-left: 13px;
+  grid-row: 3;
+  font-size: 1.8em;
+  padding: 5px 5px 5px 55px;
+}
+#post-icons-bookmark {
+  grid-column: 1;
+  grid-row: 3;
+  padding:5px;
+  font-size: 1.8em;
 }
 
-.learnmore-btn:hover {
-  background-color: #a4a4a4;
-  color: black;
-}
-
-.explore-btn {
-  border-color: black;
-  color: black;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border-radius: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
+.post-comment {
   grid-column: 2;
-  width: 150px;
-  height: 50px;
+  grid-row: 3;
+}
+.post-caption {
+  grid-column: 1;
+  grid-row: 4;
+  font-size: 1.8em;
+}
+.post-date {
+  grid-column: 1;
+  grid-row: 5;
+  font-size: 1.2em;
 }
 
-.explore-btn:hover {
-  background-color: #a4a4a4;
-  color: black;
-}
-
-.featured-aritsts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-content: center;
-}
 
 

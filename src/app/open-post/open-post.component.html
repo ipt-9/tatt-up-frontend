@@ -13,7 +13,7 @@
         Explore
       </div>
 
-      <div class="nav_bold" (click)="navigateToFavorites()">
+      <div class="hover" (click)="navigateToFavorites()">
         <i class="fas fa-bookmark" (click)="navigateToFavorites()"></i>
         Favorites
       </div>
@@ -48,7 +48,21 @@
     </div>
   </div>
 
-  <div class="main">Here comes the main content</div>
+  <div class="main">
+    <div class="grid-post">
+      <div class="post-user" >user134340</div>
+      <img class="post-image" src="assets/images/placeholder.jpg" >
+      <div class="post-comments" >comments</div>
+      <div class="post-comment" >comment</div>
+      <i class="fas fa-envelope" id="post-icons-envelope" (click)="navigateToDirectMessages()"></i>
+      <i class="fas fa-bookmark" id="post-icons-bookmark" (click)="navigateToDirectMessages()"></i>
+      <div class="post-caption" >caption</div>
+      <div class="post-date" >date</div>
+
+
+
+    </div>
+  </div>
 </div>
 
 <footer class="footer">

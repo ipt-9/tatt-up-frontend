@@ -23,6 +23,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import {MyProfileComponent} from "./my-profile/my-profile.component";
 import { DirectMessagesComponent } from "./direct-messages/direct-messages.component";
+import {OpenPostComponent} from "./open-post/open-post.component";
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -46,6 +47,7 @@ const routes: Routes = [
   { path: 'profile-settings', component: ProfileSettingsComponent },
   {path: 'my-profile', component: MyProfileComponent},
   {path: 'direct-messages', component: DirectMessagesComponent},
+  {path: 'open-post', component: OpenPostComponent},
 ];
 
 @NgModule({
