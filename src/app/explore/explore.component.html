@@ -37,6 +37,8 @@
           <img src="assets/images/explore-bold.png" />
         </button>
       </div>
+
+
       <div *ngIf="!(isLoggedIn$ | async)" class="login-signup-container">
         <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">LOG IN</button>
         <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
@@ -50,18 +52,19 @@
   </div>
 
   <div class="main">
+
     <div class="filter-container">
-      <button class="filter-button">
-        <img src="assets/images/filter.png">
-      </button>
-      <div class="filter-dropdown">
-        <div (click)="filterByCategory('Fineline')">Fineline</div>
-        <hr>
-        <div (click)="filterByCategory('Coquette')">Coquette</div>
-        <hr>
-        <div (click)="filterByCategory('Futuristic')">Futuristic</div>
-        <hr>
-        <div (click)="filterByCategory('Minimalistic')">Minimalistic</div>
+      <div class="filter-header">
+        <ng-multiselect-dropdown
+          [placeholder]="'Select Categories'"
+          [settings]="dropdownSettings"
+          [data]="dropdownList"
+          [(ngModel)]="selectedCategories"
+          (onSelect)="onItemSelect($event)"
+          (onDeSelect)="onItemDeSelect($event)"
+          (onSelectAll)="onSelectAll($event)"
+          (onDeSelectAll)="onDeSelectAll($event)">
+        </ng-multiselect-dropdown>
       </div>
     </div>
 
