@@ -7,6 +7,7 @@ import { NgForOf } from '@angular/common';
 import {AuthService} from "../auth.service";
 import {Observable} from "rxjs";
 import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-explore',
@@ -20,6 +21,7 @@ export class ExploreComponent {
   showFilterPanel: boolean = false;
   category: string = ''; // category that the user selects for filtering
   isLoggedIn$!: Observable<boolean>;
+
   constructor(
     private router: Router,
     private modalService: NgbModal,
@@ -78,15 +80,24 @@ export class ExploreComponent {
   }
   fetchSearchResults(term: string): void {
     this.searchService.search(term).subscribe({
-      next: (data) => {
-        this.searchResults = data;
+      next: (data: any[]) => {
+        this.searchResults = data.map(item => ({
+          ...item,
+          picture: this.searchService.getPictureUrl(item.id) // Call getPictureUrl from searchService
+        }));
         // Update filteredResults with initial search results
-        this.filteredResults = data;
+        this.filteredResults = this.searchResults;
       },
       error: (error) => {
         console.error('There was an error!', error);
       },
     });
+  }
+
+  getPictureUrl(itemId: string): string {
+    // Implement logic to fetch picture URL based on item ID
+    // Example: return `assets/images/${itemId}.jpg`;
+    return `assets/images/${itemId}.jpg`; // Replace this with your actual implementation
   }
 
   onSearchChange(): void {

@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
 import {Observable} from "rxjs";
 import {AuthService} from "../auth.service";
+import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
 
 @Component({
   selector: 'app-favorites',
@@ -53,5 +54,16 @@ export class FavoritesComponent {
   }
   navigateToDirectMessages():void{
     this.router.navigateByUrl('/direct-messages');
+  }
+
+  openLogoutModal() {
+    const modalRef = this.modalService.open(LogoutConfirmationComponent);
+    modalRef.result.then((result) => {
+      if (result) {
+        this.authService.logOut();
+      }
+    }).catch(err => {
+      console.error('Modal dismissed without logging out:', err);
+    });
   }
 }
