@@ -79,13 +79,22 @@
           <img src="assets/images/filter.png">
         </button>
         <div class="filter-dropdown">
-          <div (click)="filterByCategory('Fineline')">Category 1</div>
-          <div (click)="filterByCategory('Coquette')">Category 2</div>
-          <div (click)="filterByCategory('Futuristic')">Category 3</div>
+          <div (click)="filterByCategory('Fineline')">Fineline</div>
+          <hr>
+          <div (click)="filterByCategory('Coquette')">Coquette</div>
+          <hr>
+          <div (click)="filterByCategory('Futuristic')">Futuristic</div>
         </div>
       </div>
 
-    <div *ngFor="let result of searchResults">
+      <div class="results-grid-container">
+        <div *ngFor="let result of filteredResults" class="grid-item">
+          <img [src]="result.picture" alt="Picture">
+        </div>
+      </div>
+
+
+      <div *ngFor="let result of searchResults">
       <!-- Display search results here -->
       <!-- Replace 'property' with actual properties from your result objects -->
       <p>{{ result.property }}</p>

@@ -13,12 +13,12 @@ import { User } from 'src/app/models/user.model';
 export class AuthService {
   public apiUrl = 'https://backend.tatt-up-bmsd21a.bbzwinf.ch/api';
   private isLoggedInStatus = new BehaviorSubject<boolean>(this.hasToken());
-
   constructor(private http: HttpClient) {}
-
+  getToken(): string | null {
+    return localStorage.getItem('auth_token');
+  }
   private hasToken(): boolean {
-    return !!localStorage.
-    getItem('auth_token');
+    return !!localStorage.getItem('auth_token');
   }
 
   isLoggedIn(): Observable<boolean> {

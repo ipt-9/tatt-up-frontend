@@ -5,7 +5,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 10vh 85vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .title {
@@ -14,7 +14,6 @@ body {
   border-right: solid;
   border-color: #d6d6d6;
   border-width: 2px;
-
   font-family: "Cageroll", serif;
   text-transform: uppercase;
   text-decoration: underline;
@@ -25,13 +24,14 @@ body {
 
 .header {
   grid-row: 1;
-  grid-template-columns: 1fr auto;
+  grid-column: 2;
   border-bottom: solid;
   border-color: #d6d6d6;
   border-width: 2px;
   padding-top: 1vh;
   font-size: 20px;
-  align-items: center;
+  align-items: end;
+
 }
 .nav {
   grid-row: 2;
@@ -40,7 +40,7 @@ body {
   border-color: #d6d6d6;
   border-width: 2px;
   padding-top: 10%;
-  padding-left: 35%;
+  padding-left: 25%;
   text-align: left;
   font-size: 150%;
   line-height: 50px;
@@ -62,6 +62,8 @@ body {
 .signedin-icons i{
   font-size: 1.5em;
   margin-right: 10px;
+
+
 }
 .main {
   grid-row: 2;
@@ -218,23 +220,34 @@ body {
   }
 }
 
-.filter-dropdown {
-  position: absolute;
-  display: none;
-  top: calc(100% + 10px);
-  left: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+hr{
+  width: 100%;
+  color: black;
+  margin: 0px;
+}
 
-  div {
-    padding: 5px 10px;
-    cursor: pointer;
+.filter-container {
+  position: relative;
+  width: 5%;
+  height: 7%;
 
-    &:hover {
-      background-color: #f0f0f0;
+  .filter-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 300%;
+    border: 1px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    div {
+      padding: 5px 10px;
+      cursor: pointer;
     }
+  }
+
+  &:hover .filter-dropdown{
+    display: block;
   }
 }
 
-.filter-container:hover .filter-dropdown {
-  display: block;
-}
