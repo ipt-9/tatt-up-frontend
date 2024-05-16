@@ -177,7 +177,7 @@ link-style{
   .grid-container {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr 85vh;
+    grid-template-rows: 1fr;
     margin-left: 150px;
     margin-top: 50px;
   }
@@ -185,13 +185,13 @@ link-style{
   .grid-info {
     display: grid;
     grid-template-columns: 220px 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 40px 40px 40px 40px;
     grid-row: 1;
   }
 
   .circular-image {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
     grid-column: 1;
@@ -243,7 +243,6 @@ link-style{
     grid-row: 3;
     font-size: 18px;
     color: #C1C1C1;
-    margin-top: 1vh;
   }
 
   .star {
@@ -251,7 +250,6 @@ link-style{
     grid-row: 3;
     font-size: 18px;
     color: #C1C1C1;
-    margin-top: 1vh;
   }
 
   .address {
@@ -275,9 +273,11 @@ link-style{
     color: #C1C1C1;
   }
 
+//----------------------------- posts ------------------------------
+
 .posts-pic {
-  width: 180px;
-  height: 180px;
+  width: 1080px;
+  height: 1080px;
   overflow: hidden;
 }
 
@@ -294,5 +294,3 @@ link-style{
   grid-column: 1;
   grid-row: 1;
 }
-
-
