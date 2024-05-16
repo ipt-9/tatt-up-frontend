@@ -16,7 +16,7 @@ export class MessageService {
     return this.http.get<Message[]>(`${this.authService.apiUrl}/messages`);
   }
 
-  sendMessage(messageData: {receiver_id: number; message: string}): Observable<any> {
+  sendMessage(messageData: { message: string; receiver_username: string }): Observable<any> {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.authService.getToken()}`
     });
