@@ -1,107 +1,82 @@
 <title>Explore</title>
 <body>
-  <div class="grid">
-    <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
-    <div class="nav">
-      <div class="sidebar-content">
-        <div class="hover" (click)="navigateToHomepage()" >
-          <i class="fas fa-home"  (click)="navigateToHomepage()" ></i>
-          Home
-        </div>
-        <div class="nav_bold" (click)="navigateToExplore()">
-          <i class="fas fa-search" (click)="navigateToExplore()"></i>
-
-          Explore
-        </div>
-
-        <div class="hover" (click)="navigateToFavorites()">
-          <i class="fas fa-bookmark" (click)="navigateToFavorites()"></i>
-          Favorites
-        </div>
-        <div class="link-style" (click)="openCreatePostModal()">
-          <i class="fas fa-upload" (click)="openCreatePostModal()"></i>
-          Create Post
-        </div>
-
-
-        <div class="hover" (click)="navigateToAbout()">
-          <div href="/about" (click)="navigateToAbout()">
-            <i class="fas fa-info-circle"></i>
-            About Us
-          </div>
-        </div>
-</div>
+<div class="grid">
+  <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
+  <div class="nav">
+    <div class="sidebar-content">
+      <div class="hover" (click)="navigateToHomepage()">
+        <i class="fas fa-home"></i> Home
       </div>
-    <div class="header">
-      <div class="search-container">
-        <label for="search-input" class="search-label">EXPLORE</label>
-        <div class="search-bar">
-          <!-- You can add an icon here if you want -->
-          <input
-            id="search-input"
-            type="text"
-            placeholder="Explore"
-            #searchInput
-          />
-          <button class="search-button" (click)="fetchSearchResults(searchInput.value)">
-            <img src="assets/images/explore-bold.png" />
-          </button>
-        </div>
-
-        <div *ngIf="!(isLoggedIn$ | async)"  class="login-signup-container">
-          <button
-            class="lgsubutton"
-            id="log_in_btn"
-            (click)="navigateToLogin()"
-          >
-            LOG IN
-          </button>
-          <button
-            class="lgsubutton"
-            id="sign_up_btn"
-            (click)="navigateToSignUp()"
-          >
-            SIGN UP
-          </button>
-        </div>
-        <div class="signedin-icons" *ngIf="isLoggedIn$ | async ">
-          <i class="fas fa-envelope" (click)="navigateToDirectMessages()"></i>
-          <i class="fas fa-user" (click)="navigateToMyProfile()"></i>
-          <i class="fas fa-sign-out" (click)="openLogoutModal()"></i>
-        </div>
+      <div class="nav_bold" (click)="navigateToExplore()">
+        <i class="fas fa-search"></i> Explore
+      </div>
+      <div class="hover" (click)="navigateToFavorites()">
+        <i class="fas fa-bookmark"></i> Favorites
+      </div>
+      <div class="link-style" (click)="openCreatePostModal()">
+        <i class="fas fa-upload"></i> Create Post
+      </div>
+      <div class="hover" (click)="navigateToAbout()">
+        <i class="fas fa-info-circle"></i> About Us
       </div>
     </div>
+  </div>
 
-    <div class="main">
-
-      <div class="filter-container">
-        <button class="filter-button">
-          <img src="assets/images/filter.png">
+  <div class="header">
+    <div class="search-container">
+      <label for="search-input" class="search-label">EXPLORE</label>
+      <div class="search-bar">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Explore"
+          #searchInput
+          (keydown.enter)="fetchSearchResults(searchInput.value)"
+        />
+        <button class="search-button" (click)="fetchSearchResults(searchInput.value)">
+          <img src="assets/images/explore-bold.png" />
         </button>
-        <div class="filter-dropdown">
-          <div (click)="filterByCategory('Fineline')">Fineline</div>
-          <hr>
-          <div (click)="filterByCategory('Coquette')">Coquette</div>
-          <hr>
-          <div (click)="filterByCategory('Futuristic')">Futuristic</div>
-        </div>
-      </div>
-
-      <div class="results-grid-container">
-        <div *ngFor="let result of filteredResults" class="grid-item">
-          <img [src]="result.picture" alt="Picture">
-        </div>
       </div>
 
 
-      <div *ngFor="let result of searchResults">
-      <!-- Display search results here -->
-      <!-- Replace 'property' with actual properties from your result objects -->
-      <p>{{ result.property }}</p>
+      <div *ngIf="!(isLoggedIn$ | async)" class="login-signup-container">
+        <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">LOG IN</button>
+        <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">SIGN UP</button>
+      </div>
+      <div class="signedin-icons" *ngIf="isLoggedIn$ | async">
+        <i class="fas fa-envelope" (click)="navigateToDirectMessages()"></i>
+        <i class="fas fa-user" (click)="navigateToMyProfile()"></i>
+        <i class="fas fa-sign-out" (click)="openLogoutModal()"></i>
+      </div>
     </div>
   </div>
 
+  <div class="main">
+
+    <div class="filter-container">
+      <div class="filter-header">
+        <ng-multiselect-dropdown
+          [placeholder]="'Select Categories'"
+          [settings]="dropdownSettings"
+          [data]="dropdownList"
+          [(ngModel)]="selectedCategories"
+          (onSelect)="onItemSelect($event)"
+          (onDeSelect)="onItemDeSelect($event)"
+          (onSelectAll)="onSelectAll($event)"
+          (onDeSelectAll)="onDeSelectAll($event)">
+        </ng-multiselect-dropdown>
+      </div>
+    </div>
+
+    <div class="results-grid-container">
+      <div *ngFor="let image of images" class="grid-item">
+        <img [src]="image.picture" alt="Picture">
+      </div>
+    </div>
   </div>
+</div>
+
+
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-logo">TATT'UP</div>

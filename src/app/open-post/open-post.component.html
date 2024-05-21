@@ -13,7 +13,7 @@
         Explore
       </div>
 
-      <div class="nav_bold" (click)="navigateToFavorites()">
+      <div class="hover" (click)="navigateToFavorites()">
         <i class="fas fa-bookmark" (click)="navigateToFavorites()"></i>
         Favorites
       </div>
@@ -48,7 +48,34 @@
     </div>
   </div>
 
-  <div class="main">Here comes the main content</div>
+  <div class="main">
+    <div class="grid-post">
+      <img class="post-userpic" src="assets/images/placeholder.jpg">
+      <div class="post-user">user134340</div>
+      <img class="post-image" src="assets/images/search4.png">
+      <i class="fas fa-envelope" id="post-icons-envelope"></i>
+      <i class="far fa-bookmark" id="post-icons-bookmark-o"></i>
+      <div class="post-caption">Caption here</div>
+      <div class="post-date">Date here</div>
+
+      <div class="post-comments-list">
+        <ul *ngIf="comments$ | async as comments">
+          <li *ngFor="let comment of comments">
+            <strong>{{ comment.user.username }}</strong>: {{ comment.body }}
+            <small>{{ comment.created_at | date:'short' }}</small>
+          </li>
+        </ul>
+        <div *ngIf="!(comments$ | async)?.length">No comments yet.</div>
+      </div>
+
+      <!--<img class="post-comment-userpic" src="assets/images/placeholder.jpg">-->
+      <div class="send-message">
+      <input class="post-comment" [(ngModel)]="newCommentText" type="text" placeholder="Leave a comment...">
+      <button class="post-comment-btn" (click)="addComment(newCommentText)">Send</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <footer class="footer">

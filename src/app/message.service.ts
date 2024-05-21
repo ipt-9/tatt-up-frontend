@@ -1,22 +1,28 @@
 import { Injectable } from '@angular/core';
-import {Observable, of, throwError} from "rxjs";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {AuthService} from "./auth.service";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import {catchError, tap} from 'rxjs/operators';
+import { AuthService } from './auth.service';
 import { Message } from 'src/app/models/message.model';
-import {catchError} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
-
   constructor(private http: HttpClient, private authService: AuthService) { }
 
-  getMessages(): Observable<Message[]> {
-    return this.http.get<Message[]>(`${this.authService.apiUrl}/messages`);
+  getMessages(username: string): Observable<Message[]> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.authService.getToken()}`
+    });
+    return this.http.get<Message[]>(`${this.authService.apiUrl}/messages/${username}`, { headers })
+      .pipe(catchError(error => {
+        console.error('Failed to fetch messages', error);
+        return throwError(() => new Error('Failed to fetch messages'));
+      }));
   }
 
-  sendMessage(messageData: {receiver_id: number; message: string}): Observable<any> {
+  sendMessage(messageData: { receiver_username: string; message: string }): Observable<any> {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.authService.getToken()}`
     });
@@ -28,5 +34,16 @@ export class MessageService {
         })
       );
   }
+  getConversations(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.authService.apiUrl}/conversations`).pipe(
+      tap(conversations => console.log('Fetched conversations:', conversations)),
+      catchError(error => {
+        console.error('Failed to fetch conversations', error);
+        return throwError(() => new Error('Failed to fetch conversations'));
+      })
+    );
+  }
+
+
 
 }

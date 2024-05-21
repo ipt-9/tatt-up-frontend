@@ -35,6 +35,7 @@ import { DirectMessagesComponent } from './direct-messages/direct-messages.compo
 import { LogoutConfirmationComponent } from './logout-confirmation/logout-confirmation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwipeableCalendarComponent } from './swipeable-calendar/swipeable-calendar.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 //Material imports
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -45,6 +46,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AuthService } from './auth.service';
 import {MessageService} from "./message.service";
+import { OpenPostComponent } from './open-post/open-post.component';
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
@@ -94,6 +96,7 @@ import {MessageService} from "./message.service";
     MatInputModule,
     CommonModule,
     MatAutocompleteModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [
     AuthService,

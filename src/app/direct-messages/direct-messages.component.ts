@@ -10,6 +10,8 @@ import {SwipeableCalendarComponent} from "../swipeable-calendar/swipeable-calend
 import { MessageService} from "../message.service";
 import { Message } from 'src/app/models/message.model';
 import {User} from "../models/user.model";
+import {HttpClient} from "@angular/common/http";
+import {map} from "rxjs/operators";
 @Component({
   selector: 'app-direct-messages',
   styleUrls: ['./direct-messages.component.scss'],
@@ -21,22 +23,26 @@ export class DirectMessagesComponent implements OnInit{
   showUserDropdown: boolean = false;
   filteredUsers$!: Observable<User[]>;
   searchTerm: string = '';
-  currentMessage: Message | null = null;
+  //currentMessage: Message | null = null;
   isLoggedIn$!: Observable<boolean>;
-  selectedUserId!: number;
+  //selectedUserId!: number;
   selectedUser!: User;
   newMessageContent : string = '';
+  conversations$!: Observable<any[]>;
   constructor(
       private router: Router,
       private modalService: NgbModal,
       private authService : AuthService,
-      private messageService : MessageService
+      private messageService : MessageService,
+      private http: HttpClient,
+
   ) {}
   ngOnInit() {
     this.isLoggedIn$ = this.authService.isLoggedIn();
     this.users$ = this.authService.getUsers();
     this.filteredUsers$ = this.users$;
     this.loadMessages();
+    this.conversations$ = this.messageService.getConversations();
   }
 
   // New convo //
@@ -45,56 +51,43 @@ export class DirectMessagesComponent implements OnInit{
     this.showUserDropdown = !this.showUserDropdown;
 
   }
+
+  onSearchTermChange(): void {
+    this.filteredUsers$ = this.users$.pipe(
+      map(users => users.filter(user => user.username.toLowerCase().includes(this.searchTerm.toLowerCase())))
+    );
+  }
   selectUser(user: User): void {
     console.log('Selected user:', user);
     this.selectedUser = user;
     this.showUserDropdown = false;
     this.searchTerm = user.username;
-    //this.fetchMessages(user.id);
+    this.loadMessages();
   }
 
-  onSearchTermChange(): void {
-    this.filteredUsers$ = this.users$.pipe(
-      switchMap(users => {
-        if (!this.searchTerm.trim()) {
-          return of(users);
-        }
-        const lowerSearchTerm = this.searchTerm.toLowerCase();
-        return of(users.filter(user => user.username.toLowerCase().includes(lowerSearchTerm)));
-      })
+  loadMessages() {
+    if(!this.selectedUser) return;
+    this.messageService.getMessages(this.selectedUser.username).subscribe(
+      messages => {
+        console.log(messages);
+        this.messages$ = of(messages);
+      },
+      error => console.error('Error fetching messages:', error)
     );
   }
+  sendMessage(): void{
+    if (!this.newMessageContent.trim()) return;
+    const messageData = { receiver_username: this.selectedUser.username, message: this.newMessageContent };
+    this.messageService.sendMessage(messageData).subscribe(
+      response => {
+        this.newMessageContent = '';
+        this.loadMessages(); // Reload messages to show the new one
+      },
+      error => console.error('Error sending message:', error)
+    );
 
-  // Messages //
-  loadMessages() {
-    this.messages$ = this.messageService.getMessages();
   }
-  //selectMessage(message: Message) {
-   // this.currentMessage = message;
-  //}
-  //fetchMessages(userId: number): void {
-   // this.messages$ = this.messageService.getMessages(userId); }
 
-sendMessage(): void{
-  if (!this.newMessageContent.trim()) return;
-  if (!this.authService.isLoggedIn()) {
-    console.error('User is not authenticated');
-    return;
-  }
-  const messageData = {
-    receiver_id: this.selectedUser.id,
-    message: this.newMessageContent,
-  };
-  this.messageService.sendMessage(messageData).subscribe(
-    (response) => {
-      this.newMessageContent = '';
-      this.loadMessages();
-    },
-    (error) => {
-      console.error('Error sending message:', error);
-    }
-  );
-}
 
   // Basic functions //
   logOut() {
