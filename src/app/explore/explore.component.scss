@@ -206,16 +206,6 @@ body {
   background-color: black;
 }
 
-:host .ng-multiselect-dropdown .dropdown-list .selected-item-checkbox {
-  background-color: #000000 !important;
-}
-:host .ng-multiselect-dropdown .dropdown-list .selected-item-checkbox:checked + .selected-item {
-  border-color: #000000 !important;
-}
-:host .ng-multiselect-dropdown .dropdown-list .selected-item-checkbox:checked + .selected-item:after {
-  color: #000000;
-}
-
 
 .multiselect-dropdown .dropdown-btn {
   border-radius: 100%;
