@@ -96,7 +96,7 @@ import { OpenPostComponent } from './open-post/open-post.component';
     MatInputModule,
     CommonModule,
     MatAutocompleteModule,
-    NgMultiSelectDropDownModule.forRoot()
+    NgMultiSelectDropDownModule.forRoot(),
   ],
   providers: [
     AuthService,

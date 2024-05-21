@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {HttpClient} from "@angular/common/http";
+import {AuthService} from "../auth.service";
 
 @Component({
   selector: 'app-upload-popup',
@@ -10,7 +12,9 @@ export class UploadPopupComponent {
   imageUploaded: boolean = false;
   imageSrc: string | ArrayBuffer | null = null;
   selectFileClicked: boolean = false;
-  constructor(private modalService: NgbModal) {}
+
+  @ViewChild('fileInput', { static: false }) fileInput!: ElementRef;
+  constructor(private modalService: NgbModal, private http : HttpClient, private authService: AuthService) {}
 
   openCreatePostPopup() {
     this.modalService.open(UploadPopupComponent);
@@ -19,7 +23,7 @@ export class UploadPopupComponent {
     this.modalService.dismissAll();
   }
   onFileSelected(event: Event): void {
-    const element = event.currentTarget as HTMLInputElement;
+    const element = event.target as HTMLInputElement;
     const file = element.files ? element.files[0] : null;
     if (file) {
       const reader = new FileReader();
@@ -30,13 +34,32 @@ export class UploadPopupComponent {
       reader.readAsDataURL(file);
     }
   }
-  publish() {
-    // Implement publish functionality here
-    // For example, you can send the data to your backend server
-  }
 
   autoResize(event: any) {
     event.target.style.height = 'auto';
     event.target.style.height = event.target.scrollHeight + 'px';
   }
+
+  publish() {
+    const files = this.fileInput.nativeElement.files;
+    if (!files.length) {
+      console.error('No file selected.');
+      return;
+    }
+    const file = files[0];
+    const formData = new FormData();
+    formData.append('image', file);
+
+    this.http.post(`${this.authService.apiUrl}/imageUpload`, formData).subscribe({
+      next: (response) => {
+        console.log('Image uploaded successfully:', response);
+        this.closePopup();
+      },
+      error: (error) => {
+        console.error('Error uploading image:', error);
+      }
+    });
+  }
+
 }
+

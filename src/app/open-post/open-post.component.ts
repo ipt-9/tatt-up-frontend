@@ -5,7 +5,7 @@ import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
 import {Observable} from "rxjs";
 import {AuthService} from "../auth.service";
 import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
-import {AsyncPipe, DatePipe, NgIf} from "@angular/common";
+import {AsyncPipe, DatePipe, NgForOf, NgIf, NgFor} from "@angular/common";
 import {PostService} from "../post.service";
 import {FormsModule} from "@angular/forms";
 
@@ -17,7 +17,9 @@ import {FormsModule} from "@angular/forms";
     AsyncPipe,
     NgIf,
     DatePipe,
-    FormsModule
+    FormsModule,
+    NgForOf,
+    NgFor,
   ],
   standalone: true
 })
