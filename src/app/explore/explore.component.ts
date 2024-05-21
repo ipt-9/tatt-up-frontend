@@ -112,6 +112,9 @@ export class ExploreComponent {
   navigateToDirectMessages():void{
     this.router.navigateByUrl('/direct-messages');
   }
+  navigateToOpenPost():void{
+    this.router.navigateByUrl('/open-post');
+  }
   openLogoutModal() {
     const modalRef = this.modalService.open(LogoutConfirmationComponent);
     modalRef.result.then((result) => {

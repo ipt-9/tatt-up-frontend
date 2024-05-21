@@ -70,7 +70,6 @@ import { OpenPostComponent } from './open-post/open-post.component';
     ProfileSettingsComponent,
     UserProfilesComponent,
     ProfileSettingsComponent,
-    MyProfileComponent,
     DirectMessagesComponent,
     LogoutConfirmationComponent,
     SwipeableCalendarComponent,

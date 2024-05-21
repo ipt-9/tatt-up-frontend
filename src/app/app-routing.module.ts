@@ -45,7 +45,7 @@ const routes: Routes = [
   { path: 'change-password', component: ChangePasswordComponent },
   { path: 'user-profiles', component: UserProfilesComponent },
   { path: 'profile-settings', component: ProfileSettingsComponent },
-  {path: 'my-profile', component: UserProfilesComponent},
+  {path: 'my-profile', component: MyProfileComponent},
   {path: 'direct-messages', component: DirectMessagesComponent},
   {path: 'open-post', component: OpenPostComponent}
 ];

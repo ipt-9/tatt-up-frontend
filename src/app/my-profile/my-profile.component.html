@@ -23,7 +23,7 @@
       </div>
 
 
-      <div class="hover" (click)="navigateToAbout()">
+      <div class="hover"  (click)="navigateToAbout()">
         <div href="/about" (click)="navigateToAbout()">
           <i class="fas fa-info-circle"></i>
           About Us
@@ -31,26 +31,53 @@
       </div>
     </div>
   </div>
-
   <div class="header">
-    <div *ngIf="!(isLoggedIn$ | async)">
-      <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">
-        LOG IN
-      </button>
-      <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">
-        SIGN UP
-      </button>
-    </div>
-    <div class="signedin-icons" *ngIf="isLoggedIn$ | async ">
-      <i class="fas fa-envelope"></i>
+    <div class="signedin-icons">
+      <i class="fas fa-envelope" (click)="navigateToDirectMessages()"></i>
       <i class="fas fa-user" (click)="navigateToMyProfile()"></i>
       <i class="fas fa-sign-out" (click)="openLogoutModal()"></i>
     </div>
   </div>
+  <div class="main">
+    <div class="grid-container">
 
-  <div class="main">Here comes the main content</div>
+      <div class="circular-image">
+        <img src="assets/X.jpeg" alt="Profile Picture">
+      </div>
+
+      <div class="grid-info">
+
+        <div class="username">user134340</div>
+        <button class="editprofile"> Edit Profile</button>
+        <div class="posts">6 Posts</div>
+        <div class="followers">6'275 Followers</div>
+        <div class="designer">Designer</div>
+        <div class="star">Tattoo Artist</div>
+        <div class="address">Fear Street 88</div>
+        <div class="email">lmao.lol&#64;outlook.com</div>
+        <div class="bio">I'm a fine line artist</div>
+      </div>
+    </div>
+
+    <div class="posts-grid">
+      <div class="posts-pic1">
+        <img src="assets/X.jpeg" alt="Profile Picture">
+      </div>
+
+      <div class="posts-pic2">
+        <img src="assets/X.jpeg" alt="Profile Picture">
+      </div>
+
+      <div class="posts-pic3">
+        <img src="assets/X.jpeg" alt="Profile Picture">
+      </div>
+    </div>
+
+
+
+
+  </div>
 </div>
-
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-logo">TATT'UP</div>
