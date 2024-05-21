@@ -1,3 +1,4 @@
+<title>Favorites</title>
 <body>
 <div class="grid">
   <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
@@ -48,7 +49,53 @@
     </div>
   </div>
 
-  <div class="main">Here comes the main content</div>
+  <div class="main">
+    <div class="grid-container">
+
+      <div class="circular-image">
+        <img src="assets/X.jpeg" alt="Profile Picture">
+      </div>
+
+      <div class="grid-info">
+
+        <div class="username">user134340</div>
+        <button class="editprofile"> Edit Profile</button>
+        <div class="posts">6 Posts</div>
+        <div class="followers">6'275 Followers</div>
+        <div class="designer">Designer</div>
+        <div class="star">Tattoo Artist</div>
+        <div class="address">Fear Street 88</div>
+        <div class="email">lmao.lol&#64;outlook.com</div>
+        <div class="bio">I'm a fine line artist</div>
+      </div>
+    </div>
+
+    <div class="posts-grid">
+      <div class="posts-pic1">
+        <img src="assets/images/search4.png" alt="Profile Picture" (click)="navigateToOpenPost()">
+      </div>
+
+      <div class="posts-pic2">
+        <img src="assets/images/search2.png" alt="Profile Picture" (click)="navigateToOpenPost()">
+      </div>
+
+      <div class="posts-pic3">
+        <img src="assets/images/search5.png" alt="Profile Picture"(click)="navigateToOpenPost()">
+      </div>
+
+      <div class="posts-pic4">
+        <img src="assets/images/search1.png" alt="Profile Picture" (click)="navigateToOpenPost()">
+      </div>
+
+      <div class="posts-pic5">
+        <img src="assets/images/search3.png" alt="Profile Picture"(click)="navigateToOpenPost()">
+      </div>
+    </div>
+
+
+
+
+  </div>
 </div>
 
 <footer class="footer">

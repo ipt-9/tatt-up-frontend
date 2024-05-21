@@ -70,7 +70,7 @@
 
     <div class="results-grid-container">
       <div *ngFor="let image of images" class="grid-item">
-        <img [src]="image.picture" alt="Picture">
+        <img [src]="image.picture" alt="Picture" (click)="navigateToOpenPost()">
       </div>
     </div>
   </div>

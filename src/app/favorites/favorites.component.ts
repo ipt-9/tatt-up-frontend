@@ -50,10 +50,14 @@ export class FavoritesComponent {
     this.router.navigateByUrl('');
   }
   navigateToMyProfile(): void{
-    this.router.navigateByUrl('/my-profile');
+    this.router.navigateByUrl('/user-profiles');
   }
   navigateToDirectMessages():void{
     this.router.navigateByUrl('/direct-messages');
+  }
+
+  navigateToOpenPost():void{
+    this.router.navigateByUrl('/open-post');
   }
 
   openLogoutModal() {

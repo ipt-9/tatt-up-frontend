@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
@@ -10,6 +10,7 @@ import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirm
 import {AppComponent} from "../app.component";
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
+
 interface DropdownItem {
   item_id: number;
   item_text: string;
@@ -19,6 +20,7 @@ interface DropdownItem {
   selector: 'app-explore',
   templateUrl: './explore.component.html',
   styleUrls: ['./explore.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ExploreComponent {
   searchTerm: string = ''; //  search term entered by the user
@@ -105,10 +107,13 @@ export class ExploreComponent {
     this.router.navigateByUrl('');
   }
   navigateToMyProfile(): void{
-    this.router.navigateByUrl('/my-profile');
+    this.router.navigateByUrl('user-profiles');
   }
   navigateToDirectMessages():void{
     this.router.navigateByUrl('/direct-messages');
+  }
+  navigateToOpenPost():void{
+    this.router.navigateByUrl('/open-post');
   }
   openLogoutModal() {
     const modalRef = this.modalService.open(LogoutConfirmationComponent);

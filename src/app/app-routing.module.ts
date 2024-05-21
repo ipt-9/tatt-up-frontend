@@ -47,7 +47,7 @@ const routes: Routes = [
   { path: 'profile-settings', component: ProfileSettingsComponent },
   {path: 'my-profile', component: MyProfileComponent},
   {path: 'direct-messages', component: DirectMessagesComponent},
-  {path: 'open-post', component: OpenPostComponent},
+  {path: 'open-post', component: OpenPostComponent}
 ];
 
 @NgModule({
