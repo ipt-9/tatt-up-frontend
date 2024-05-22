@@ -46,7 +46,12 @@ export class MyProfileComponent{
   navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }
-
+  navigateToLegal():void{
+    this.router.navigateByUrl('/legal');
+  }
+  navigateToDisclaimer():void{
+    this.router.navigateByUrl('imprint');
+  }
   navigateToMyProfile(): void{
     this.router.navigateByUrl('/my-profile');
   }

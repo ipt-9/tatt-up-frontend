@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { UploadPopupComponent } from '../upload-popup/upload-popup.component';
 import {Observable} from "rxjs";
+import {Router} from "@angular/router";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {AuthService} from "../auth.service";
+import {UploadPopupComponent} from "../upload-popup/upload-popup.component";
 import {LogoutConfirmationComponent} from "../logout-confirmation/logout-confirmation.component";
 
 @Component({
-  selector: 'app-favorites',
-  templateUrl: './favorites.component.html',
-  styleUrls: ['./favorites.component.scss'],
+  selector: 'app-disclaimer',
+  templateUrl: './disclaimer.component.html',
+  styleUrls: ['./disclaimer.component.scss']
 })
-export class FavoritesComponent {
+export class DisclaimerComponent {
   isLoggedIn$!: Observable<boolean>;
   constructor(
     private router: Router,
@@ -31,10 +31,15 @@ export class FavoritesComponent {
   navigateToAbout(): void {
     this.router.navigateByUrl('/about');
   }
+  navigateToLegal():void{
+    this.router.navigateByUrl('/legal');
+  }
   navigateToExplore(): void {
     this.router.navigateByUrl('/explore');
   }
-
+  navigateToDisclaimer():void{
+    this.router.navigateByUrl('imprint');
+  }
   navigateToFavorites(): void {
     this.router.navigateByUrl('/favorites');
   }
@@ -50,23 +55,15 @@ export class FavoritesComponent {
     this.router.navigateByUrl('');
   }
   navigateToMyProfile(): void{
-    this.router.navigateByUrl('/user-profiles');
+    this.router.navigateByUrl('/my-profile');
   }
+
   navigateToDirectMessages():void{
     this.router.navigateByUrl('/direct-messages');
   }
 
-  navigateToOpenPost():void{
-    this.router.navigateByUrl('/open-post');
-  }
-  navigateToLegal():void{
-    this.router.navigateByUrl('/legal');
-  }
-  navigateToDisclaimer():void{
-    this.router.navigateByUrl('imprint');
-  }
   openLogoutModal() {
-    const modalRef = this.modalService.open(LogoutConfirmationComponent);
+    const modalRef = this.modalService.open(LogoutConfirmationComponent );
     modalRef.result.then((result) => {
       if (result) {
         this.authService.logOut();

@@ -85,7 +85,8 @@
 
       <div>
         <div class="contact-heading">Still have some questions?</div>
-        <div class="contact-subheading">Do not hesitate to contact us.</div>
+        <div class="contact-subheading">Do not hesitate to contact us. <br/>
+        Email: tattup.contact@gmail.com</div>
 
         <app-contact-form></app-contact-form>
       </div>
@@ -97,10 +98,10 @@
       <div class="footer-logo">TATT'UP</div>
       <div class="footer-copy">© 2023 Copyright</div>
       <nav class="footer-links">
-        <a href="/legal">Legal</a>
-        <a href="/about">Contact</a>
+        <a (click)="navigateToLegal()">Legal</a>
+        <a (click)="navigateToAbout()">Contact</a>
         <a href="/monetization">Monetization</a>
-        <a href="/disclaimer">Disclaimer</a>
+        <a (click)="navigateToDisclaimer()">Imprint</a>
       </nav>
     </div>
   </footer>

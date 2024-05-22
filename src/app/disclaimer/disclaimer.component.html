@@ -1,0 +1,90 @@
+<body>
+<div class="grid">
+  <div (click)="navigateToHomepage()" class="title">Tatt' up</div>
+  <div class="nav">
+    <div class="sidebar-content">
+      <div class="hover" (click)="navigateToHomepage()" >
+        <i class="fas fa-home"  (click)="navigateToHomepage()" ></i>
+        Home
+      </div>
+      <div class="hover" (click)="navigateToExplore()">
+        <i class="fas fa-search" (click)="navigateToExplore()"></i>
+
+        Explore
+      </div>
+
+      <div class="hover" (click)="navigateToFavorites()">
+        <i class="fas fa-bookmark" (click)="navigateToFavorites()"></i>
+        Favorites
+      </div>
+      <div class="link-style" (click)="openCreatePostModal()">
+        <i class="fas fa-upload" (click)="openCreatePostModal()"></i>
+        Create Post
+      </div>
+
+
+      <div class="hover" (click)="navigateToAbout()">
+        <div href="/about" (click)="navigateToAbout()">
+          <i class="fas fa-info-circle"></i>
+          About Us
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header">
+    <div *ngIf="!(isLoggedIn$ | async)">
+      <button class="lgsubutton" id="log_in_btn" (click)="navigateToLogin()">
+        LOG IN
+      </button>
+      <button class="lgsubutton" id="sign_up_btn" (click)="navigateToSignUp()">
+        SIGN UP
+      </button>
+    </div>
+    <div class="signedin-icons" *ngIf="isLoggedIn$ | async ">
+      <i class="fas fa-envelope" (click)="navigateToDirectMessages()"></i>
+      <i class="fas fa-user" (click)="navigateToMyProfile()"></i>
+      <i class="fas fa-sign-out" (click)="openLogoutModal()"></i>
+    </div>
+  </div>
+
+  <div class="main">
+    <h1>Imprint</h1>
+    <h2>Responsible for the content of this website:</h2>
+    <p><strong>Name:</strong> Aline Schwegler, Mathusiga Nithivathanan, Valentina Mettler, and Sara Cabrera.</p>
+    <p><strong>Address:</strong> Kottenmatte 4, 6210 Sursee, Switzerland</p>
+    <p><strong>Contact Information:</strong></p>
+    <ul>
+      <li><strong>Email:</strong> tattup.contact@gmail.com</li>
+    </ul>
+    <h2>Purpose of the Website:</h2>
+    <p>This website is a school project created as part of the vocational studies at BBZW Sursee. It serves exclusively educational purposes.</p>
+    <h2>Privacy Policy</h2>
+    <p><strong>Privacy:</strong> On this website, personal data such as passwords are securely hashed with bcrypt by Laravel, making them inaccessible. Only the school and the students who programmed the website have access to the database. No information is shared with third parties, and no cookies are used.</p>
+    <h2>Disclaimer</h2>
+    <h3>Content of the Online Offer:</h3>
+    <p>The operator assumes no responsibility for the up-to-dateness, correctness, completeness, or quality of the information provided. Liability claims against the operator, which refer to material or non-material damages caused by the use or non-use of the information provided or by the use of incorrect and incomplete information, are excluded in principle unless it can be proven that the operator acted willfully or was grossly negligent.</p>
+    <h3>References and Links:</h3>
+    <p>For direct or indirect references to external websites ("hyperlinks"), liability would only arise if the operator had knowledge of illegal contents and it would be technically possible and reasonable for him to prevent their use.</p>
+    <h3>Copyright</h3>
+    <p>All images displayed on this website are the property of their respective owners. These images are used for illustrative purposes only and no ownership is claimed. All rights belong to their respective owners.
+
+      In accordance with Swiss copyright law, if any copyright holder objects to their work being displayed on this site, please contact us at tattup.contact@gmail.com and the image will be removed promptly.
+
+    </p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">TATT'UP</div>
+    <div class="footer-copy">© 2023 Copyright</div>
+    <nav class="footer-links">
+      <a (click)="navigateToLegal()">Legal</a>
+      <a (click)="navigateToAbout()">Contact</a>
+      <a href="/monetization">Monetization</a>
+      <a (click)="navigateToDisclaimer()">Imprint</a>
+    </nav>
+  </div>
+</footer>
+</body>
