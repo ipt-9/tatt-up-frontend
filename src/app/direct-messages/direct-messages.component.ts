@@ -23,9 +23,7 @@ export class DirectMessagesComponent implements OnInit{
   showUserDropdown: boolean = false;
   filteredUsers$!: Observable<User[]>;
   searchTerm: string = '';
-  //currentMessage: Message | null = null;
   isLoggedIn$!: Observable<boolean>;
-  //selectedUserId!: number;
   selectedUser!: User;
   newMessageContent : string = '';
   conversations$!: Observable<any[]>;
@@ -52,11 +50,13 @@ export class DirectMessagesComponent implements OnInit{
 
   }
 
+// Taken from ChatGPT //
   onSearchTermChange(): void {
     this.filteredUsers$ = this.users$.pipe(
       map(users => users.filter(user => user.username.toLowerCase().includes(this.searchTerm.toLowerCase())))
     );
   }
+
   selectUser(user: User): void {
     console.log('Selected user:', user);
     this.selectedUser = user;
@@ -81,7 +81,7 @@ export class DirectMessagesComponent implements OnInit{
     this.messageService.sendMessage(messageData).subscribe(
       response => {
         this.newMessageContent = '';
-        this.loadMessages(); // Reload messages to show the new one
+        this.loadMessages();
       },
       error => console.error('Error sending message:', error)
     );

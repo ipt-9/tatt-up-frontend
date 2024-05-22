@@ -42,13 +42,14 @@ export class SwipeableCalendarComponent implements OnInit {
 
   saveEvent(): void {
     if (this.eventForm.valid) {
-      const { title, time, date, usernames } = this.eventForm.value;  // Ensure this matches your form structure
+      const { title, time, date, usernames } = this.eventForm.value;
       const event: Event = {
         title,
         time,
         date: new Date(date).toISOString().split('T')[0],
         usernames
       };
+      // This part was helped out by ChatGPT
       this.authService.saveEvent(event).subscribe(savedEvent => {
         this.events.push(savedEvent);
         console.log('Saved events:', this.events);

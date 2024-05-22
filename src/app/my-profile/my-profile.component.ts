@@ -21,6 +21,9 @@ export class MyProfileComponent{
   openCreatePostModal() {
     this.modalService.open(UploadPopupComponent);
   }
+  navigateToSettings():void{
+    this.router.navigateByUrl('/profile-settings');
+  }
   navigateToSignUp(): void {
     this.router.navigateByUrl('/user-signup');
   }
@@ -62,3 +65,5 @@ export class MyProfileComponent{
   }
   protected readonly open = open;
 }
+
+
