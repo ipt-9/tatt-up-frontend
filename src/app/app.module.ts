@@ -47,6 +47,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AuthService } from './auth.service';
 import {MessageService} from "./message.service";
 import { OpenPostComponent } from './open-post/open-post.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
@@ -72,6 +73,7 @@ import { OpenPostComponent } from './open-post/open-post.component';
     DirectMessagesComponent,
     LogoutConfirmationComponent,
     SwipeableCalendarComponent,
+    DisclaimerComponent,
   ],
 
   imports: [

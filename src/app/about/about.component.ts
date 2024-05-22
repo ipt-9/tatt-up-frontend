@@ -35,6 +35,9 @@ export class AboutComponent {
   navigateToLogin(): void {
     this.router.navigateByUrl('/user-login');
   }
+  navigateToLegal():void{
+    this.router.navigateByUrl('/legal');
+  }
 
   navigateToAbout(): void {
     this.router.navigateByUrl('/about');
@@ -46,7 +49,9 @@ export class AboutComponent {
   navigateToFavorites(): void {
     this.router.navigateByUrl('/favorites');
   }
-
+navigateToDisclaimer():void{
+    this.router.navigateByUrl('imprint');
+}
   navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }

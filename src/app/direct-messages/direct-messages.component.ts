@@ -109,7 +109,12 @@ export class DirectMessagesComponent implements OnInit{
   navigateToSignUp(): void {
     this.router.navigateByUrl('/user-signup');
   }
-
+  navigateToLegal():void{
+    this.router.navigateByUrl('/legal');
+  }
+  navigateToDisclaimer():void{
+    this.router.navigateByUrl('imprint');
+  }
   navigateToLogin(): void {
     this.router.navigateByUrl('/user-login');
   }

@@ -55,6 +55,12 @@ export class LegalComponent {
   navigateToDirectMessages():void{
     this.router.navigateByUrl('/direct-messages');
   }
+  navigateToLegal():void{
+    this.router.navigateByUrl('/legal');
+  }
+  navigateToDisclaimer():void{
+    this.router.navigateByUrl('imprint');
+  }
   openLogoutModal() {
     const modalRef = this.modalService.open(LogoutConfirmationComponent);
     modalRef.result.then((result) => {

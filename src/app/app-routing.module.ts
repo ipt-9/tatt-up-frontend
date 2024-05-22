@@ -24,6 +24,7 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
 import {MyProfileComponent} from "./my-profile/my-profile.component";
 import { DirectMessagesComponent } from "./direct-messages/direct-messages.component";
 import {OpenPostComponent} from "./open-post/open-post.component";
+import {DisclaimerComponent} from "./disclaimer/disclaimer.component";
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -47,7 +48,8 @@ const routes: Routes = [
   { path: 'profile-settings', component: ProfileSettingsComponent },
   {path: 'my-profile', component: MyProfileComponent},
   {path: 'direct-messages', component: DirectMessagesComponent},
-  {path: 'open-post', component: OpenPostComponent}
+  {path: 'open-post', component: OpenPostComponent},
+  {path: 'imprint', component: DisclaimerComponent},
 ];
 
 @NgModule({

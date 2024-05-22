@@ -102,7 +102,12 @@ export class ExploreComponent {
   navigateToLogin(): void {
     this.router.navigateByUrl('/user-login');
   }
-
+  navigateToLegal():void{
+    this.router.navigateByUrl('/legal');
+  }
+  navigateToDisclaimer():void{
+    this.router.navigateByUrl('imprint');
+  }
   navigateToHomepage(): void {
     this.router.navigateByUrl('');
   }
