@@ -20,7 +20,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AboutComponent } from './about/about.component';
 import { ExploreComponent } from './explore/explore.component';
 import { FavoritesComponent } from './favorites/favorites.component';
-import { CreatePostComponent } from './create-post/create-post.component';
+
 import { LegalComponent } from './legal/legal.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -62,7 +62,6 @@ import { OpenPostComponent } from './open-post/open-post.component';
     AboutComponent,
     ExploreComponent,
     FavoritesComponent,
-    CreatePostComponent,
     LegalComponent,
     ContactFormComponent,
     ChangePasswordComponent,
